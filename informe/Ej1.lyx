@@ -1,0 +1,1292 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement !tph
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\headheight 2cm
+\headsep 2cm
+\footskip 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Filtro con GIC
+\end_layout
+
+\begin_layout Subsection
+Introduccion
+\end_layout
+
+\begin_layout Standard
+En la siguiente seccion se muestra la resolucion de un circuito que utiliza
+ un GIC(Generalized Impedance Converter).Se calculo de manera teorica la
+ funcion transferencia, la ubicacion de polos y ceros, y las impedancias
+ de entrada y de salida del siguiente circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Circuito propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Objetivos y resumen
+\end_layout
+
+\begin_layout Standard
+Se tomo como objetivoo de este informe la presentacion de la resolucion
+ teorica de la funcion transferencia del circuito para el caso de OpAmps
+ ideales con ganancias a lazo abierto finitas.Tambien se busco analizar de
+ manera teorica como las resistencias 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{8}$
+\end_inset
+
+ afectan al circuito a la expresion de la funcion transferencia, en particular
+ a las singularidades de la misma.Finalmente se decidio implementar dicho
+ filtro como un filtro 'High Pass Notch' mediante la adecuada eleccion de
+ componentes y medir las impedancias y la respuesta en frecuencia de la
+ configuracion.
+\end_layout
+
+\begin_layout Subsection
+Resolucion del circuito
+\end_layout
+
+\begin_layout Subsubsection
+Fucion transferencia
+\end_layout
+
+\begin_layout Standard
+Para resolver el circuito se utilizo el metodo de nodos del cual se obtuvo
+ el siguiente sistema de ecuaciones:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{V_{in}-V_{1}^{+}}{Z_{7}}=\frac{V_{1}^{+}}{R_{6}}+\frac{V_{1}^{+}-V_{out_{2}}}{R_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{out}=A_{vol}(V_{1}^{+}-V^{-})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V_{out_{2}}=A_{vol}(V_{2}^{+}-V^{-})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{V_{out_{2}}-V^{-}}{Z_{2}}=\frac{V^{-}-V_{out}}{R_{3}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{V_{in}-V_{2}^{+}}{R_{8}}=\frac{V_{2}^{+}}{R_{5}}+\frac{V_{2}^{+}-V_{out}}{R_{4}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definiendo las siguientes constantes por conveniencia se puede llegar al
+ grafo que representa al circuito:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{a}=R_{4}R_{8}+R_{5}R_{8}+R_{4}R_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{b}=R_{6}Z_{7}+R_{1}Z_{7}+R_{1}R_{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Grafo equivalente del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La ganancia deseada se puede obtener si se aplica la formula de Mason:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{\sum_{i=1}^{N}G_{I}\triangle_{I}}{\Delta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\triangle=1-\sum L_{i}+\sum L_{i}L_{j}-\sum L_{i}L_{j}L_{k}+...
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ es la ganancia del camino directo i-esimo, 
+\begin_inset Formula $L_{i}$
+\end_inset
+
+es la ganancia del bucle i-esimo y 
+\begin_inset Formula $\triangle_{i}$
+\end_inset
+
+ es el delta pero solo teniendo los bucles que no se tocan con el camino
+ principal i-esimo.
+ En el grafo se tienen tres caminos directos cuyas ganancias son:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{1}=\frac{R_{4}R_{5}}{R_{a}}.A_{vol}.\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{2}=\frac{R_{1}R_{6}}{R_{b}}.A_{vol}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $G_{3}=\frac{R_{4}R_{5}}{R_{a}}.A_{vol}.\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
+ todos comparten por lo menos un nodo.
+ Teniendo esto en cuento los deltas son:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta=1-(A_{vol}.\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol}).\frac{R_{5}R_{8}}{R_{a}}+A_{vol}.\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}.\frac{R_{5}R_{8}}{R_{a}}+\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol})+\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}.\frac{Z_{2}}{R_{3}+Z_{2}}.(-A_{vol})+\frac{Z_{2}}{R_{3}+Z_{2}}.(-A_{vol}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta_{1}=\Delta_{3}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta_{2}=1+\frac{R_{3}A_{vol}}{R_{3}+Z_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se despejo convenientemente la funcion tranferencia con la ayuda de Matlab
+ y se llego a la siguiente funcion transferencia para cuando la ganancia
+ en lazo abierto(
+\begin_inset Formula $A_{vol}$
+\end_inset
+
+) es finita:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})s^{2}+(C_{2}R_{3}R_{4}R_{5}R_{6}R_{7}-C_{2}R_{3}R_{4}R_{5}R_{u}-C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{6}R_{7}+R_{1}R_{6}R_{a}(C_{2}R_{3}+\frac{C_{6}R_{7}+C_{2}R_{3}}{A_{vol}}))s+R_{6}(R_{4}R_{5}R_{7}+\frac{R_{1}R_{a}}{A_{vol}})}{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{5}R_{8}+\frac{R_{a}}{A_{vol}}(1+\frac{1}{A_{vol}}))s^{2}+(\frac{C_{6}R_{1}R_{6}R_{7}R_{a}+C_{2}R_{3}R_{a}R_{u}}{A_{vol}}-C_{2}R_{3}R_{5}R_{6}R_{7}R_{8}+C_{2}R_{3}R_{5}R_{8}R_{u}+\frac{R_{a}}{A_{vol}^{2}}(C_{2}R_{3}R_{u}+C_{6}R_{1}R_{6}R_{7}))s+R_{4}R_{6}R_{7}(R_{5}+R_{8})+\frac{R_{a}R_{u}}{A_{vol}}(1+\frac{1}{A_{vol}})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{u}=R_{1}R_{6}+R_{1}R_{7}+R_{6}R_{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se considera que 
+\begin_inset Formula $A_{vol}$
+\end_inset
+
+ es infinitamente grande enonces se llega a la transferencia ideal:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}R_{8}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}(R_{6}R_{a}-C_{6}R_{4}R_{5}R_{6}R_{7}-R_{4}R_{5}(R_{6}+R_{7}))s+R_{4}R_{5}R_{6}R_{7}}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{6}R_{7}R_{8}s^{2}+(R_{7}+R_{6})C_{2}R_{1}R_{3}R_{5}R_{8}s+R_{4}R_{6}R_{7}(R_{5}+R_{8})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La funcion transferencia puede ser reescrita en funcion de cierta magnitudes
+ de interes como se presenta a continuacion:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=K\frac{(\frac{s}{\omega_{z}})^{2}+\frac{s}{Q_{z}\omega_{z}}+1}{(\frac{s}{\omega_{p}})^{2}+\frac{s}{Q_{p}\omega_{p}}+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Realizando el despeje y las simplificaciones adecuadas se llega a que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=\frac{R_{5}}{R_{5}+R_{8}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{z}=\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}(R_{4}+R_{5})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{z}=-\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{8}(R_{4}+R_{5})}}{C_{2}R_{1}R_{3}R_{4}R_{5}(R_{6}+R_{7}+C_{6}R_{6}R_{7})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{p}=\sqrt{\frac{R_{4}(R_{5}+R_{8})}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{P}=\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{8}(R_{5}+R_{8})}}{C_{2}R_{1}R_{3}R_{5}R_{8}(R_{6}+R_{7})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando las siguientes sustituciones, las magnitudes se vuelven mas simples:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\begin{array}{cc}
+R_{1}=R_{3}=R_{8}=R, & C_{2}=C_{6}=C,\\
+R_{5}=\frac{2k^{2}}{1-k^{2}}R, & R_{6}=(1+k^{2})QR,
+\end{array}$
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{cc}
+k=\frac{\omega_{z}}{\omega_{p}},k\leq1, & R_{4}=\frac{2k^{2}}{1+k^{2}}R\\
+R_{7}=(1+\frac{1}{k^{2}})QR
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=\frac{2k^{2}}{k^{2}+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{z}=\frac{k}{RC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{z}=-\frac{1}{kRC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{p}=\frac{1}{RC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{P}=Q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Funcion de 
+\begin_inset Formula $R_{8}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+El circuito ademas del GIC tiene unas resistencias y un capacitor adicional
+ que lo componen.
+ A continuacion se analiza que sucede al tomar los limites de los dos casos
+ extremos, cuando la resistencia 
+\begin_inset Formula $R_{8}$
+\end_inset
+
+ es un corto y cuando es un circuito abierto.
+\end_layout
+
+\begin_layout Enumerate
+Caso 
+\begin_inset Formula $R_{8}\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tomando dicho limite de la expresion (4) se llega a:
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+H(s)=\frac{-C_{2}R_{1}R_{3}R_{4}R_{5}R_{7}(C_{6}R_{6}+1)s+R_{4}R_{5}R_{6}R_{7}}{R_{4}R_{5}R_{6}R_{7}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=-\frac{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}{R_{6}}s+1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con lo cual la funcion trasnferencia es la de un filtro pasa altos con 
+\begin_inset Formula $\omega_{corte}=-\frac{R_{6}}{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ Caso 
+\begin_inset Formula $R_{8}\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nuevamente haciendo el limite en la expresion (4 ) se tiene que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}R_{6}(R_{4}+R_{5})s+R_{4}R_{5}R_{6}R_{7}}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{6}R_{7}s^{2}+(R_{6}+R_{7})C_{2}R_{1}R_{3}R_{5}s+R_{4}R_{6}R_{7}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reescribiendo la transferencia en el formato (5), se tiene que:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=R_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{z}=\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}(R_{4}+R_{5})}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{z}=\frac{R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}(R_{4}+R_{5})}}{C_{2}R_{1}R_{3}(R_{4}+R_{5})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{p}=\sqrt{\frac{R_{4}}{C_{2}C_{6}R_{1}R_{3}R_{5}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q_{P}=\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}}}{C_{2}R_{1}R_{3}R_{5}(R_{6}+R_{7})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diagrama de polos y ceros
+\end_layout
+
+\begin_layout Standard
+Analizando el denominador de (5) se llega a que los ceros del polinomio
+ estan dados por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\omega_{p}(-\frac{1}{2Q_{p}}\pm\sqrt{(\frac{1}{2Q_{p}})^{2}-\omega_{p}^{2}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remplazando en la ecuacion (6) por los valores de las magnitudes calculados
+ en relacion a los componentes se llega a las dos siguientes expresiones
+ para los polos:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $polos=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm\sqrt{\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)^{2}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}-\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dichas expresiones genericas para los polos se obtuvieron de manera simbolica
+ mediante el uso de Matlab.
+\end_layout
+
+\begin_layout Standard
+De manera similar se puede obtener una expresion generica para los ceros
+ de la transferencia utilizando la expresion (6) pero reemplazando en la
+ misma por la selectividad y la frecuencia de corte adecuada.
+ La expresion obtenida mediante el mismo analisis en Matlab pero para los
+ ceros es:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $ceros=\left(\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}}{2R_{4}R_{5}R_{6}R_{7}}\pm\sqrt{\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)^{2}}{4C_{6}R_{4}R_{5}R_{6}^{2}R_{7}^{2}R_{8}\left(R_{4}+R_{5}\right)}-\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuacion se analizara el caso de que pasa con los polos y ceros del
+ circuito para casos extremos en los valores de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+(cortocircuitandola o haciendo que sea un circuito abierto).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $R_{6}\rightarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Tomando el limite en la funcion transferencia (4), se llega a que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $lim_{R_{6\rightarrow0}}H(s)=-\frac{R_{4}s}{R_{8}s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lo que significa que en el caso en el que se corotciruita 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+ se tiene un polo simple asi como un cero simple en el origen.Como el polo
+ y el cero se 'anulan', el circuito se comportaria como un circuito inversor
+ donde la relacion entre 
+\begin_inset Formula $R_{4}$
+\end_inset
+
+y 
+\begin_inset Formula $R_{8}$
+\end_inset
+
+ es la que define la ganancia.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $R_{6}\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Si se asume que los polos son complejos conjugados(El cual es el caso de
+ interes ya que el circuito se utilizara como un filtro notch con 
+\begin_inset Formula $Q_{p}>\frac{1}{2}$
+\end_inset
+
+).
+ La expresion de los polos cambia a la forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $polos=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm j\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)^{2}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se toman como fijos los valores de todos los componentes menos el de
+ 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+, se tiene que al aumentar el valor de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+ la parte imaginaria de los polos crece(en modulo).Como caso contrario, al
+ aumentar el valor de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+ la parte real de los polos disminuye(tambien en modulo).Al tomar el valor
+ de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+como infinito se llega a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $polos_{R_{6}=\infty}=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm j\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El hecho de que al tomar valores de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+mayores el modulo de la parte imaginaria del polo aumente, mientras que
+ la real disminuya implica que mientras mayor sea el valor de 
+\begin_inset Formula $R_{6}$
+\end_inset
+
+ mayor es la selectividad del circuito (
+\begin_inset Formula $Q_{p}$
+\end_inset
+
+).
+ En la siguiente imagen se muestra la relacion entre algunas magnitudes
+ del denominador de una funcion transferencia de segundo orden que corresponde
+ a un sistema con 
+\begin_inset Formula $\xi<1$
+\end_inset
+
+(respuesta transistoria sub-amortiguada, polos complejos conjugados):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/Pole-zero-diagram-of-an-underdamped-second-order-oscillator-as-a-function-of-the.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Polos de un sistema de segundo orden con 
+\begin_inset Formula $\xi<1$
+\end_inset
+
+ (
+\begin_inset Formula $Q_{P}>\frac{1}{2}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La figura anterior muestra como al aumentar el angulo entre el eje real
+ y el vector posicion del polo, el 
+\begin_inset Formula $\xi=\frac{1}{2Q}$
+\end_inset
+
+ disminuye, lo que equivale a decir que el factor de calidad aumenta.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Notch Depth
+\end_layout
+
+\begin_layout Standard
+El termino 'Notch Depth' hace referencia a la atenuacion que produce un
+ filtro Notch sobre la frecuencia de corte(
+\begin_inset Formula $\omega_{z}$
+\end_inset
+
+).
+ A continuacion se analizara la funcion transferencia de un filtro rechazza
+ banda y se analizara el efecto de las magnitudes que la componen para llegar
+ a conclusiones sobre la notch depth:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+H(s)=\frac{s^{2}+\omega_{z}^{2}}{s^{2}+s\frac{\omega_{p}}{Q}+\omega_{p}^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{z}$
+\end_inset
+
+es la frecuencia de corte del filtro y define donde esta centrada la banda
+ de rechazo del mismo
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+ determina si el filtro es un 'High Pass Notch'(
+\begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}<1$
+\end_inset
+
+), un 'Low Pass Notch' (
+\begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}>1$
+\end_inset
+
+), o un Notch comun (
+\begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}=1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Q$
+\end_inset
+
+ se denomina el factor de calidad del filtro y controla el ancho de la banda
+ de rechazo asi como tambien el valor del Notch depth.
+ Para mayores valores de Q la banda de rechazo es mas estrecha pero de menor
+ Notch Depth, mientras que para valores de 
+\begin_inset Formula $Q$
+\end_inset
+
+ bajos la banda de rechazo es mas extensa pero de menor Notch Depth.
+\end_layout
+
+\begin_layout Standard
+Una aproximacion utilizada para estimar el ancho de la banda de rechazo
+ es 
+\begin_inset Formula $\frac{1}{Q}$
+\end_inset
+
+.
+ En un filtro Notch ideal, la frecuencia de corte es un cero de transmision
+ de la funcion transfrencia.Sin embargo(!!!!!)
+\end_layout
+
+\begin_layout Subsection
+Eleccion de los componentes
+\end_layout
+
+\begin_layout Subsubsection
+Valores de elementos pasivos
+\end_layout
+
+\begin_layout Standard
+Se eligieron los componentes del circuito con el objetivo de que el mismo
+ funcione como un filtro 'High Pass Notch'.
+ Las exigencias a cumplir se presentan en la siguiente tabla:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\omega_{p}(rad/seg)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $Q$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $|H(\infty)|(db)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Requisitos del filtro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Primero se analizara la exigencia de la ganancia en el infinito, para ello
+ se reescribira la ecuacion (5) de la forma:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+H(s)=K\frac{\frac{1}{\omega_{z}^{2}}+\frac{1}{\omega_{z}Q_{z}s}+\frac{1}{s^{2}}}{\frac{1}{\omega_{p}^{2}}+\frac{1}{\omega_{p}Q_{p}s}+\frac{1}{s^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se toma el limite para una frecuencia infinita, lo termnos con s dividiendo
+ se anulan y queda:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+|H(\infty)|=\frac{2k^{2}}{k^{2}+1}(\frac{\omega_{p}}{\omega_{z}})^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $|H(\infty)|=\frac{2}{k^{2}+1}$
+\end_inset
+
+ , 
+\begin_inset Formula $k^{-1}=\frac{\omega_{p}}{\omega_{z}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que reemplazando por la condicion de 4dB(aproximadamente 1.58 en veces),
+ se llega a que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+k=0.5117760144
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+k\approx0.512
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para cumplir la primera condicion de la tabla se remplaza en la expresion
+ obtenida en el marco teorico para 
+\begin_inset Formula $\omega_{p}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\omega_{p}=\frac{1}{RC}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+RC=\frac{1}{13000}\frac{seg}{rad}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se probo con varios valores comerciales de capacitores y se llego a la conclusio
+n que una forma de llegar a valores convenientes de capacitores tanto como
+ de resistencias es fijando C=47nf.
+ Haciendo dicha seleccion el valor de R queda fijado a:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\[
+R\approx1637
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando los valores de C, R, k y 
+\begin_inset Formula $Q$
+\end_inset
+
+ obtenidos que cumplen los requisitos, los valores elegidos mas cercanos
+ a los teoricos fueron:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\begin{array}{cc}
+R_{1}=R_{3}=R_{8}=15k\Omega, & R_{4}=680\Omega,\\
+R_{7}=15k\Omega, & C_{2}=C_{6}=47nf
+\end{array}$
+\end_inset
+
+
+\begin_inset Formula $\begin{array}{cc}
+R_{5}=1.2k\Omega & R_{6}=3.9k\Omega\\
+\\
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Eleccion del modelo de amplificador operacional
+\end_layout
+
+\begin_layout Standard
+Para la implementacion del circuito se decidio utilizar el modelo de amplificado
+r operacional LM833, a lo largo de esta seccion se justificara la eleccion
+ del modelo.
+ El circuito a implementar debe funcionar como un filtro High Pass Notch
+ con la frecuencia de notch cerca de 1.06kHz, y se desea que luego la ganancia
+ para altas frecuencias quede establecida en 4dB.
+ Se llego a la conclusion de que la mayor limitacion de dicho filtro es
+ el funcionamiento del circuito a altas frecuencias, por lo que los parametros
+ del amplificador que se consideraron de mayor importancia fueron el slew
+ rate y el BWP del modelo.
+\end_layout
+
+\begin_layout Standard
+El BWP del operacional influye en la decision ya que el mismo indica la
+ relacion entre la ganancia a lazo abierto del operacional y la ubicacion
+ del polo dominante del mismo.
+ Para el LM833 el BWP es de un valor tipico de 15MHz y un valor minimo de
+ 10MHz, lo cual es el mayor BWP que se pudo encontrar dentro de los operacionale
+s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parametros:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3.16\times10^{4}<A_{vol}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{vol_{tipico}}=3.16\times10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{o_{tipico}}=298\frac{rad}{seg}$
+\end_inset
+
+ (Polo dominante)
+\end_layout
+
+\begin_layout Subsection
+Resultados de las mediciones
+\end_layout
+
+\begin_layout Subsection
+Analisis de las mediciones
+\end_layout
+
+\begin_layout Subsection
+Conclusiones
+\end_layout
+
+\end_body
+\end_document
