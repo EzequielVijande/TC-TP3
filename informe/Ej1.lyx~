@@ -84,13 +84,13 @@ Filtro con GIC
 \end_layout
 
 \begin_layout Subsection
-Introduccion
+Introducción
 \end_layout
 
 \begin_layout Standard
-En la siguiente seccion se muestra la resolucion de un circuito que utiliza
- un GIC(Generalized Impedance Converter).Se calculo de manera teorica la
- funcion transferencia, la ubicacion de polos y ceros, y las impedancias
+En la siguiente sección se muestra la resolución de un circuito que utiliza
+ un GIC(Generalized Impedance Converter).Se calculo de manera teórica la
+ función transferencia, la ubicación de polos y ceros, y las impedancias
  de entrada y de salida del siguiente circuito:
 \end_layout
 
@@ -131,10 +131,10 @@ Objetivos y resumen
 \end_layout
 
 \begin_layout Standard
-Se tomo como objetivoo de este informe la presentacion de la resolucion
- teorica de la funcion transferencia del circuito para el caso de OpAmps
- ideales con ganancias a lazo abierto finitas.Tambien se busco analizar de
- manera teorica como las resistencias 
+Se tomo como objetivo de este informe la presentación de la resolución teórica
+ de la función transferencia del circuito para el caso de OpAmps ideales
+ con ganancias a lazo abierto finitas.También se busco analizar de manera
+ teórica como las resistencias 
 \begin_inset Formula $R_{6}$
 \end_inset
 
@@ -142,24 +142,80 @@ Se tomo como objetivoo de este informe la presentacion de la resolucion
 \begin_inset Formula $R_{8}$
 \end_inset
 
- afectan al circuito a la expresion de la funcion transferencia, en particular
- a las singularidades de la misma.Finalmente se decidio implementar dicho
- filtro como un filtro 'High Pass Notch' mediante la adecuada eleccion de
+ afectan al circuito a la expresión de la función transferencia, en particular
+ a las singularidades de la misma.Finalmente se decidió implementar dicho
+ filtro como un filtro 'High Pass Notch' mediante la adecuada elección de
  componentes y medir las impedancias y la respuesta en frecuencia de la
- configuracion.
-\end_layout
-
-\begin_layout Subsection
-Resolucion del circuito
-\end_layout
-
-\begin_layout Subsubsection
-Fucion transferencia
+ configuración.
 \end_layout
 
 \begin_layout Standard
-Para resolver el circuito se utilizo el metodo de nodos del cual se obtuvo
- el siguiente sistema de ecuaciones:
+Para la realización del circuito se utilizo un Generalized Impedance Converter(G
+IC), dicho elemento consiste en un conjunto de elementos pasivos y dos amplifica
+dores operacionales dispuestos en la siguiente configuración:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/gic.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ilustración de un GIC generico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un GIC puede utilizarse para crear una impedancia de un valor definido por
+ sus componentes pasivos, y se puede comportar en frecuencia de muchas formas
+ posibles.
+ Uno de sus usos mas comunes es para simular inductores en bajas frecuencias,
+ ya que la fabricación de estos posee muchas complicaciones, debido a su
+ tamaño, su composición y el hecho de que pueden crear efectos indeseados
+ en el circuito.
+\end_layout
+
+\begin_layout Subsection
+Resolución del circuito
+\end_layout
+
+\begin_layout Subsubsection
+Función transferencia
+\end_layout
+
+\begin_layout Standard
+En la resolución que se expone a continuación se asumió que la ganancia
+ a lazo abierto de los dos operacionales es la misma.Para resolver el circuito
+ se utilizo el método de nodos del cual se obtuvo el siguiente sistema de
+ ecuaciones:
 \end_layout
 
 \begin_layout Itemize
@@ -250,7 +306,7 @@ Grafo equivalente del circuito
 \end_layout
 
 \begin_layout Standard
-La ganancia deseada se puede obtener si se aplica la formula de Mason:
+La ganancia deseada se puede obtener si se aplica la formula de Masón:
 \end_layout
 
 \begin_layout Standard
@@ -344,8 +400,8 @@ En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
 \end_layout
 
 \begin_layout Standard
-Se despejo convenientemente la funcion tranferencia con la ayuda de Matlab
- y se llego a la siguiente funcion transferencia para cuando la ganancia
+Se despejo convenientemente la función transferencia con la ayuda de Matlab
+ y se llego a la siguiente función transferencia para cuando la ganancia
  en lazo abierto(
 \begin_inset Formula $A_{vol}$
 \end_inset
@@ -382,7 +438,7 @@ Si se considera que
 \begin_inset Formula $A_{vol}$
 \end_inset
 
- es infinitamente grande enonces se llega a la transferencia ideal:
+ es infinitamente grande entonces se llega a la transferencia ideal:
 \end_layout
 
 \begin_layout Standard
@@ -398,8 +454,8 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}R_{8}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}
 \end_layout
 
 \begin_layout Standard
-La funcion transferencia puede ser reescrita en funcion de cierta magnitudes
- de interes como se presenta a continuacion:
+La función transferencia puede ser reescrita en función de cierta magnitudes
+ de interés como se presenta a continuación:
 \end_layout
 
 \begin_layout Standard
@@ -510,7 +566,7 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Subsubsection
-Funcion de 
+Función de 
 \begin_inset Formula $R_{8}$
 \end_inset
 
@@ -520,7 +576,7 @@ Funcion de
 \begin_layout Standard
 El circuito ademas del GIC tiene unas resistencias y un capacitor adicional
  que lo componen.
- A continuacion se analiza que sucede al tomar los limites de los dos casos
+ A continuación se analiza que sucede al tomar los limites de los dos casos
  extremos, cuando la resistencia 
 \begin_inset Formula $R_{8}$
 \end_inset
@@ -538,7 +594,7 @@ Caso
 
 \begin_deeper
 \begin_layout Standard
-Tomando dicho limite de la expresion (4) se llega a:
+Tomando dicho limite de la expresión (4) se llega a:
 \end_layout
 
 \end_deeper
@@ -566,7 +622,7 @@ H(s)=-\frac{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}{R_{6}}s+1
 \end_layout
 
 \begin_layout Standard
-Con lo cual la funcion trasnferencia es la de un filtro pasa altos con 
+Con lo cual la función transferencia es la de un filtro pasa altos con 
 \begin_inset Formula $\omega_{corte}=-\frac{R_{6}}{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}$
 \end_inset
 
@@ -583,7 +639,7 @@ Con lo cual la funcion trasnferencia es la de un filtro pasa altos con
 \end_layout
 
 \begin_layout Standard
-Nuevamente haciendo el limite en la expresion (4 ) se tiene que:
+Nuevamente haciendo el limite en la expresión (4 ) se tiene que:
 \end_layout
 
 \begin_layout Standard
@@ -642,7 +698,7 @@ Diagrama de polos y ceros
 
 \begin_layout Standard
 Analizando el denominador de (5) se llega a que los ceros del polinomio
- estan dados por:
+ están dados por:
 \end_layout
 
 \begin_layout Standard
@@ -657,8 +713,8 @@ Analizando el denominador de (5) se llega a que los ceros del polinomio
 \end_layout
 
 \begin_layout Standard
-Remplazando en la ecuacion (6) por los valores de las magnitudes calculados
- en relacion a los componentes se llega a las dos siguientes expresiones
+Remplazando en la ecuación (6) por los valores de las magnitudes calculados
+ en relación a los componentes se llega a las dos siguientes expresiones
  para los polos:
 \end_layout
 
@@ -671,15 +727,15 @@ Remplazando en la ecuacion (6) por los valores de las magnitudes calculados
 \end_layout
 
 \begin_layout Standard
-Dichas expresiones genericas para los polos se obtuvieron de manera simbolica
+Dichas expresiones genéricas para los polos se obtuvieron de manera simbólica
  mediante el uso de Matlab.
 \end_layout
 
 \begin_layout Standard
-De manera similar se puede obtener una expresion generica para los ceros
- de la transferencia utilizando la expresion (6) pero reemplazando en la
+De manera similar se puede obtener una expresión genérica para los ceros
+ de la transferencia utilizando la expresión (6) pero reemplazando en la
  misma por la selectividad y la frecuencia de corte adecuada.
- La expresion obtenida mediante el mismo analisis en Matlab pero para los
+ La expresión obtenida mediante el mismo análisis en Matlab pero para los
  ceros es:
 \end_layout
 
@@ -692,12 +748,12 @@ De manera similar se puede obtener una expresion generica para los ceros
 \end_layout
 
 \begin_layout Standard
-A continuacion se analizara el caso de que pasa con los polos y ceros del
+A continuación se analizara el caso de que pasa con los polos y ceros del
  circuito para casos extremos en los valores de 
 \begin_inset Formula $R_{6}$
 \end_inset
 
-(cortocircuitandola o haciendo que sea un circuito abierto).
+(cortocircuitando la o haciendo que sea un circuito abierto).
 \end_layout
 
 \begin_layout Enumerate
@@ -709,7 +765,7 @@ A continuacion se analizara el caso de que pasa con los polos y ceros del
 
 \begin_deeper
 \begin_layout Standard
-Tomando el limite en la funcion transferencia (4), se llega a que:
+Tomando el limite en la función transferencia (4), se llega a que:
 \end_layout
 
 \begin_layout Standard
@@ -721,13 +777,13 @@ Tomando el limite en la funcion transferencia (4), se llega a que:
 \end_layout
 
 \begin_layout Standard
-Lo que significa que en el caso en el que se corotciruita 
+Lo que significa que en el caso en el que se cortocircuita 
 \begin_inset Formula $R_{6}$
 \end_inset
 
- se tiene un polo simple asi como un cero simple en el origen.Como el polo
- y el cero se 'anulan', el circuito se comportaria como un circuito inversor
- donde la relacion entre 
+ se tiene un polo simple así como un cero simple en el origen.Como el polo
+ y el cero se 'anulan', el circuito se comportaría como un circuito inversor
+ donde la relación entre 
 \begin_inset Formula $R_{4}$
 \end_inset
 
@@ -749,7 +805,7 @@ y
 \begin_deeper
 \begin_layout Standard
 Si se asume que los polos son complejos conjugados(El cual es el caso de
- interes ya que el circuito se utilizara como un filtro notch con 
+ interés ya que el circuito se utilizara como un filtro Notch con 
 \begin_inset Formula $Q_{p}>\frac{1}{2}$
 \end_inset
 
@@ -780,7 +836,7 @@ Si se toman como fijos los valores de todos los componentes menos el de
 \begin_inset Formula $R_{6}$
 \end_inset
 
- la parte real de los polos disminuye(tambien en modulo).Al tomar el valor
+ la parte real de los polos disminuye(también en modulo).Al tomar el valor
  de 
 \begin_inset Formula $R_{6}$
 \end_inset
@@ -811,13 +867,13 @@ mayores el modulo de la parte imaginaria del polo aumente, mientras que
 \end_inset
 
 ).
- En la siguiente imagen se muestra la relacion entre algunas magnitudes
- del denominador de una funcion transferencia de segundo orden que corresponde
+ En la siguiente imagen se muestra la relación entre algunas magnitudes
+ del denominador de una función transferencia de segundo orden que corresponde
  a un sistema con 
 \begin_inset Formula $\xi<1$
 \end_inset
 
-(respuesta transistoria sub-amortiguada, polos complejos conjugados):
+(respuesta transitoria sub-amortiguada, polos complejos conjugados):
 \end_layout
 
 \begin_layout Standard
@@ -868,7 +924,7 @@ Polos de un sistema de segundo orden con
 
 \begin_layout Standard
 La figura anterior muestra como al aumentar el angulo entre el eje real
- y el vector posicion del polo, el 
+ y el vector posición del polo, el 
 \begin_inset Formula $\xi=\frac{1}{2Q}$
 \end_inset
 
@@ -881,13 +937,13 @@ Notch Depth
 \end_layout
 
 \begin_layout Standard
-El termino 'Notch Depth' hace referencia a la atenuacion que produce un
+El termino 'Notch Depth' hace referencia a la atenuación que produce un
  filtro Notch sobre la frecuencia de corte(
 \begin_inset Formula $\omega_{z}$
 \end_inset
 
 ).
- A continuacion se analizara la funcion transferencia de un filtro rechazza
+ A continuación se analizara la función transferencia de un filtro rechaza
  banda y se analizara el efecto de las magnitudes que la componen para llegar
  a conclusiones sobre la notch depth:
 \end_layout
@@ -923,7 +979,7 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}>1$
 \end_inset
 
-), o un Notch comun (
+), o un Notch común (
 \begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}=1$
 \end_inset
 
@@ -935,7 +991,7 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \end_inset
 
  se denomina el factor de calidad del filtro y controla el ancho de la banda
- de rechazo asi como tambien el valor del Notch depth.
+ de rechazo así como también el valor del Notch depth.
  Para mayores valores de Q la banda de rechazo es mas estrecha pero de menor
  Notch Depth, mientras que para valores de 
 \begin_inset Formula $Q$
@@ -945,18 +1001,18 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \end_layout
 
 \begin_layout Standard
-Una aproximacion utilizada para estimar el ancho de la banda de rechazo
+Una aproximación utilizada para estimar el ancho de la banda de rechazo
  es 
 \begin_inset Formula $\frac{1}{Q}$
 \end_inset
 
 .
- En un filtro Notch ideal, la frecuencia de corte es un cero de transmision
- de la funcion transfrencia.Sin embargo(!!!!!)
+ En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
+ de la función transferencia.Sin embargo(!!!!!)
 \end_layout
 
 \begin_layout Subsection
-Eleccion de los componentes
+Elección de los componentes
 \end_layout
 
 \begin_layout Subsubsection
@@ -1081,7 +1137,7 @@ Requisitos del filtro
 
 \begin_layout Standard
 Primero se analizara la exigencia de la ganancia en el infinito, para ello
- se reescribira la ecuacion (5) de la forma:
+ se reescribirá la ecuación (5) de la forma:
 \end_layout
 
 \begin_layout Standard
@@ -1097,7 +1153,7 @@ H(s)=K\frac{\frac{1}{\omega_{z}^{2}}+\frac{1}{\omega_{z}Q_{z}s}+\frac{1}{s^{2}}}
 \end_layout
 
 \begin_layout Standard
-Si se toma el limite para una frecuencia infinita, lo termnos con s dividiendo
+Si se toma el limite para una frecuencia infinita, los términos con s dividiendo
  se anulan y queda:
 \end_layout
 
@@ -1126,7 +1182,7 @@ Si se toma el limite para una frecuencia infinita, lo termnos con s dividiendo
 \end_layout
 
 \begin_layout Standard
-Por lo que reemplazando por la condicion de 4dB(aproximadamente 1.58 en veces),
+Por lo que reemplazando por la condición de 4dB(aproximadamente 1.58 en veces),
  se llega a que:
 \end_layout
 
@@ -1155,8 +1211,8 @@ k\approx0.512
 \end_layout
 
 \begin_layout Standard
-Para cumplir la primera condicion de la tabla se remplaza en la expresion
- obtenida en el marco teorico para 
+Para cumplir la primera condición de la tabla se remplaza en la expresión
+ obtenida en el marco teórico para 
 \begin_inset Formula $\omega_{p}$
 \end_inset
 
@@ -1184,10 +1240,10 @@ RC=\frac{1}{13000}\frac{seg}{rad}
 \end_layout
 
 \begin_layout Standard
-Se probo con varios valores comerciales de capacitores y se llego a la conclusio
+Se probo con varios valores comerciales de capacitores y se llego a la conclusió
 n que una forma de llegar a valores convenientes de capacitores tanto como
  de resistencias es fijando C=47nf.
- Haciendo dicha seleccion el valor de R queda fijado a:
+ Haciendo dicha selección el valor de R queda fijado a:
 \end_layout
 
 \begin_layout Standard
@@ -1208,7 +1264,7 @@ Utilizando los valores de C, R, k y
 \end_inset
 
  obtenidos que cumplen los requisitos, los valores elegidos mas cercanos
- a los teoricos fueron:
+ a los teóricos fueron:
 \end_layout
 
 \begin_layout Standard
@@ -1230,15 +1286,644 @@ R_{5}=1.2k\Omega & R_{6}=3.9k\Omega\\
 \end_layout
 
 \begin_layout Subsubsection
-Eleccion del modelo de amplificador operacional
+Elección del modelo de amplificador operacional
+\end_layout
+
+\begin_layout Standard
+Para la implementación del circuito se decidió utilizar el modelo de amplificado
+r operacional LM833, a lo largo de esta sección se justificara la elección
+ del modelo.
+ El circuito a implementar debe funcionar como un filtro High Pass Notch
+ con la frecuencia de notch cerca de 1.06kHz, y se desea que luego la ganancia
+ para altas frecuencias quede establecida en 4dB.
+ Se llego a la conclusión de que la mayor limitación de dicho filtro es
+ el funcionamiento del circuito a altas frecuencias, por lo que los parámetros
+ del amplificador que se consideraron de mayor importancia fueron el slew
+ rate y el BWP del modelo.
+\end_layout
+
+\begin_layout Standard
+El BWP del operacional influye en la decisión ya que el mismo indica la
+ relación entre la ganancia a lazo abierto del operacional y la ubicación
+ del polo dominante del mismo.
+ Para el LM833 el BWP es de un valor típico de 15MHz y un valor mínimo de
+ 10MHz, lo cual es el mayor BWP que se pudo encontrar dentro de los operacionale
+s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $3.16\times10^{4}<A_{vol}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A_{vol_{tipico}}=3.16\times10^{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\omega_{o_{tipico}}=298\frac{rad}{seg}$
+\end_inset
+
+ (Polo dominante)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $SlewRate_{tipico}=7\frac{V}{\mu seg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I_{bias_{MAX}}=1\mu A$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $v_{offset_{MAX}}=5mV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $Z_{in}=175k\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las mayores desventajas del amplificador son sus altos valores de corrientes
+ de bias y su baja impedancia de entrada con respecto a otros operacionales.Sin
+ embargo, se considero que dichas desventajas no son de gran interés ya
+ que los valores de resistencias elegidos para el circuito son relativamente
+ bajos(la resistencia mas grande es de 15kΩ).Esto significa que las resistencias
+ utilizadas pueden considerarse mucho menores que la impedancia de entrada
+ del operacional, así como también se puede despreciar las caídas en las
+ resistencias debido a las corrientes de bias ya que las mismas no tienen
+ valores lo suficientemente grandes para alterar significativamente el funcionam
+iento del circuito.
+ En el peor caso se tendría que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $I_{bias_{MAX}}R_{7}=(1\mu A)\times(15k\Omega)=15mV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esa seria la peor caída posible asumiendo que la corriente de bias toma
+ su máximo valor posible y que la misma pasa completamente por 
+\begin_inset Formula $R_{7}$
+\end_inset
+
+ que tiene el valor de resistencia mas grande del circuito.
+\end_layout
+
+\begin_layout Standard
+En cuanto al slew rate, se trato de que sea lo mas alto posible para poder
+ tener un mayor rango de tensiones posible a altas frecuencias.
+\end_layout
+
+\begin_layout Subsection
+Limitaciones del filtro
+\end_layout
+
+\begin_layout Subsubsection
+Slew rate
+\end_layout
+
+\begin_layout Standard
+El slew rate del LM833 es en l peor de los casos de 
+\begin_inset Formula $5\frac{V}{\mu s}$
+\end_inset
+
+, se realizaron las cuentas para este caso con el objetivo de ver cual es
+ la mayor amplitud posible a la entrada del circuito para frecuencias mayores
+ a los 100kHz, ya que para frecuencias menores a esta el circuito satura
+ antes de que el slew rate sea una limitacion.La formula utilizada para encontrar
+ las limitaciones fue la siguiente:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+SR=A_{max}G_{i}2\pi f
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ es la ganancia ideal que tiene el filtro luego de 10kHz,como se asume que
+ esta se mantiene constante en 4dB entonces 
+\begin_inset Formula $G_{i}=1.585$
+\end_inset
+
+.Remplazando por los valores numericos en (8) y despejando se llega a la
+ ecuacion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $A_{max}\approx\frac{502100}{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuacion se presenta una breve tabla con algunos valores de tensiones
+ maximas permitidas para freceuncias mayores a los 100KHz:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(kHz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{max}(V)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.02
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.502
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores maximos de amplitud de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Saturacion
+\end_layout
+
+\begin_layout Standard
+Tambien se debe tener cuidado de no saturar al operacional con tensiones
+ de eentrada muy grandes.El mayor riesgo de saturacion es en el sobrepico
+ que sigue a la frecuencia de notch, ya que es el rango de frecuencias de
+ la transferencia en el que hay mayor ganancia.
+ El punto maximo de este sobrepico segun las simulaciones en LTSpice es
+ a los 2.5kHz y puede llegar a tener una ganancia de hasta 8.7dB(2.72 veces).De
+ la datasheet del LM833 se obtiene que en el peor de los casos la salida
+ del operacional puede ser del rango de 
+\begin_inset Formula $\pm12$
+\end_inset
+
+V,por lo que se tiene que la mayor amplitud posible a la entrada sin saturar
+ la salida es en el peor caso posible de unos 4.4V.Sin embargo, la mayor ganancia
+ medida empiricamente en el sobrepico fue de 6.7dB(La grafica se encuentra
+ en la seccion 1.6) , con lo que empiricamente se obtiene que el mayor valor
+ posible de entrada es de 5.55V.
+\end_layout
+
+\begin_layout Subsubsection
+Polo dominante
+\end_layout
+
+\begin_layout Standard
+A partir de la simulacion en LTSpice, se obtiene que el filtro funciona
+ adecuadamente hasta alrededor de los 5MHz en donde la ganancia sube alrededor
+ de 1dB y luego en 11MHz la ganancia empieza a bajar debido al polo dominante
+ del amplificador operacional.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/PoloDominante.PNG
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+El efecto del polo dominante del LM833
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Resultados de las mediciones
 \end_layout
 
+\begin_layout Standard
+A continuación se presentan las gráficas de las mediciones de los distintos
+ parámetros medidos del circuito superpuestos con los obtenidos de las simulacio
+nes de los mismos.La gráfica de la transferencia teórica del filtro se realizo
+ utilizando la expresión (3) con el valor de 
+\begin_inset Formula $A_{vol}$
+\end_inset
+
+ de a datasheet del operacional.
+\end_layout
+
+\begin_layout Subsubsection
+Respuesta en frecuencia
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/MagRespFrec.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnitud de la respuesta en frecuencia del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/FaseRespFrec.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase de la respuesta en frecuencia del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de entrada
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnitud de la impedancia de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase de la impedancia de salida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de salida
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/MagZout.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnitud de la impedancia de salida del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/FaseZout.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase de la impedancia de salida del circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-Analisis de las mediciones
+Análisis de las mediciones
 \end_layout
 
 \begin_layout Subsection
