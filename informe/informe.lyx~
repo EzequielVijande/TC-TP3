@@ -118,8 +118,11 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset Preview
+
+\begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -473,6 +476,22 @@ vfill
 end{titlepage}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Amplificador de Instrumentación
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
