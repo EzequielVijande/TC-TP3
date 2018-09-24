@@ -49,8 +49,6 @@ H=simplify(H,'IgnoreAnalyticConstraints',true);
 pretty(H)
 
 Ru=R1*R6+R6*R7+R7*R1;
-
-clc;
 num1=C2*C6*R1*R3*R6*R7*(Ra*(1+1/A)-R4*R5);
 num2=(R1*R6*Ra*((C6*R7)/A+C2*R3*(1+1/A))+C2*R3*R4*R5*R6*R7-C2*C6*R1*R3*R4*R5*R6*R7-C2*R3*R4*R5*Ru);
 num3=R6*((R1*Ra)/A+R4*R5*R7);
@@ -59,16 +57,19 @@ den1=C2*C6*R1*R3*R6*R7*((Ra/A)*(1+1/A)+R5*R8);
 den2=( (C6*R1*R6*R7*Ra+C2*R3*Ra*Ru)/A-C2*R3*R5*R6*R7*R8+C2*R3*R5*R8*Ru+(Ra/(A^2))*(C2*R3*Ru+C6*R1*R6*R7));
 den3=(Ra*Ru)/A+R6*R7*Ra-R5*R6*R7*R8+(Ru*Ra)/(A^2);
 
-num=num1*(s^2)+...
-    num2*s+...
-    num3;
-den= den1*(s^2)+...
-    den2*s+...
-    den3;
-wp= sqrt( 1/(den1/den3) );
-Q= 1/((den2/den3)*wp);
-wz= sqrt( 1/(num1/num3) );
-pretty(simplify(wz))
-%H=k*(num/den);
-%H=simplify(H,'IgnoreAnalyticConstraints',true);
-%pretty(H)
+num1=C2*C6*R1*R3*R6*R7*(Ra-R4*R5);
+num2=(R1*R6*Ra*(C2*R3)+C2*R3*R4*R5*R6*R7-C2*C6*R1*R3*R4*R5*R6*R7-C2*R3*R4*R5*Ru);
+num3=R6*(R4*R5*R7);
+
+num1=simplify(num1);
+num2=simplify(num2);
+num3=simplify(num3);
+wz=simplify(sqrt(num3/num1));
+qz=simplify(num3/(wz*num2));
+qaux=simplify(1/(2*qz));
+cero1= wz*(-qaux+sqrt( (qaux^2)-(wz^2)));
+cero2= wz*(-qaux-sqrt( (qaux^2)-(wz^2)));
+cero1=simplify(cero1);
+cero2=simplify(cero2);
+pretty(cero2)
+latex(cero2)

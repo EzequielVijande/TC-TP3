@@ -1,7 +1,7 @@
 close all;
-R=1636.66;
+R=1636.661211;
 C=47e-9;
-k=0.515;
+k=0.5118;
     Q=2;
     R1=R;
     R3=R;
@@ -11,7 +11,7 @@ k=0.515;
     R8=R;
     R6=Q*(1+(k^2))*R;
 
-    A=1000e9;
+    A=10e4;
 
     C2=C;
     C6=C;
@@ -25,7 +25,7 @@ k=0.515;
     num1=C2*C6*R1*R3*R6*R7*(Ra*(1+1/A)-R4*R5);
     num2=(R1*R6*Ra*((C6*R7)/A+C2*R3*(1+1/A))+C2*R3*R4*R5*R6*R7-C2*C6*R1*R3*R4*R5*R6*R7-C2*R3*R4*R5*Ru);
     num3=R6*((R1*Ra)/A+R4*R5*R7);
-
+    
     den1=C2*C6*R1*R3*R6*R7*((Ra/A)*(1+1/A)+R5*R8);
     den2=( (C6*R1*R6*R7*Ra+C2*R3*Ra*Ru)/A-C2*R3*R5*R6*R7*R8+C2*R3*R5*R8*Ru+(Ra/(A^2))*(C2*R3*Ru+C6*R1*R6*R7));
     den3=(Ra*Ru)/A+R6*R7*Ra-R5*R6*R7*R8+(Ru*Ra)/(A^2);
@@ -36,9 +36,10 @@ k=0.515;
     den= den1*(s^2)+...
         den2*s+...
         den3;
-
+wz=sqrt(num3/num1);
+qz=num3/(wz*num2)
     func=(num/den);
-    wx=((1*2*pi):(20*pi):((1e5)*(2*pi)));
+    wx=((1*2*pi):(10*pi):((1e6)*(2*pi)));
     [mag, fase]= bode(func, wx);
     mag2=squeeze(mag);
     fase2=squeeze(fase);
