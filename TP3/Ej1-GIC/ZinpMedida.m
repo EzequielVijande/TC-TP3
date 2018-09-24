@@ -1,13 +1,11 @@
 close all;
-Num= xlsread('Zinp');
+Num= xlsread('ZinpMedida');
 Sim1=xlsread('ZinpSIM');
 
 R=100e3;
 f1= Num(:,1);
-vin= Num(:,2);
-vout= Num(:,3);
-faseM= Num(:,4);
-Zinp=R.*(vout./(vin-vout));
+Zinp= Num(:,2);
+faseM= Num(:,3);
 
 
 f1SIM= Sim1(:,1);
