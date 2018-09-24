@@ -1397,6 +1397,297 @@ En cuanto al slew rate, se trato de que sea lo mas alto posible para poder
 \end_layout
 
 \begin_layout Subsection
+Limitaciones del filtro
+\end_layout
+
+\begin_layout Subsubsection
+Slew rate
+\end_layout
+
+\begin_layout Standard
+El slew rate del LM833 es en l peor de los casos de 
+\begin_inset Formula $5\frac{V}{\mu s}$
+\end_inset
+
+, se realizaron las cuentas para este caso con el objetivo de ver cual es
+ la mayor amplitud posible a la entrada del circuito para frecuencias mayores
+ a los 100kHz, ya que para frecuencias menores a esta el circuito satura
+ antes de que el slew rate sea una limitacion.La formula utilizada para encontrar
+ las limitaciones fue la siguiente:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+SR=A_{max}G_{i}2\pi f
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+ es la ganancia ideal que tiene el filtro luego de 10kHz,como se asume que
+ esta se mantiene constante en 4dB entonces 
+\begin_inset Formula $G_{i}=1.585$
+\end_inset
+
+.Remplazando por los valores numericos en (8) y despejando se llega a la
+ ecuacion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $A_{max}\approx\frac{502100}{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuacion se presenta una breve tabla con algunos valores de tensiones
+ maximas permitidas para freceuncias mayores a los 100KHz:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+f(kHz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $A_{max}(V)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5.02
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.01
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.502
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Valores maximos de amplitud de entrada
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Saturacion
+\end_layout
+
+\begin_layout Standard
+Tambien se debe tener cuidado de no saturar al operacional con tensiones
+ de eentrada muy grandes.El mayor riesgo de saturacion es en el sobrepico
+ que sigue a la frecuencia de notch, ya que es el rango de frecuencias de
+ la transferencia en el que hay mayor ganancia.
+ El punto maximo de este sobrepico segun las simulaciones en LTSpice es
+ a los 2.5kHz y puede llegar a tener una ganancia de hasta 8.7dB(2.72 veces).De
+ la datasheet del LM833 se obtiene que en el peor de los casos la salida
+ del operacional puede ser del rango de 
+\begin_inset Formula $\pm12$
+\end_inset
+
+V,por lo que se tiene que la mayor amplitud posible a la entrada sin saturar
+ la salida es en el peor caso posible de unos 4.4V.Sin embargo, la mayor ganancia
+ medida empiricamente en el sobrepico fue de 6.7dB(La grafica se encuentra
+ en la seccion 1.6) , con lo que empiricamente se obtiene que el mayor valor
+ posible de entrada es de 5.55V.
+\end_layout
+
+\begin_layout Subsubsection
+Polo dominante
+\end_layout
+
+\begin_layout Standard
+A partir de la simulacion en LTSpice, se obtiene que el filtro funciona
+ adecuadamente hasta alrededor de los 5MHz en donde la ganancia sube alrededor
+ de 1dB y luego en 11MHz la ganancia empieza a bajar debido al polo dominante
+ del amplificador operacional.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/PoloDominante.PNG
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+El efecto del polo dominante del LM833
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Resultados de las mediciones
 \end_layout
 
