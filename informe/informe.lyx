@@ -907,6 +907,7 @@ Se despejo convenientemente la función transferencia con la ayuda de Matlab
 \begin_layout Standard
 \align center
 
+\size scriptsize
 \lang spanish
 \begin_inset Formula 
 \begin{equation}
@@ -1323,6 +1324,7 @@ De manera similar se puede obtener una expresión genérica para los ceros
 \begin_layout Standard
 \align center
 
+\size tiny
 \lang spanish
 \begin_inset Formula $ceros=\left(\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}}{2R_{4}R_{5}R_{6}R_{7}}\pm\sqrt{\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)^{2}}{4C_{6}R_{4}R_{5}R_{6}^{2}R_{7}^{2}R_{8}\left(R_{4}+R_{5}\right)}-\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}$
 \end_inset
@@ -2188,7 +2190,7 @@ A continuacion se presenta una breve tabla con algunos valores de tensiones
 \begin_inset Float table
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
@@ -2426,7 +2428,7 @@ A partir de la simulacion en LTSpice, se obtiene que el filtro funciona
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
