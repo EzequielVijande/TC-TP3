@@ -519,8 +519,8 @@ Introducción
 \lang spanish
 En la siguiente sección se muestra la resolución de un circuito que utiliza
  un GIC(Generalized Impedance Converter).Se calculo de manera teórica la
- función transferencia, la ubicación de polos y ceros, y las impedancias
- de entrada y de salida del siguiente circuito:
+ función transferencia, la ubicación de polos y ceros, asi como se simularon
+ y midieron las impedancias de entrada y de salida del siguiente circuito:
 \end_layout
 
 \begin_layout Standard
@@ -984,7 +984,7 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}R_{8}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}
 \begin_layout Standard
 
 \lang spanish
-La función transferencia puede ser reescrita en función de cierta magnitudes
+La función transferencia puede ser reescrita en función de ciertas magnitudes
  de interés como se presenta a continuación:
 \end_layout
 
@@ -1712,14 +1712,69 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \begin_layout Standard
 
 \lang spanish
-Una aproximación utilizada para estimar el ancho de la banda de rechazo
- es 
-\begin_inset Formula $\frac{1}{Q}$
+En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
+ de la función transferencia.Sin embargo, en la practica la atenuacion del
+ filtro nunca es infinita y existe una relacion entre la ubicacion de la
+ frecuencia del polo con respecto a la del cero y la profundidad del notch.
+ A continuacion se presenta unos graficos de un filtro notch con un valor
+ de k(
+\begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}$
 \end_inset
 
-.
- En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
- de la función transferencia.
+) fijo y variando el valor de Q.:
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/NotchDepth.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang spanish
+Filtro Notch con k=0.99 y Q(de 0.1 a 100)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+No se puede apreciar del todo en la grafica, pero el notch depth disminuye
+ con el Q.
+ El mismo comienaa en -80 db y disminuye a valores cercanos a -10db para
+ los valores mas alto de Q.
 \end_layout
 
 \begin_layout Subsection
@@ -2013,7 +2068,7 @@ n que una forma de llegar a valores convenientes de capacitores tanto como
 \lang spanish
 \begin_inset Formula 
 \[
-R\approx1637
+R\approx1637\Omega
 \]
 
 \end_inset
@@ -2037,7 +2092,7 @@ Utilizando los valores de C, R, k y
 
 \lang spanish
 \begin_inset Formula $\begin{array}{cc}
-R_{1}=R_{3}=R_{8}=15k\Omega, & R_{4}=680\Omega,\\
+R_{1}=R_{3}=R_{8}=1.5k\Omega, & R_{4}=680\Omega,\\
 R_{7}=15k\Omega, & C_{2}=C_{6}=47nf
 \end{array}$
 \end_inset
@@ -2206,14 +2261,14 @@ Slew rate
 \begin_layout Standard
 
 \lang spanish
-El slew rate del LM833 es en l peor de los casos de 
+El slew rate del LM833 es en el peor de los casos de 
 \begin_inset Formula $5\frac{V}{\mu s}$
 \end_inset
 
 , se realizaron las cuentas para este caso con el objetivo de ver cual es
  la mayor amplitud posible a la entrada del circuito para frecuencias mayores
  a los 100kHz, ya que para frecuencias menores a esta el circuito satura
- antes de que el slew rate sea una limitacion.La formula utilizada para encontrar
+ antes de que el slew rate sea una limitación.La formula utilizada para encontrar
  las limitaciones fue la siguiente:
 \end_layout
 
@@ -2243,8 +2298,8 @@ Donde
 \begin_inset Formula $G_{i}=1.585$
 \end_inset
 
-.Remplazando por los valores numericos en (8) y despejando se llega a la
- ecuacion:
+.Remplazando por los valores numéricos en (8) y despejando se llega a la
+ ecuación:
 \end_layout
 
 \begin_layout Standard
@@ -2260,8 +2315,8 @@ Donde
 \begin_layout Standard
 
 \lang spanish
-A continuacion se presenta una breve tabla con algunos valores de tensiones
- maximas permitidas para freceuncias mayores a los 100KHz:
+A continuación se presenta una breve tabla con algunos valores de tensiones
+ máximas permitidas para frecuencias mayores a los 100KHz:
 \end_layout
 
 \begin_layout Standard
@@ -2443,7 +2498,7 @@ f(kHz)
 \begin_layout Plain Layout
 
 \lang spanish
-Valores maximos de amplitud de entrada
+Valores máximos de amplitud de entrada
 \end_layout
 
 \end_inset
@@ -2463,17 +2518,17 @@ Valores maximos de amplitud de entrada
 \begin_layout Subsubsection
 
 \lang spanish
-Saturacion
+Saturación
 \end_layout
 
 \begin_layout Standard
 
 \lang spanish
-Tambien se debe tener cuidado de no saturar al operacional con tensiones
- de eentrada muy grandes.El mayor riesgo de saturacion es en el sobrepico
+También se debe tener cuidado de no saturar al operacional con tensiones
+ de entrada muy grandes.El mayor riesgo de saturación es en el sobrepico
  que sigue a la frecuencia de notch, ya que es el rango de frecuencias de
  la transferencia en el que hay mayor ganancia.
- El punto maximo de este sobrepico segun las simulaciones en LTSpice es
+ El punto máximo de este sobrepico según las simulaciones en LTSpice es
  a los 2.5kHz y puede llegar a tener una ganancia de hasta 8.7dB(2.72 veces).De
  la datasheet del LM833 se obtiene que en el peor de los casos la salida
  del operacional puede ser del rango de 
@@ -2482,8 +2537,8 @@ Tambien se debe tener cuidado de no saturar al operacional con tensiones
 
 V,por lo que se tiene que la mayor amplitud posible a la entrada sin saturar
  la salida es en el peor caso posible de unos 4.4V.Sin embargo, la mayor ganancia
- medida empiricamente en el sobrepico fue de 6.7dB(La grafica se encuentra
- en la seccion 1.6) , con lo que empiricamente se obtiene que el mayor valor
+ medida empíricamente en el sobrepico fue de 6.7dB(La gráfica se encuentra
+ en la sección 1.6) , con lo que empíricamente se obtiene que el mayor valor
  posible de entrada es de 5.55V.
 \end_layout
 
@@ -2496,7 +2551,7 @@ Polo dominante
 \begin_layout Standard
 
 \lang spanish
-A partir de la simulacion en LTSpice, se obtiene que el filtro funciona
+A partir de la simulación en LTSpice, se obtiene que el filtro funciona
  adecuadamente hasta alrededor de los 5MHz en donde la ganancia sube alrededor
  de 1dB y luego en 11MHz la ganancia empieza a bajar debido al polo dominante
  del amplificador operacional.
@@ -2861,10 +2916,62 @@ Fase de la impedancia de salida del circuito
 Análisis de las mediciones
 \end_layout
 
+\begin_layout Standard
+
+\lang spanish
+Se puede ver en las mediciones realizadas que para la frecuencia de 1Mhz
+ las mediciones comienzan a diferir con los resultados simulados.
+ Esta diferencia resulta mas evidente en el caso de las impedancias medidas,
+ las cuales se midieron utilizando un analizador de impedancia, a diferencia
+ de la respuesta en frecuencia que se midió utilizando un osciloscopio.Es
+ posible que en el caso de la respuesta en frecuencia la discrepancia sea
+ causa del efecto que tienen los instrumentos de medición en el circuito.
+ 
+\end_layout
+
+\begin_layout Standard
+En la gráfica de respuesta se puede notar que la teoría y la simulación
+ se corresponden casi perfectamente.Sin embargo, hay discrepancias con las
+ mediciones respecto a la ubicación de la frecuencia de notch así como la
+ frecuencia del sobrepico(ambas están corridas levemente hacia la derecha).Las
+ diferencias pueden ser causa de las tolerancias de los componentes que
+ ocasionan que la ubicación de los polos y los ceros sea levemente distinta
+ por lo que la gráfica tiene la misma forma que la simulada pero esta corrida.
+ La medición de la notch depth difiere considerablemente de la simulación,
+ lo cual era de esperarse ya que la medición de la misma tiene complicaciones
+ debido a que la frecuencia que se desea medir esta fuertemente atenuada(entre
+ 60 y 70 veces) por lo que el ruido y la interferencia dificultan considerableme
+nte la medición.
+ En especial, se considera problemática la medición de la notch depth debido
+ a que el filtro es un pasa-altos, por lo que ademas de que se atenuá fuertement
+e la frecuencia que se quiere medir, la señal de entrada del generador no
+ es una senoidal perfecta por lo que sus armónicos son amplificados e interfiere
+n con la forma de onda a la salida, la cual deja de ser una senoidal.
+\end_layout
+
+\begin_layout Standard
+En cuanto a la impedancia de salida, se puede ver que la misma es despreciable
+ en todo el rango de funcionamiento, ya que el mayor valor que adquiere
+ es cercano a los 10Ω.La mayor discrepancia es en la medición de la fase
+ de la impedancia de salida, es posible que esto se deba al valor tan pequeño
+ de la magnitud de la impedancia, ya que a medida que aumenta la frecuencia
+ y la magnitud de la impedancia se aleja del 0 las mediciones de la fase
+ comienzan a tomar valores mas cercanos a los de la simulación.
+\end_layout
+
 \begin_layout Subsection
 
 \lang spanish
 Conclusiones
+\end_layout
+
+\begin_layout Standard
+Es importante en el diseno de filtros que utilizan uno o varios GICs tener
+ en cuenta las limitaciones y parametros caracteristicos de los operacionales
+ a utilizar.
+ Asimismo, en el caso de medir un filtro notch se debe prestar atencion
+ a la forma de onda a la salida del ciruito para frecuencias cercanas a
+ la de corte.
 \end_layout
 
 \begin_layout Standard
