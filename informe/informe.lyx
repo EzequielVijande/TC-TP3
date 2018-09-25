@@ -533,6 +533,17 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/CircProp.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \lang spanish
 \begin_inset Caption Standard
@@ -750,6 +761,17 @@ Definiendo las siguientes constantes por conveniencia se puede llegar al
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/GrafoEqPNG.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 
@@ -1549,6 +1571,64 @@ La figura anterior muestra como al aumentar el angulo entre el eje real
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+
+\lang spanish
+Para los valores de componentes elegidos de componentes el diagrama de polos
+ y cero es el siguiente:
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/PolosYCeros.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang spanish
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de poos y ceros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang spanish
+Como se puede apreciar de la figura, el factor de calidad 
+\begin_inset Formula $Q_{z}$
+\end_inset
+
+ es muy alto ya que la parte real del cero es completamente despreciable
+ frente a la parte imaginaria del mismo.Lo cual es lo que deberia pasar en
+ un filtro Notch ya que se desea que el cero del funcion transferencia sea
+ lo mas cercano posible a un cero imaginario puro.
+\end_layout
+
 \begin_layout Subsubsection
 
 \lang spanish
@@ -1639,7 +1719,7 @@ Una aproximación utilizada para estimar el ancho de la banda de rechazo
 
 .
  En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
- de la función transferencia.Sin embargo(!!!!!)
+ de la función transferencia.
 \end_layout
 
 \begin_layout Subsection
@@ -2190,7 +2270,7 @@ A continuacion se presenta una breve tabla con algunos valores de tensiones
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2428,7 +2508,7 @@ A partir de la simulacion en LTSpice, se obtiene que el filtro funciona
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -2595,6 +2675,17 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/MagnitudImpEntrada.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 
 \lang spanish
 \begin_inset Caption Standard
@@ -2627,6 +2718,17 @@ placement H
 wide false
 sideways false
 status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ImagenesEj1/FaseImpEntrada.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
 
 \begin_layout Plain Layout
 

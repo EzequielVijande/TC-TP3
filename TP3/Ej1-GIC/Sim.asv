@@ -37,7 +37,7 @@ k=0.5118;
         den2*s+...
         den3;
 wz=sqrt(num3/num1);
-qz=num3/(wz*num2);
+qz=num3/(wz*num2)
     func=(num/den);
     wx=((1*2*pi):(10*pi):((1e6)*(2*pi)));
     [mag, fase]= bode(func, wx);
@@ -60,13 +60,13 @@ qz=num3/(wz*num2);
     ylabel('fase(deg)')
     grid on
     hold off
-K= R5/(R5+R8)
-wz=sqrt( (R4*R5)/(C2*C6*R1*R3*R8*(R4+R5)))
-wp=sqrt( (R4*(R5+R8))/(C2*C6*R1*R3*R5*R8))
-qz=(-1)*(( (R6*R7)*sqrt(C2*C6*R1*R3*R4*R5*R8*(R4+R5)) )/( C2*R1*R3*R4*R5*(R6+R7+C6*R6*R7)))
-qp=(R6*R7*sqrt(C2*C6*R1*R3*R4*R5*R8*(R5+R8)))/(C2*R1*R3*R5*R8*(R6+R7))
+K= R5/(R5+R8);
+wz=sqrt( (R4*R5)/(C2*C6*R1*R3*R8*(R4+R5)));
+wp=sqrt( (R4*(R5+R8))/(C2*C6*R1*R3*R5*R8));
+qz=(-1)*(( (R6*R7)*sqrt(C2*C6*R1*R3*R4*R5*R8*(R4+R5)) )/( C2*R1*R3*R4*R5*(R6+R7+C6*R6*R7)));
+qp=(R6*R7*sqrt(C2*C6*R1*R3*R4*R5*R8*(R5+R8)))/(C2*R1*R3*R5*R8*(R6+R7));
 
 modulo_depth= (K*abs(1/qz))/sqrt( ((1-((wz/wp)^2))^2)+((wz/(wp*qp))^2));
-20*log10(modulo_depth)
+
 
 
