@@ -1,0 +1,2210 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part
+TP3-TC
+\end_layout
+
+\begin_layout Section
+Diseño de Filtros
+\end_layout
+
+\begin_layout Standard
+A continuación se propondrá el diseño de diferentes circuitos que actuén
+ como filtro de frecuencias para las señales de excitación de los mismos.
+ Cada uno de estos circuitos conforman un cuadripolo, cuya entrada es la
+ señal de excitación y la salida es la señal de entrada filtrada según la
+ frecuencia.
+ Por esto, a los cuadripolos en cuestión también se los llama 
+\begin_inset Quotes eld
+\end_inset
+
+filtros
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Plantillas y Circuitos Propuestos
+\end_layout
+
+\begin_layout Standard
+Los filtros a realizar son cuatro, los cuales deben cumplir con una plantilla
+ (una para cada filtro) que se especifica a continuación:
+\end_layout
+
+\begin_layout Standard
+
+\color red
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo de Filtro
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fpaso (Hz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fatenuación (Hz)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fcorte (Hz)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pasa Alto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pasa Bajo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pasa Banda
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rechaza Banda
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\color red
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Plantillas de Filtros
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Otras especificaciones para el filtro pasa alto y para el pasa bajo son:
+\end_layout
+
+\begin_layout Standard
+Para el filtro pasa alto, se requiere que para frecuencias a menores a la
+ frecuencia de paso, la ganancia sea entre 
+\begin_inset Quotes eld
+\end_inset
+
+-3 dB
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Quotes eld
+\end_inset
+
+0dB
+\begin_inset Quotes erd
+\end_inset
+
+, mientras que para la frecuencia de atenuación en adelante, la ganancia
+ debe ser menor a 
+\begin_inset Quotes eld
+\end_inset
+
+-10dB
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Además, para frecuencia tendiendo a cero, la ganancia debe ser de 0dB.
+\end_layout
+
+\begin_layout Standard
+En cuanto al filtro pasa alto, la ganancia en frecuencias menores a la de
+ atenuación debe ser menor a -10dB mientras que para frecuencias mayores
+ a la de paso la ganancia debe ser mayor a -3dB y no superar 0dB.
+ Por último, para frecuencias tendiendo a 
+\begin_inset Formula $"\infty"$
+\end_inset
+
+ en el pasa altos, la ganancia debe tender a 0dB.
+\end_layout
+
+\begin_layout Standard
+Para diseñar circuitos que cumplan con estos requerimientos, se procederá
+ a analizar las diferentes señales de tensión que pueden ser medidas en
+ un circuito 
+\begin_inset Quotes eld
+\end_inset
+
+RLC serie
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A continuación se presenta una imagen que presenta un circuito RLC serie
+ y algunas señales de salida (caída de tensión) que pueden ser de interés.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename puntosRelevantes.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+RLC serie - Puntos de Medición Relevantes 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Funciones de Transferencia
+\end_layout
+
+\begin_layout Standard
+Según el punto del circuito en el cual se tome la señal de salida del sistema
+ se obtendrán distintas funciones transferencia, las cuales se presentan
+ a continuación:
+\end_layout
+
+\begin_layout Standard
+La función transferencia del filtro 
+\begin_inset Quotes eld
+\end_inset
+
+pasa altos
+\begin_inset Quotes erd
+\end_inset
+
+, al tomar la caída de tensión en la bobina como salida se puede calcular
+ de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{L}=V_{i}\frac{sL}{sL+\frac{1}{sC}+R}\Rightarrow H_{HP}(s)=\frac{V_{L}}{V_{i}}=\frac{s^{2}LC}{s^{2}LC+sRC+1}$
+\end_inset
+
+ 
+\begin_inset Formula $(s=jw)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera se logra obtener un cero doble en el numerador el cual puede
+ adecuarse para atenuar las frecuencias bajas y luego ser estabilizado por
+ el denominador de la transferencia.
+\end_layout
+
+\begin_layout Standard
+Otra manera de ver que este circuito conforma un pasa altos con la tensión
+ de la bobina como salida, es analizar lo que ocurre en casos extremos.
+ Es decir, para frecuencias bajas, la bobina se comporta como un corto circuito
+ mientras que el capacitor se mantiene como una llave abierta.
+ Esto conlleva a que la señal de salida a frecuencias bajas sea nula (a
+ este fenómeno se lo suele llamar cero de transimisión doble en altas frecuencia
+s ya que la señal se anula a frecuencias elevadas por dos motivos, tanto
+ por comportamiento de la bobina como por efecto del capacitor).
+ Por otro lado, a frecuencias altas el capacitor se comporta como un cable
+ y la bobina como una llave abierta, por ende si la frecuencia es lo suficientem
+ente alta se obtiene una señal de salida igual a la de entrada.
+\end_layout
+
+\begin_layout Standard
+Para el caso del filtro pasa bajos, se puede tomar la salida como la caída
+ de tensión en el capacitor:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{C}=V_{i}\frac{\frac{1}{sC}}{\frac{1}{sC}+sL+R}\Rightarrow H_{LP}(s)=\frac{V_{C}}{V_{i}}=\frac{1}{s^{2}LC+sRC+1}$
+\end_inset
+
+ (cero de transmisiópn a frecuencia baja)
+\end_layout
+
+\begin_layout Standard
+En cuanto al filtro pasa banda, se toma la salida como la caída de tensión
+ en la resistencia:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{R}=V_{i}\frac{R}{R+sL+\frac{1}{sC}}\Rightarrow H_{BP}(s)=\frac{V_{R}}{V_{i}}=\frac{sRC}{s^{2}LC+sRC+1}$
+\end_inset
+
+ (cero de transimisión a frecuencias altas y también a frecuencias bajas)
+\end_layout
+
+\begin_layout Standard
+Por último, para la función transferencia del rechaza banda, tomando la
+ salida como la caida de tensión del conjunto capacitor en serie con la
+ bobina se puede plantear lo siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{LC}=V_{i}\frac{sL+\frac{1}{sC}}{sL+\frac{1}{sC}+R}\Rightarrow H_{BR}(s)=\frac{V_{LC}}{V_{i}}=\frac{s^{2}LC+1}{s^{2}LC+sRC+1}$
+\end_inset
+
+ (cero de transmisión a frecuencia intermedia debido a la resonancia LC)
+\end_layout
+
+\begin_layout Standard
+Sin embargo, este análisis supone que la bobina no tiene resistencia interna.
+ Para tener en cuenta esta resistencia (
+\begin_inset Formula $R_{coil}$
+\end_inset
+
+), se debe reemplazar la impedancia 
+\begin_inset Formula $sL$
+\end_inset
+
+ del inductor por la expresión 
+\begin_inset Formula $sL+R_{coil}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por ende las funciones transferencias que se obtienen con este ùltimo enfoque
+ son las siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+H_{HP}(s)=\frac{s\frac{L}{R_{coil}}.sCR_{coil}}{s^{2}LC+s(R+R_{coil})C+1} & (1)\\
+H_{LP}(s)=\frac{1}{s^{2}LC+s(R+R_{coil})C+1} & (2)\\
+H_{BP}(s)=\frac{sRC}{s^{2}LC+s(R+R_{coil})C+1} & (3)\\
+H_{BR}(s)=\frac{s^{2}LC+sCR_{coil}+1}{s^{2}LC+s(R+R_{coil})C+1} & (4)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bobina vs Gyrator
+\end_layout
+
+\begin_layout Standard
+Para el diseño de los filtros planteados se requiere de una bobina en el
+ circuito.
+ Lo que se planteará a continuación será proponer el uso de un componente
+ que reemplace la bobina y así evitar algunos de los problemas que puede
+ conllevar el uso de la bobina como inductor.
+\end_layout
+
+\begin_layout Standard
+El nuevo componente para reemplazar la bobina es llamado 
+\begin_inset Quotes eld
+\end_inset
+
+gyrator
+\begin_inset Quotes erd
+\end_inset
+
+ (o girador) y enrealidad no es un componente, si no que es un circuito
+ que utiliza un capacitor para obtener una impedancia de entrada al circuito
+ con características inductivas para ciertas condiciones de trabajo.
+ El hecho de utilizar un capacitor para simular un comportamiento inductivo
+ se puede asociar al origen del nombre de 
+\begin_inset Quotes eld
+\end_inset
+
+girador
+\begin_inset Quotes erd
+\end_inset
+
+ al nuevo componente.
+ A continuación se presenta el esquema del gyrator con amplificador operacional
+ a utilizar a lo largo del artìculo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename gyrator.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gyrator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de Entrada del Gyrator - Análisis Teórico
+\end_layout
+
+\begin_layout Standard
+El análisis teórico de la impedancia de entrada del gyrator puede realizarse
+ mediante dos enfoques.
+ Uno de ellos se realiza con op-amp ideal, mientras que el otro tiene en
+ cuenta el modelo de op-amp con polo dominante.
+\end_layout
+
+\begin_layout Standard
+Con op-amp ideal se puede plantear:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+V_{o}=(V^{+}-V^{-}).A_{v}=V^{-} & (a)\\
+I=\frac{V_{in}-V^{-}}{R_{L}}+\frac{V^{+}}{R_{G}} & (b)\\
+(V_{in}-V^{+}).sC_{G}=\frac{V^{+}}{R} & (c)
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego, despejando 
+\begin_inset Formula $V^{-}$
+\end_inset
+
+ de (a) para reemplazar en (b) y luego despejando 
+\begin_inset Formula $V^{+}$
+\end_inset
+
+ de (c) para nuevamente reemplazar en (b), resulta la siguiente expresión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z_{input}=\frac{V_{in}}{I}=\frac{sR_{G}C_{G}R_{L}+R_{L}}{sR_{G}C_{G}(1-K)+sR_{L}C_{G}+1}$
+\end_inset
+
+ siendo 
+\begin_inset Formula $K=\frac{A_{v}}{A_{v}+1}$
+\end_inset
+
+.
+ Esta expresión de la impedancia de entrada del gyrator es la más general
+ del análisis.
+\end_layout
+
+\begin_layout Standard
+Considerando 
+\begin_inset Formula $A_{v}$
+\end_inset
+
+ constante, para un op-amp ideal se tiene entonces que 
+\begin_inset Formula $K\thickapprox1$
+\end_inset
+
+.
+ Por lo tanto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Z_{input}\thickapprox\frac{sR_{G}C_{G}+R_{L}}{sR_{L}C_{G}+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Con lo cual, si se cumple la condición de que 
+\begin_inset Formula $sR_{L}C_{G}\lll1\Rightarrow\left[Z_{input}\thickapprox sR_{G}C_{G}+R_{L}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta expresión se puede apreciar que el gyrator, bajo las condiciones
+ impuestas, presenta una impedancia de entrada característica de una bobina
+ con su comportamiento inductivo 
+\begin_inset Formula $(L=R_{G}C_{G}$
+\end_inset
+
+y su resistencia interna 
+\begin_inset Formula $(R_{L})$
+\end_inset
+
+ en serie.
+\end_layout
+
+\begin_layout Standard
+Si se profundiza más en este análisis y se considera un polo dominante del
+ operacional en la frecuencia 
+\begin_inset Formula $"fp"$
+\end_inset
+
+ de tal manera que 
+\begin_inset Formula $A_{v}=\frac{A_{o}}{\frac{s}{2\pi fp}+1}$
+\end_inset
+
+ (
+\begin_inset Formula $A_{o}$
+\end_inset
+
+constante adimensional, del orden de 
+\begin_inset Formula $10^{5}$
+\end_inset
+
+) se debería desarrollar entonces la siguiente expresión:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $K=\frac{A_{v}}{A_{v}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1}.\frac{1}{\frac{A_{o}}{\frac{s}{2\pi fp}+1}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1+A_{o}}\thickapprox\frac{A_{o}}{\frac{s}{2\pi fp}+A_{o}}=\frac{1}{\frac{s}{A_{o}2\pi fp}+1}=\frac{1}{\frac{s}{GBP}+1}$
+\end_inset
+
+; (
+\begin_inset Formula $GBP=A_{o}.2\pi fp$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Debese notar que a frecuencias bajas 
+\begin_inset Formula $(\frac{f}{A_{o}fp}\lll1)$
+\end_inset
+
+ la expresión de 
+\begin_inset Formula $"K"$
+\end_inset
+
+ se reduce a la ideal, sin embargo a medida que se eleva la frecuencia de
+ trabajo el comportamiento de la impedancia del gyrator ya no se adecúa
+ al de una bobina.
+ Aún más, en el caso extremo en el cual 
+\begin_inset Formula $f\shortrightarrow\infty$
+\end_inset
+
+sucede que 
+\begin_inset Formula $K\shortrightarrow0$
+\end_inset
+
+, luego 
+\begin_inset Formula $lím_{f\shortrightarrow\infty}Z_{input}=\frac{R_{G}R_{L}}{R_{L}+R_{G}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este resultado análitico tiene sentido ya que coincide con el paralelo entre
+ 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+, el cual se puede observar si se considera que la resistencia de entrada
+ del operacional es relativamente 
+\begin_inset Quotes eld
+\end_inset
+
+muy
+\begin_inset Quotes erd
+\end_inset
+
+ grande, la impedancia de salida del mismo op-amp es nula y además que el
+ capactitor a altas frecuencias se comporta como un cable.
+\end_layout
+
+\begin_layout Standard
+Además, generalmente para poder obtener inductancias apreciables en frecuencias
+ no demasiado altas es necesario que 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ tome un valor elevado para poder contrarestar el valor de 
+\begin_inset Formula $C_{G}$
+\end_inset
+
+ que suele ser del orden de los nano faradios (para que el valor del capacitor
+ no sea comparable al de capacitancias paràsitas), mientras que 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ suele ser un valor pequeño simulando una resistencia interna de la bobina
+ favorable.
+ Esto produce que el paralelo entre 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ y 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ se pueda estimar directamente por 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+.
+ Con lo cual, a altas frecuencias la impedancia de entrada de la bobina
+ que simula el gyrator es 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ lo que indica que la parte inductiva se convirtiò en un cable, caso contrario
+ a una bobina real que a frecuencias elevadas se comporta como una llave
+ abierta.
+\end_layout
+
+\begin_layout Standard
+Por ùltimo, es importante aclarar que este anàlisis se realizò estableciendo
+ una referencia a tierra del gyrator mediante la resistencia 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+, caso contrario hubiera cambiado algunos aspectos del anàlisis.
+\end_layout
+
+\begin_layout Subsubsection
+Impedancia de Entrada del Gyrator - Simulación vs Modelo Teórico
+\end_layout
+
+\begin_layout Standard
+A continuación se expondrán los resultados de las simulaciones en LTspice
+ de la respuesta en frecuencia para la impedancia de una bobina ideal en
+ serie con una resistencia y también para un gyrator (se simulará para el
+ mismo gyrator que se utilizará en los filtros).
+ Este resultados se presentan a continuación en forma de gráfico, superponiendo
+ a estos el gráfico resultante del modelo análítico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename zinMAG.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de Entrada - LTspice vs Modelo Teórico - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename zinPHA.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Impedancia de Entrada - LTspice vs Modelo Teórico - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En el gráfico de magnitud de la impedancia se puede notar como esta aumenta
+ con la frecuencia de la forma que lo hace una bobina pero para el modelo
+ con 
+\begin_inset Formula $A_{v}$
+\end_inset
+
+ dependiente de la frecuncia existe una frecuencia crítica a la cual se
+ alcanza un máximo y luego empieza a decaer, tendiendo a la magnitud que
+ se tenía a frecuencias bajas (este resultado también se respalda con la
+ simulación).
+ Para el modelo con 
+\begin_inset Formula $A_{v}$
+\end_inset
+
+ ideal la magnitud se incrementa pero igualmente se puede notar como tiende
+ a estabilizarse, lo cual tiene sentido debido a que el término 
+\begin_inset Formula $jwR_{L}C_{G}$
+\end_inset
+
+ (que se encuentra en el denominador de la expresión de la impedancia de
+ entrada) deja de ser despreciable y la impedancia tiene a 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ para frecuencias altas.
+ De todas maneras, 
+\begin_inset Formula $R_{G}$
+\end_inset
+
+ presenta un valor relativamente elevado.
+\end_layout
+
+\begin_layout Standard
+En cuanto a la fase, para ambos modelos se puede notar el comportamiento
+ inductivo hasta cierta frecuencia.
+ Luego, con 
+\begin_inset Formula $A_{v}$
+\end_inset
+
+ ideal se tiende a un comportamiento resistivo (lo cual coincide a lo que
+ se describió para la magnitud), mientras que en el modelo de polo dominante
+ se observa un desfasaje abrupto hacia las fase negativas (comportamiento
+ capacitivo) y recién desde esas frecuencias negativas la fase vuelve a
+ tender a cero (comportamiento resistivo).
+\end_layout
+
+\begin_layout Subsubsection
+Desventaja de la Bobina
+\end_layout
+
+\begin_layout Standard
+Hasta aquí se ha analizado el gyrator para poder reemplazar la bobina, pero
+ no se ha analizado en profundidad la necesidad de este reemplazo.
+ Para evidenciar esto se puede especificar varias desventajas de la bobina
+ como la distorsiòn armònica que presentan los materiales ferromàgneticos
+ debido a sus comportamientos alineales o la tendencia de las bobinas a
+ funcionar como antenas que inducen señales electromagnèticas, pero principalmen
+te el tamaño de las bobinas, sobre todo para su uso en bajas frecuencias,
+ no es compatible con la tecnologìa miniaturizada (por ejemplo para circuitos
+ integrados).
+ Segùn la inductancia que se requiera, el peso de la bobina, su tamaño y
+ su resistencia asociada pueden llegar a tomar valores elevados lo cual
+ no es deseable.
+ De aquì la necesidad del gyrator.
+\end_layout
+
+\begin_layout Subsection
+Diseño y Materialización de los Filtros
+\end_layout
+
+\begin_layout Standard
+A continuaciòn se desarrollaran los criterios abordados para la disposiciòn
+ de los componentes para cada filtro, y luego se detallarà la elecciòn de
+ los valores de cada componente para la obtenciòn de los resultados deseados.
+\end_layout
+
+\begin_layout Subsubsection
+Disposiciones Convenientes a la Mediciòn
+\end_layout
+
+\begin_layout Standard
+Como se ha mencionado, para todos los filtros se ha decidido implementar
+ el circuito 
+\begin_inset Quotes eld
+\end_inset
+
+RLC serie
+\begin_inset Quotes erd
+\end_inset
+
+, pero ademàs es importante en el diseño tener en cuenta que se pueda medir
+ la salida con algùn instrumento.
+ Con respecto a los cuatro casos a diseñar, se tendra en cuenta la salida
+ para ser medida con un osciloscopio, por lo tanto existe el requerimiento
+ de que el componente sobre el cual se mida la salida este referido a tierra.
+ Esto ùltimo no traerìa inconvenientes si se trabajara con los tres elementos
+ bàsicos convencionales (resistencia, capacitor, bobina) ya que cualquiera
+ de ellos pueden ser referidos a tierra sin cambiar el comportamiento del
+ circuito.
+ Sin embargo, al trabajar con un gyrator es importante que este se encuentre
+ referido a tierra para que se mantenga la validez del anàlisis realizado
+ para su impedancia de entrada., por ende, pueden existir dificultades para
+ medir los filtros que requieran que sea el capacitor (para el pasa bajo)
+ o la resistencia (para el pasa banda) los elementos que estèn referidos
+ a tierra por el hecho de que el osciloscopio debe medir la caìda sobre
+ estos componentes.
+\end_layout
+
+\begin_layout Standard
+Con el objetivo de solucionar este problema (solo para el filtro pasa bajo
+ y pasa banda), se plantea la posibilidad de disponer al gyrator en el circuito
+ de manera que su original puesta a tierra se coloque junto a la fuente
+ de excitaciòn (fuente de tensiòn).
+ Con esto se logra la posibilidad de plantear un nuevo anàlisis pero que
+ se basa en el anàlisis realizado anteriormente para la impedancia de entrada
+ del gyrator.
+ El nuevo anàlisis es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename gyrReferenciaVin.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gyrator con Referencia en la Fuente de Excitaciòn
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir de la figura mostrada, si se quiere plantear la funciòn transferencia
+ 
+\begin_inset Formula $\frac{Vo}{Vi}$
+\end_inset
+
+ se puede plantear un equivalente de Thevenin para el conjunto 
+\begin_inset Quotes eld
+\end_inset
+
+fuente-gyrator
+\begin_inset Quotes erd
+\end_inset
+
+ suponiendo que el operacional se encuentra en su zona lineal de trabajo.
+ Luego, para hallar 
+\begin_inset Formula $"Z_{th}"$
+\end_inset
+
+ (impedancia equivalente de Thevenin) se procede a pasivar la fuente de
+ excitaciòn (de tensiòn) cortocircuitando la misma.
+ Al hacer esto, el gyrator queda referenciado a tierra y resulta que 
+\begin_inset Formula $Z_{th}=Z_{in/gyrator}$
+\end_inset
+
+, lo cual ya se ha calculado anteriormente.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, para calcular 
+\begin_inset Formula $"V_{th}"$
+\end_inset
+
+ se plantea la tensiòn equivalente entre los bornes de salida del gyrator:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename theveninGyr.PNG
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Calculo de Tensiòn de Thevenin
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(V^{+}-V_{th})sC_{G}=\frac{(V_{th}-V^{-})}{R_{L}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+considerando 
+\begin_inset Formula $V^{+}=V^{-}\Rightarrow(V^{-}-V_{th})sC_{G}=\frac{(V_{th}-V^{-})}{R_{L}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow V_{th}(sC_{G}+\frac{1}{R_{L}})=V^{-}(sC_{G}+\frac{1}{R_{L}})\Rightarrow V_{th}=V^{-}=V^{+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow I=0\Rightarrow\left[V_{th}=V_{in}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finalmente, se pueden calcular las funciones transeferencias y se llegarà
+ al mismo resultado que se habìa arribado anteriormente (con el gyrator
+ puesto a tierra).
+\end_layout
+
+\begin_layout Subsubsection
+Operacional Para el Gyrator
+\end_layout
+
+\begin_layout Standard
+En cuanto al integrado utilizado para el armado del gyrator de cada filtro,
+ se eligiò el modelo 
+\begin_inset Quotes eld
+\end_inset
+
+TL084
+\begin_inset Quotes erd
+\end_inset
+
+, el cual ademàs de ser ùtil por proveer cuatro operacionales tambièn posee
+ una impedancia de entrada de 
+\begin_inset Formula $10^{12}\Omega$
+\end_inset
+
+y un 
+\begin_inset Formula $GBP$
+\end_inset
+
+ de 
+\begin_inset Formula $3MHz$
+\end_inset
+
+, lo cual permite evitar mejor las alinealidades en comparaciòn a otros
+ modelos.
+\end_layout
+
+\begin_layout Standard
+Es importante aclarar que las especifiaciones mencionadas son extraídas
+ de la hoja de datos del componente, pero en la práctica estos parámetros
+ suelen variar en un entorno realtivamente cercano pero no exactamente el
+ mismo, lo cual puede dar como consecuencia pequeñas diferencias entre las
+ mediciones de un circuito que utilize el integrado real y una simulación
+ que implemente los valores que brinda la hoja de datos.
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de Pasa Alto
+\end_layout
+
+\begin_layout Standard
+Para construir el filtro pasa alto se eligieron los siguientes componentes
+ con valores comerciales:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{G}=1nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{G}=56K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}=470\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=10nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R=2.37K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para elegir los componentes que conforman el gyrator, se tuvieron en cuenta
+ tres factores:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $2\pi fR_{L}C_{G}\lll1$
+\end_inset
+
+ para frecuencias menores a 
+\begin_inset Formula $100KHz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}$
+\end_inset
+
+del orden de los Ohms para no disminuir significativamente el factor de
+ calidad de la bobina resultante.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L$
+\end_inset
+
+ del orden los mili Henry para luego obtener valores de 
+\begin_inset Formula $C$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+ en el orden de los nano Faradios y kilo Ohms
+\end_layout
+
+\begin_layout Standard
+Ademàs, con esta elecciòn de componentes se obtuvo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}C\lll1$
+\end_inset
+
+ (garantiza atenuaciòn para frecuencias bajas)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi=\frac{R_{L}+R}{2}.\sqrt{\frac{C}{L}}\thickapprox0.88>\frac{\sqrt{2}}{2}$
+\end_inset
+
+ (garantiza no tener sobre picos, para que la salida no supere la entrada)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}\thickapprox10KHz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de Pasa Bajo
+\end_layout
+
+\begin_layout Standard
+Los valores de los componentes elegidos para el filtro pasa bajos son los
+ siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{G}=1nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{G}=56K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}=470\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=39nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R=680\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algunas consideraciones relevantes fueron:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\xi>\frac{\sqrt{2}}{2}$
+\end_inset
+
+ (para evitar sobrepicos)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de Pasa Banda
+\end_layout
+
+\begin_layout Standard
+Para el filtro pasa banda se utilizaron los siguientes componentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{G}=1nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{G}=560K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}=47\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=39nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R=1.2K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diseño de Rechaza Banda
+\end_layout
+
+\begin_layout Standard
+Para el rechaza banda se utilizaron los siguientes componentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{G}=1nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{G}=560K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}=470\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=39nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R=2.37K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Resultados Obtenidos
+\end_layout
+
+\begin_layout Standard
+Una vez terminado el diseño y materialización del circuito, se procede a
+ medir para corroborar su funcionamiento.
+ A continuación se presentan los resultados obtenidos de las mediciones,
+ supuerpuestos estos resultados con lo que se obtuvo al realizar las simulacione
+s en LTspice y mediante el análisis teórico.
+ Vale aclarar que para los gráficos del análisis teórico se utilizaron las
+ expresiones (1), (2), (3), (4) de la sección de funciones transferencia.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Pasa Altos - Resultados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HPmag.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Altos - Diagrama de Bode - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HPfase.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Altos - Diagrama de Bode - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Pasa Bajos - Resultados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LPmag.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Bajos - Diagrama de Bode - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename LPfase.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Bajos - Diagrama de Bode - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Pasa Banda - Resultados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename BPmag.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Banda - Diagrama de Bode - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename BPfase.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Pasa Banda - Diagrama de Bode - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Rechaza Banda - Resultados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename BRmag.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Rechaza Banda - Diagrama de Bode - Magnitud
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename BRfase.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Filtro Rechaza Banda - Diagrama de Bode - Fase
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Análisis de Resultados
+\end_layout
+
+\begin_layout Standard
+Los resultados obtenidos presentan en general discrepancias entre el modelo
+ análitico y las mediciones, mientras que las mediciones coinciden con la
+ forma de respuesta que indican las simulaciones de LTspice.
+ A continuación se analizan distintos factores relevantes con respecto a
+ estos resultados.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Magnitud Según Frecuencia de Trabajo
+\end_layout
+
+\begin_layout Standard
+Según los resultados obtenidos, se puede afirmar que para frecuencias bajas
+ y medias (menores a 100KHz) los filtros cumplen con las plantillas especificada
+s.
+ En cuanto a las frecuencias altas, el comportamiento de la impedancia de
+ entrada del gyrator, sumado a el efecto del polo dominante del operacional,
+ provocaron discrepancias entre el modelo análitico y los resultados experimenta
+les de los filtros.
+ Se puede notar tanto para el filtro pasa altos como para el rechaza banda
+ que a frecuencias altas la magnitud de la salida no tiende a igualar la
+ entrada (0 dB) sino que decrece.
+ Este resultado medido coincide con las simulaciones según lo muestran los
+ gráficos, pero también se puede predecir análiticamente teniendo en cuenta
+ lo siguiente:
+\end_layout
+
+\begin_layout Standard
+Por ejemplo, para el pasa altos 
+\begin_inset Formula $H(s)=\frac{Z_{Gyrator}}{Z_{Gyrator}+R+\frac{1}{sC}}=\frac{sCZ_{Gyrator}}{sCZ_{gyrator}+sRC+1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Luego, para frecuencias elevadas (
+\begin_inset Formula $s\rightarrow\infty$
+\end_inset
+
+) se tiene que 
+\begin_inset Formula $Z_{Gyrator}\rightarrow(R_{G}//R_{L})=R_{//}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $H(s)\rightarrow\frac{R_{//}}{R_{//}+R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En decibeles se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+R})\thickapprox-16dB$
+\end_inset
+
+, siendo 
+\begin_inset Formula $"M"$
+\end_inset
+
+ la magnitud de establecimiento a frecuencias altas.
+\end_layout
+
+\begin_layout Standard
+Sin embargo, este efecto no impide el cumplimiento de la plantilla para
+ el caso del filtro pasa bajos y el filtro pasa banda, los cuales deben
+ presentar atenuaciones elevadas a frecuencias altas.
+\end_layout
+
+\begin_layout Standard
+Como aspecto a mejorar, para el filtro pasa alto por ejemplo, se podría
+ plantear un diseño para el cual la magnitud de establecimiento a altas
+ frecuencias se encuentre entre -3dB y 0dB provocada por una relación entre
+ 
+\begin_inset Formula $R_{//}$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+ adecuado.
+\end_layout
+
+\begin_layout Standard
+Más aún, notese que si 
+\begin_inset Formula $R=\frac{R_{//}}{4}$
+\end_inset
+
+ se logra que 
+\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+\frac{R_{//}}{4}})=20log(\frac{1}{1.25})\thickapprox-1.94dB$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para mostrar la posible realización de esta mejora se presenta la simulación
+ en LTspice de un diseño del circuito con los siguientes valores de componentes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C_{G}=100pF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{G}=30K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{L}=3K\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow L\thickapprox9mH$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C=3.3nF$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R=750\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename simHPmejora.PNG
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Simulación LTspice - Filtro Pasa Altos - Tentativa Mejora
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Efecto de Resistencia Interna de Bobina
+\end_layout
+
+\begin_layout Standard
+Otro aspecto a analizar, es la resistencia 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ del gyrator, que simula la resistencia en serie a una bobina.
+ El efecto de esta resistencia es notable en el caso del filtro rechaza
+ banda ya que limita la atenuación en la frecuencia de resonancia (o frecuencia
+ de 
+\begin_inset Quotes eld
+\end_inset
+
+notch
+\begin_inset Quotes erd
+\end_inset
+
+).
+ Esto se puede predecir facilmente teniendo en cuenta que el cero de transimisió
+n para este tipo de filtros se debe a la resonancia de un capacitor y una
+ bobina produciendo que no se aprecie una caida de tensión sobre estos dos
+ componentes.
+ Sin embargo, existir una resistencia 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ la caída de tensión entre estos componentes se vuelve apreciable y provoca
+ una limitación en la atenuación de la señal de entrada.
+\end_layout
+
+\begin_layout Standard
+Del mismo modo, la resistencia 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ provoca que la señal de salida en el filtro pasa banda en la frecuencia
+ de resonancia no sea igual a la señal de entrada, si no que sea el divisor
+ resistivo entre 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+ y la resistencia 
+\begin_inset Formula $"R"$
+\end_inset
+
+ del circuito.
+\end_layout
+
+\begin_layout Standard
+En fin, como aspecto a mejorar en estos filtros se podría pensar un diseño
+ para el cual se trate minimzar aún más el valor de 
+\begin_inset Formula $R_{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Desfase
+\end_layout
+
+\begin_layout Standard
+En referencia a la fase que resultó de los filtros, se puede observar que
+ el modelo análitico indica un salto de 180 grados en el diagrama de Bode,
+ lo cual es esperable para un circuito de segundo orden.
+ Sin embargo, las mediciones y las simulaciones en LTspice indican que la
+ fase tiende a cambiar 180 grados solo hasta cierta frecuencia.
+ A partir de esta frecuencia la fase cesa de tender a un salto de 180 grados
+ y en lugar de esto tiende a un salto total de 90 grados.
+\end_layout
+
+\begin_layout Standard
+Dicho fenómeno se puede entender si se tiene en cuenta que la impedancia
+ del gyrator se comporta como una bobina para ciertas frecuencias, pero
+ a frecuencias altas presenta una impedancia resistiva, lo cual provoca
+ que el comportamiento del circuito a altas frecuencias sea de primer orden
+ (simil a un 
+\begin_inset Quotes eld
+\end_inset
+
+RC
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Conclusiónes
+\end_layout
+
+\begin_layout Standard
+En conclusión, para el diseño de un filtro es importante plantear la función
+ transferencia conveniente según las características que se especifiquen
+ en la plantilla.
+ Para esto es relevante tener en cuenta la ubicación de los ceros de transmisión
+ generalmente necesarios y los componentes adecuados para logralos.
+\end_layout
+
+\begin_layout Standard
+Aún así, el uso de algunos de los componentes, a partir de los cuales se
+ obtuvo la transferencia deseada, pueden generar problemas de diseño como
+ en el caso de la bobina.
+ Por esto es útil contar con elementos activos como un gyrator para poder
+ prescindir de los anteriores.
+ De todas maneras, las características de estos nuevos componentes de reemplazo
+ deben ser fijadas para una determinada condición de trabajo (por ejemplo,
+ baja frecuencia de excitación) ya que los elementos que se encuentran al
+ alcance de la electrónica no suelen adaptarse a todas las condiciones.
+ Es decir, por ejemplo, al reemplazar una bobina por un gyrator construido
+ con operacionales, resistencias y un capacitor, este se comportará como
+ tal en determinadas zonas de trabajo (en términos de frecuencia) mientras
+ que en otras su comportamiento no necesariamente será inductivo.
+\end_layout
+
+\end_body
+\end_document
