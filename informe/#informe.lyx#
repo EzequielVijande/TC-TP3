@@ -6139,7 +6139,7 @@ Simulación Montecarlo de la ganancia en modo diferencial, con
 \end_inset
 
 Como se puede observar, la ganancia del modo diferencial no parece depender
- de las tolerancias de los componentes; lo que tiene sentido ya que //chamuyar
+ de las tolerancias de los componentes.
 \end_layout
 
 \begin_layout Standard
@@ -6838,13 +6838,22 @@ Se notó, sin embargo, que estando el circuito conectado a tierra, es decir,
  nodo que va a tierra, como se diseñó.
 \end_layout
 
+\begin_layout Subsection
+
+\lang spanish-mexico
+Conclusiones
+\end_layout
+
 \begin_layout Standard
 
 \lang spanish-mexico
-\begin_inset Newpage pagebreak
-\end_inset
-
-
+Se diseñó un amplificador de instrumentación que funciona en un rango de
+ frecuencias de hasta 100kHz, o 10kHz dependiendo el CMRR deseado.
+ Se cumplió con las características de un AI, que cuenta con altas impedancias
+ de entrada, y una ganancia en modo diferencial estable.
+ Se encontró además, una manera de calibrarlo para evitar que sature u oscile
+ la salida, y dando la posibilidad de montar la salida sobre una señal de
+ tensión continua.
 \end_layout
 
 \begin_layout Standard
