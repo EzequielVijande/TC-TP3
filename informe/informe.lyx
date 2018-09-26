@@ -530,13 +530,13 @@ En la siguiente sección se muestra la resolución de un circuito que utiliza
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ImagenesEj1/CircProp.PNG
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -607,6 +607,7 @@ dores operacionales dispuestos en la siguiente configuración:
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -758,6 +759,7 @@ Definiendo las siguientes constantes por conveniencia se puede llegar al
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -766,7 +768,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename ImagenesEj1/GrafoEqPNG.PNG
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -929,11 +931,11 @@ Se despejo convenientemente la función transferencia con la ayuda de Matlab
 \begin_layout Standard
 \align center
 
-\size scriptsize
+\size large
 \lang spanish
 \begin_inset Formula 
 \begin{equation}
-H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})s^{2}+(C_{2}R_{3}R_{4}R_{5}R_{6}R_{7}-C_{2}R_{3}R_{4}R_{5}R_{u}-C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{6}R_{7}+R_{1}R_{6}R_{a}(C_{2}R_{3}+\frac{C_{6}R_{7}+C_{2}R_{3}}{A_{vol}}))s+R_{6}(R_{4}R_{5}R_{7}+\frac{R_{1}R_{a}}{A_{vol}})}{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{5}R_{8}+\frac{R_{a}}{A_{vol}}(1+\frac{1}{A_{vol}}))s^{2}+(\frac{C_{6}R_{1}R_{6}R_{7}R_{a}+C_{2}R_{3}R_{a}R_{u}}{A_{vol}}-C_{2}R_{3}R_{5}R_{6}R_{7}R_{8}+C_{2}R_{3}R_{5}R_{8}R_{u}+\frac{R_{a}}{A_{vol}^{2}}(C_{2}R_{3}R_{u}+C_{6}R_{1}R_{6}R_{7}))s+R_{4}R_{6}R_{7}(R_{5}+R_{8})+\frac{R_{a}R_{u}}{A_{vol}}(1+\frac{1}{A_{vol}})}
+H(s)=\frac{num1\times s^{2}+num2\times s+num3}{den1\times s^{2}+den2\times s+den3}
 \end{equation}
 
 \end_inset
@@ -947,11 +949,54 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})
 Donde:
 \end_layout
 
-\begin_layout Standard
-\align center
+\begin_layout Itemize
 
 \lang spanish
 \begin_inset Formula $R_{u}=R_{1}R_{6}+R_{1}R_{7}+R_{6}R_{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+\begin_inset Formula $num1=C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $num2=(C_{2}R_{3}R_{4}R_{5}R_{6}R_{7}-C_{2}R_{3}R_{4}R_{5}R_{u}-C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{6}R_{7}+R_{1}R_{6}R_{a}(C_{2}R_{3}+\frac{C_{6}R_{7}+C_{2}R_{3}}{A_{vol}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $num3=R_{6}(R_{4}R_{5}R_{7}+\frac{R_{1}R_{a}}{A_{vol}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den1=C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{5}R_{8}+\frac{R_{a}}{A_{vol}}(1+\frac{1}{A_{vol}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den2=(\frac{C_{6}R_{1}R_{6}R_{7}R_{a}+C_{2}R_{3}R_{a}R_{u}}{A_{vol}}-C_{2}R_{3}R_{5}R_{6}R_{7}R_{8}+C_{2}R_{3}R_{5}R_{8}R_{u}+\frac{R_{a}}{A_{vol}^{2}}(C_{2}R_{3}R_{u}+C_{6}R_{1}R_{6}R_{7}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den3=R_{4}R_{6}R_{7}(R_{5}+R_{8})+\frac{R_{a}R_{u}}{A_{vol}}(1+\frac{1}{A_{vol}})$
 \end_inset
 
 
@@ -1509,6 +1554,7 @@ mayores el modulo de la parte imaginaria del polo aumente, mientras que
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1582,6 +1628,7 @@ Para los valores de componentes elegidos de componentes el diagrama de polos
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1713,21 +1760,22 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 
 \lang spanish
 En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
- de la función transferencia.Sin embargo, en la practica la atenuacion del
- filtro nunca es infinita y existe una relacion entre la ubicacion de la
+ de la función transferencia.Sin embargo, en la practica la atenuación del
+ filtro nunca es infinita y existe una relación entre la ubicación de la
  frecuencia del polo con respecto a la del cero y la profundidad del notch.
- A continuacion se presenta unos graficos de un filtro notch con un valor
+ A continuación se presenta unos gráficos de un filtro notch con un valor
  de k(
 \begin_inset Formula $\frac{\omega_{z}}{\omega_{p}}$
 \end_inset
 
-) fijo y variando el valor de Q.:
+) fijo y variando el valor de Q:
 \end_layout
 
 \begin_layout Standard
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1773,7 +1821,7 @@ Filtro Notch con k=0.99 y Q(de 0.1 a 100)
 \lang spanish
 No se puede apreciar del todo en la grafica, pero el notch depth disminuye
  con el Q.
- El mismo comienaa en -80 db y disminuye a valores cercanos a -10db para
+ El mismo comienza en -80 db y disminuye a valores cercanos a -10db para
  los valores mas alto de Q.
 \end_layout
 
@@ -1802,6 +1850,7 @@ Se eligieron los componentes del circuito con el objetivo de que el mismo
 
 \lang spanish
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -2209,12 +2258,15 @@ Las mayores desventajas del amplificador son sus altos valores de corrientes
  de bias y su baja impedancia de entrada con respecto a otros operacionales.Sin
  embargo, se considero que dichas desventajas no son de gran interés ya
  que los valores de resistencias elegidos para el circuito son relativamente
- bajos(la resistencia mas grande es de 15kΩ).Esto significa que las resistencias
- utilizadas pueden considerarse mucho menores que la impedancia de entrada
- del operacional, así como también se puede despreciar las caídas en las
- resistencias debido a las corrientes de bias ya que las mismas no tienen
- valores lo suficientemente grandes para alterar significativamente el funcionam
-iento del circuito.
+ bajos(la resistencia mas grande es de 
+\begin_inset Formula $15k\Omega$
+\end_inset
+
+).Esto significa que las resistencias utilizadas pueden considerarse mucho
+ menores que la impedancia de entrada del operacional, así como también
+ se puede despreciar las caídas en las resistencias debido a las corrientes
+ de bias ya que las mismas no tienen valores lo suficientemente grandes
+ para alterar significativamente el funcionamiento del circuito.
  En el peor caso se tendría que:
 \end_layout
 
@@ -2323,6 +2375,7 @@ A continuación se presenta una breve tabla con algunos valores de tensiones
 
 \lang spanish
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -2561,6 +2614,7 @@ A partir de la simulación en LTSpice, se obtiene que el filtro funciona
 
 \lang spanish
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -2952,11 +3006,15 @@ n con la forma de onda a la salida, la cual deja de ser una senoidal.
 \begin_layout Standard
 En cuanto a la impedancia de salida, se puede ver que la misma es despreciable
  en todo el rango de funcionamiento, ya que el mayor valor que adquiere
- es cercano a los 10Ω.La mayor discrepancia es en la medición de la fase
- de la impedancia de salida, es posible que esto se deba al valor tan pequeño
- de la magnitud de la impedancia, ya que a medida que aumenta la frecuencia
- y la magnitud de la impedancia se aleja del 0 las mediciones de la fase
- comienzan a tomar valores mas cercanos a los de la simulación.
+ es cercano a los 
+\begin_inset Formula $10\varOmega$
+\end_inset
+
+.La mayor discrepancia es en la medición de la fase de la impedancia de salida,
+ es posible que esto se deba al valor tan pequeño de la magnitud de la impedanci
+a, ya que a medida que aumenta la frecuencia y la magnitud de la impedancia
+ se aleja del 0 las mediciones de la fase comienzan a tomar valores mas
+ cercanos a los de la simulación.
 \end_layout
 
 \begin_layout Subsection
@@ -2966,11 +3024,11 @@ Conclusiones
 \end_layout
 
 \begin_layout Standard
-Es importante en el diseno de filtros que utilizan uno o varios GICs tener
- en cuenta las limitaciones y parametros caracteristicos de los operacionales
+Es importante en el diseño de filtros que utilizan uno o varios GICs tener
+ en cuenta las limitaciones y parámetros característicos de los operacionales
  a utilizar.
- Asimismo, en el caso de medir un filtro notch se debe prestar atencion
- a la forma de onda a la salida del ciruito para frecuencias cercanas a
+ Asimismo, en el caso de medir un filtro notch se debe prestar atención
+ a la forma de onda a la salida del circuito para frecuencias cercanas a
  la de corte.
 \end_layout
 
