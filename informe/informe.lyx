@@ -49,7 +49,7 @@
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
-\language spanish-mexico
+\language spanish
 \language_package babel
 \inputencoding utf8
 \fontencoding T1
@@ -503,20 +503,14 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Section
-
-\lang spanish
 Filtro con GIC
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Introducción
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 En la siguiente sección se muestra la resolución de un circuito que utiliza
  un GIC(Generalized Impedance Converter).Se calculo de manera teórica la
  función transferencia, la ubicación de polos y ceros, asi como se simularon
@@ -524,8 +518,6 @@ En la siguiente sección se muestra la resolución de un circuito que utiliza
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -536,7 +528,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ImagenesEj1/CircProp.PNG
-	scale 35
+	scale 60
 
 \end_inset
 
@@ -544,13 +536,9 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Circuito propuesto
 \end_layout
 
@@ -569,14 +557,10 @@ Circuito propuesto
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Objetivos y resumen
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se tomo como objetivo de este informe la presentación de la resolución teórica
  de la función transferencia del circuito para el caso de OpAmps ideales
  con ganancias a lazo abierto finitas.También se busco analizar de manera
@@ -596,16 +580,12 @@ Se tomo como objetivo de este informe la presentación de la resolución teóric
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para la realización del circuito se utilizo un Generalized Impedance Converter(G
 IC), dicho elemento consiste en un conjunto de elementos pasivos y dos amplifica
 dores operacionales dispuestos en la siguiente configuración:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -614,11 +594,9 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/gic.png
-	scale 60
+	scale 35
 
 \end_inset
 
@@ -626,13 +604,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Ilustración de un GIC generico
 \end_layout
 
@@ -651,8 +625,6 @@ Ilustración de un GIC generico
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Un GIC puede utilizarse para crear una impedancia de un valor definido por
  sus componentes pasivos, y se puede comportar en frecuencia de muchas formas
  posibles.
@@ -663,20 +635,14 @@ Un GIC puede utilizarse para crear una impedancia de un valor definido por
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Resolución del circuito
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Función transferencia
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 En la resolución que se expone a continuación se asumió que la ganancia
  a lazo abierto de los dos operacionales es la misma.Para resolver el circuito
  se utilizo el método de nodos del cual se obtuvo el siguiente sistema de
@@ -684,8 +650,6 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\frac{V_{in}-V_{1}^{+}}{Z_{7}}=\frac{V_{1}^{+}}{R_{6}}+\frac{V_{1}^{+}-V_{out_{2}}}{R_{1}}$
 \end_inset
 
@@ -693,8 +657,6 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $V_{out}=A_{vol}(V_{1}^{+}-V^{-})$
 \end_inset
 
@@ -702,8 +664,6 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $V_{out_{2}}=A_{vol}(V_{2}^{+}-V^{-})$
 \end_inset
 
@@ -711,8 +671,6 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\frac{V_{out_{2}}-V^{-}}{Z_{2}}=\frac{V^{-}-V_{out}}{R_{3}}$
 \end_inset
 
@@ -720,8 +678,6 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\frac{V_{in}-V_{2}^{+}}{R_{8}}=\frac{V_{2}^{+}}{R_{5}}+\frac{V_{2}^{+}-V_{out}}{R_{4}}$
 \end_inset
 
@@ -729,16 +685,12 @@ En la resolución que se expone a continuación se asumió que la ganancia
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Definiendo las siguientes constantes por conveniencia se puede llegar al
  grafo que representa al circuito:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $R_{a}=R_{4}R_{8}+R_{5}R_{8}+R_{4}R_{5}$
 \end_inset
 
@@ -747,8 +699,6 @@ Definiendo las siguientes constantes por conveniencia se puede llegar al
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $R_{b}=R_{6}Z_{7}+R_{1}Z_{7}+R_{1}R_{6}$
 \end_inset
 
@@ -756,8 +706,6 @@ Definiendo las siguientes constantes por conveniencia se puede llegar al
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -776,13 +724,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Grafo equivalente del circuito
 \end_layout
 
@@ -801,15 +745,11 @@ Grafo equivalente del circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 La ganancia deseada se puede obtener si se aplica la formula de Masón:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 H(s)=\frac{\sum_{i=1}^{N}G_{I}\triangle_{I}}{\Delta}
@@ -822,8 +762,6 @@ H(s)=\frac{\sum_{i=1}^{N}G_{I}\triangle_{I}}{\Delta}
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 \triangle=1-\sum L_{i}+\sum L_{i}L_{j}-\sum L_{i}L_{j}L_{k}+...
@@ -835,8 +773,6 @@ H(s)=\frac{\sum_{i=1}^{N}G_{I}\triangle_{I}}{\Delta}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Donde 
 \begin_inset Formula $G_{i}$
 \end_inset
@@ -855,8 +791,6 @@ es la ganancia del bucle i-esimo y
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $G_{1}=\frac{R_{4}R_{5}}{R_{a}}.A_{vol}.\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol})$
 \end_inset
 
@@ -864,8 +798,6 @@ es la ganancia del bucle i-esimo y
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $G_{2}=\frac{R_{1}R_{6}}{R_{b}}.A_{vol}$
 \end_inset
 
@@ -873,8 +805,6 @@ es la ganancia del bucle i-esimo y
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $G_{3}=\frac{R_{4}R_{5}}{R_{a}}.A_{vol}.\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}$
 \end_inset
 
@@ -882,16 +812,12 @@ es la ganancia del bucle i-esimo y
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
  todos comparten por lo menos un nodo.
  Teniendo esto en cuento los deltas son:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\Delta=1-(A_{vol}.\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol}).\frac{R_{5}R_{8}}{R_{a}}+A_{vol}.\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}.\frac{R_{5}R_{8}}{R_{a}}+\frac{R_{3}}{R_{3}+Z_{2}}.(-A_{vol})+\frac{R_{6}Z_{7}}{R_{b}}.A_{vol}.\frac{Z_{2}}{R_{3}+Z_{2}}.(-A_{vol})+\frac{Z_{2}}{R_{3}+Z_{2}}.(-A_{vol}))$
 \end_inset
 
@@ -899,8 +825,6 @@ En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\Delta_{1}=\Delta_{3}=1$
 \end_inset
 
@@ -908,8 +832,6 @@ En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\Delta_{2}=1+\frac{R_{3}A_{vol}}{R_{3}+Z_{2}}$
 \end_inset
 
@@ -917,8 +839,6 @@ En cuanto a los bucles, el grafo tiene cinco bucles simples distintos y
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se despejo convenientemente la función transferencia con la ayuda de Matlab
  y se llego a la siguiente función transferencia para cuando la ganancia
  en lazo abierto(
@@ -932,7 +852,6 @@ Se despejo convenientemente la función transferencia con la ayuda de Matlab
 \align center
 
 \size large
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 H(s)=\frac{num1\times s^{2}+num2\times s+num3}{den1\times s^{2}+den2\times s+den3}
@@ -944,14 +863,10 @@ H(s)=\frac{num1\times s^{2}+num2\times s+num3}{den1\times s^{2}+den2\times s+den
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Donde:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $R_{u}=R_{1}R_{6}+R_{1}R_{7}+R_{6}R_{7}$
 \end_inset
 
@@ -959,8 +874,6 @@ Donde:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $num1=C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})$
 \end_inset
 
@@ -1003,8 +916,6 @@ Donde:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Si se considera que 
 \begin_inset Formula $A_{vol}$
 \end_inset
@@ -1014,8 +925,6 @@ Si se considera que
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}R_{8}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}(R_{6}R_{a}-C_{6}R_{4}R_{5}R_{6}R_{7}-R_{4}R_{5}(R_{6}+R_{7}))s+R_{4}R_{5}R_{6}R_{7}}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{6}R_{7}R_{8}s^{2}+(R_{7}+R_{6})C_{2}R_{1}R_{3}R_{5}R_{8}s+R_{4}R_{6}R_{7}(R_{5}+R_{8})}
@@ -1027,15 +936,11 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}R_{8}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 La función transferencia puede ser reescrita en función de ciertas magnitudes
  de interés como se presenta a continuación:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 H(s)=K\frac{(\frac{s}{\omega_{z}})^{2}+\frac{s}{Q_{z}\omega_{z}}+1}{(\frac{s}{\omega_{p}})^{2}+\frac{s}{Q_{p}\omega_{p}}+1}
@@ -1047,14 +952,10 @@ H(s)=K\frac{(\frac{s}{\omega_{z}})^{2}+\frac{s}{Q_{z}\omega_{z}}+1}{(\frac{s}{\o
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $K=\frac{R_{5}}{R_{5}+R_{8}}$
 \end_inset
 
@@ -1062,8 +963,6 @@ Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{z}=\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}(R_{4}+R_{5})}}$
 \end_inset
 
@@ -1071,8 +970,6 @@ Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{z}=-\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{8}(R_{4}+R_{5})}}{C_{2}R_{1}R_{3}R_{4}R_{5}(R_{6}+R_{7}+C_{6}R_{6}R_{7})}$
 \end_inset
 
@@ -1080,8 +977,6 @@ Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{p}=\sqrt{\frac{R_{4}(R_{5}+R_{8})}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
 \end_inset
 
@@ -1089,8 +984,6 @@ Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{P}=\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{8}(R_{5}+R_{8})}}{C_{2}R_{1}R_{3}R_{5}R_{8}(R_{6}+R_{7})}$
 \end_inset
 
@@ -1098,15 +991,11 @@ Realizando el despeje y las simplificaciones adecuadas se llega a que:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Utilizando las siguientes sustituciones, las magnitudes se vuelven mas simples:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $\begin{array}{cc}
 R_{1}=R_{3}=R_{8}=R, & C_{2}=C_{6}=C,\\
 R_{5}=\frac{2k^{2}}{1-k^{2}}R, & R_{6}=(1+k^{2})QR,
@@ -1124,8 +1013,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $K=\frac{2k^{2}}{k^{2}+1}$
 \end_inset
 
@@ -1133,8 +1020,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{z}=\frac{k}{RC}$
 \end_inset
 
@@ -1142,8 +1027,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{z}=-\frac{1}{kRC}$
 \end_inset
 
@@ -1151,8 +1034,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{p}=\frac{1}{RC}$
 \end_inset
 
@@ -1160,8 +1041,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{P}=Q$
 \end_inset
 
@@ -1169,8 +1048,6 @@ R_{7}=(1+\frac{1}{k^{2}})QR
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Función de 
 \begin_inset Formula $R_{8}$
 \end_inset
@@ -1179,8 +1056,6 @@ Función de
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 El circuito ademas del GIC tiene unas resistencias y un capacitor adicional
  que lo componen.
  A continuación se analiza que sucede al tomar los limites de los dos casos
@@ -1192,8 +1067,6 @@ El circuito ademas del GIC tiene unas resistencias y un capacitor adicional
 \end_layout
 
 \begin_layout Enumerate
-
-\lang spanish
 Caso 
 \begin_inset Formula $R_{8}\rightarrow0$
 \end_inset
@@ -1203,16 +1076,12 @@ Caso
 
 \begin_deeper
 \begin_layout Standard
-
-\lang spanish
 Tomando dicho limite de la expresión (4) se llega a:
 \end_layout
 
 \end_deeper
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 H(s)=\frac{-C_{2}R_{1}R_{3}R_{4}R_{5}R_{7}(C_{6}R_{6}+1)s+R_{4}R_{5}R_{6}R_{7}}{R_{4}R_{5}R_{6}R_{7}}
@@ -1224,8 +1093,6 @@ H(s)=\frac{-C_{2}R_{1}R_{3}R_{4}R_{5}R_{7}(C_{6}R_{6}+1)s+R_{4}R_{5}R_{6}R_{7}}{
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Formula 
 \[
 H(s)=-\frac{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}{R_{6}}s+1
@@ -1237,8 +1104,6 @@ H(s)=-\frac{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}{R_{6}}s+1
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Con lo cual la función transferencia es la de un filtro pasa altos con 
 \begin_inset Formula $\omega_{corte}=-\frac{R_{6}}{C_{2}R_{1}R_{3}(C_{6}R_{6}+1)}$
 \end_inset
@@ -1247,8 +1112,6 @@ Con lo cual la función transferencia es la de un filtro pasa altos con
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 2.
  Caso 
 \begin_inset Formula $R_{8}\rightarrow\infty$
@@ -1258,14 +1121,10 @@ Con lo cual la función transferencia es la de un filtro pasa altos con
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Nuevamente haciendo el limite en la expresión (4 ) se tiene que:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Formula 
 \[
 H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}R_{6}(R_{4}+R_{5})s+R_{4}R_{5}R_{6}R_{7}}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{6}R_{7}s^{2}+(R_{6}+R_{7})C_{2}R_{1}R_{3}R_{5}s+R_{4}R_{6}R_{7}}
@@ -1277,14 +1136,10 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{4}+R_{5})s^{2}+C_{2}R_{1}R_{3}R_{6}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $K=R_{5}$
 \end_inset
 
@@ -1292,8 +1147,6 @@ Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{z}=\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}(R_{4}+R_{5})}}$
 \end_inset
 
@@ -1301,8 +1154,6 @@ Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{z}=\frac{R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}(R_{4}+R_{5})}}{C_{2}R_{1}R_{3}(R_{4}+R_{5})}$
 \end_inset
 
@@ -1310,8 +1161,6 @@ Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{p}=\sqrt{\frac{R_{4}}{C_{2}C_{6}R_{1}R_{3}R_{5}}}$
 \end_inset
 
@@ -1319,8 +1168,6 @@ Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q_{P}=\frac{R_{6}R_{7}\sqrt{C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}}}{C_{2}R_{1}R_{3}R_{5}(R_{6}+R_{7})}$
 \end_inset
 
@@ -1328,21 +1175,15 @@ Reescribiendo la transferencia en el formato (5), se tiene que:
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Diagrama de polos y ceros
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Analizando el denominador de (5) se llega a que los ceros del polinomio
  están dados por:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 \omega_{p}(-\frac{1}{2Q_{p}}\pm\sqrt{(\frac{1}{2Q_{p}})^{2}-\omega_{p}^{2}})
@@ -1354,8 +1195,6 @@ Analizando el denominador de (5) se llega a que los ceros del polinomio
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Remplazando en la ecuación (6) por los valores de las magnitudes calculados
  en relación a los componentes se llega a las dos siguientes expresiones
  para los polos:
@@ -1363,8 +1202,6 @@ Remplazando en la ecuación (6) por los valores de las magnitudes calculados
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $polos=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm\sqrt{\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)^{2}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}-\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
 \end_inset
 
@@ -1372,15 +1209,11 @@ Remplazando en la ecuación (6) por los valores de las magnitudes calculados
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Dichas expresiones genéricas para los polos se obtuvieron de manera simbólica
  mediante el uso de Matlab.
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 De manera similar se puede obtener una expresión genérica para los ceros
  de la transferencia utilizando la expresión (6) pero reemplazando en la
  misma por la selectividad y la frecuencia de corte adecuada.
@@ -1391,17 +1224,36 @@ De manera similar se puede obtener una expresión genérica para los ceros
 \begin_layout Standard
 \align center
 
-\size tiny
-\lang spanish
-\begin_inset Formula $ceros=\left(\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}}{2R_{4}R_{5}R_{6}R_{7}}\pm\sqrt{\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)^{2}}{4C_{6}R_{4}R_{5}R_{6}^{2}R_{7}^{2}R_{8}\left(R_{4}+R_{5}\right)}-\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}$
+\size large
+\color black
+\begin_inset Formula $ceros=\left(A\pm B\right)C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $A=\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}}{2R_{4}R_{5}R_{6}R_{7}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $B=\sqrt{\frac{C_{2}R_{1}R_{3}\left(R_{4}R_{5}R_{7}-R_{4}R_{6}R_{8}-R_{5}R_{6}R_{8}+C_{6}R_{4}R_{5}R_{6}R_{7}\right)^{2}}{4C_{6}R_{4}R_{5}R_{6}^{2}R_{7}^{2}R_{8}\left(R_{4}+R_{5}\right)}-\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $C=\sqrt{\frac{R_{4}R_{5}}{C_{2}C_{6}R_{1}R_{3}R_{8}\left(R_{4}+R_{5}\right)}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 A continuación se analizara el caso de que pasa con los polos y ceros del
  circuito para casos extremos en los valores de 
 \begin_inset Formula $R_{6}$
@@ -1411,8 +1263,6 @@ A continuación se analizara el caso de que pasa con los polos y ceros del
 \end_layout
 
 \begin_layout Enumerate
-
-\lang spanish
 \begin_inset Formula $R_{6}\rightarrow0$
 \end_inset
 
@@ -1421,15 +1271,11 @@ A continuación se analizara el caso de que pasa con los polos y ceros del
 
 \begin_deeper
 \begin_layout Standard
-
-\lang spanish
 Tomando el limite en la función transferencia (4), se llega a que:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $lim_{R_{6\rightarrow0}}H(s)=-\frac{R_{4}s}{R_{8}s}$
 \end_inset
 
@@ -1437,8 +1283,6 @@ Tomando el limite en la función transferencia (4), se llega a que:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Lo que significa que en el caso en el que se cortocircuita 
 \begin_inset Formula $R_{6}$
 \end_inset
@@ -1458,8 +1302,6 @@ y
 
 \end_deeper
 \begin_layout Enumerate
-
-\lang spanish
 \begin_inset Formula $R_{6}\rightarrow\infty$
 \end_inset
 
@@ -1468,8 +1310,6 @@ y
 
 \begin_deeper
 \begin_layout Standard
-
-\lang spanish
 Si se asume que los polos son complejos conjugados(El cual es el caso de
  interés ya que el circuito se utilizara como un filtro Notch con 
 \begin_inset Formula $Q_{p}>\frac{1}{2}$
@@ -1481,8 +1321,6 @@ Si se asume que los polos son complejos conjugados(El cual es el caso de
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $polos=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm j\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\left(1+\frac{R_{7}}{R_{6}}\right)^{2}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
 \end_inset
 
@@ -1490,8 +1328,6 @@ Si se asume que los polos son complejos conjugados(El cual es el caso de
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Si se toman como fijos los valores de todos los componentes menos el de
  
 \begin_inset Formula $R_{6}$
@@ -1516,8 +1352,6 @@ como infinito se llega a:
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $polos_{R_{6}=\infty}=\left(-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}}{2R_{4}R_{7}\left(R_{5}+R_{8}\right)}\pm j\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}-\frac{C_{2}R_{1}R_{3}R_{5}R_{8}}{4C_{6}R_{4}R_{7}^{2}\left(R_{5}+R_{8}\right)}}\right)\sqrt{\frac{R_{4}\left(R_{5}+R_{8}\right)}{C_{2}C_{6}R_{1}R_{3}R_{5}R_{8}}}$
 \end_inset
 
@@ -1525,8 +1359,6 @@ como infinito se llega a:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 El hecho de que al tomar valores de 
 \begin_inset Formula $R_{6}$
 \end_inset
@@ -1551,8 +1383,6 @@ mayores el modulo de la parte imaginaria del polo aumente, mientras que
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -1561,8 +1391,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/Pole-zero-diagram-of-an-underdamped-second-order-oscillator-as-a-function-of-the.png
 	scale 50
@@ -1573,13 +1401,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Polos de un sistema de segundo orden con 
 \begin_inset Formula $\xi<1$
 \end_inset
@@ -1606,8 +1430,6 @@ Polos de un sistema de segundo orden con
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 La figura anterior muestra como al aumentar el angulo entre el eje real
  y el vector posición del polo, el 
 \begin_inset Formula $\xi=\frac{1}{2Q}$
@@ -1618,15 +1440,11 @@ La figura anterior muestra como al aumentar el angulo entre el eje real
 
 \end_deeper
 \begin_layout Standard
-
-\lang spanish
 Para los valores de componentes elegidos de componentes el diagrama de polos
  y cero es el siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -1645,8 +1463,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -1664,8 +1480,6 @@ Diagrama de poos y ceros
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Como se puede apreciar de la figura, el factor de calidad 
 \begin_inset Formula $Q_{z}$
 \end_inset
@@ -1677,14 +1491,10 @@ Como se puede apreciar de la figura, el factor de calidad
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Notch Depth
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 El termino 'Notch Depth' hace referencia a la atenuación que produce un
  filtro Notch sobre la frecuencia de corte(
 \begin_inset Formula $\omega_{z}$
@@ -1697,8 +1507,6 @@ El termino 'Notch Depth' hace referencia a la atenuación que produce un
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 H(s)=\frac{s^{2}+\omega_{z}^{2}}{s^{2}+s\frac{\omega_{p}}{Q}+\omega_{p}^{2}}
@@ -1710,8 +1518,6 @@ H(s)=\frac{s^{2}+\omega_{z}^{2}}{s^{2}+s\frac{\omega_{p}}{Q}+\omega_{p}^{2}}
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{z}$
 \end_inset
 
@@ -1720,8 +1526,6 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{p}$
 \end_inset
 
@@ -1741,8 +1545,6 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Q$
 \end_inset
 
@@ -1757,8 +1559,6 @@ es la frecuencia de corte del filtro y define donde esta centrada la banda
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
  de la función transferencia.Sin embargo, en la practica la atenuación del
  filtro nunca es infinita y existe una relación entre la ubicación de la
@@ -1772,8 +1572,6 @@ En un filtro Notch ideal, la frecuencia de corte es un cero de transmisión
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -1792,13 +1590,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Filtro Notch con k=0.99 y Q(de 0.1 a 100)
 \end_layout
 
@@ -1817,8 +1611,6 @@ Filtro Notch con k=0.99 y Q(de 0.1 a 100)
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 No se puede apreciar del todo en la grafica, pero el notch depth disminuye
  con el Q.
  El mismo comienza en -80 db y disminuye a valores cercanos a -10db para
@@ -1826,20 +1618,14 @@ No se puede apreciar del todo en la grafica, pero el notch depth disminuye
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Elección de los componentes
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Valores de elementos pasivos
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se eligieron los componentes del circuito con el objetivo de que el mismo
  funcione como un filtro 'High Pass Notch'.
  Las exigencias a cumplir se presentan en la siguiente tabla:
@@ -1847,8 +1633,6 @@ Se eligieron los componentes del circuito con el objetivo de que el mismo
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Float table
 placement H
 wide false
@@ -1857,8 +1641,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="3">
 <features tabularvalignment="middle">
@@ -1870,8 +1652,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Formula $\omega_{p}(rad/seg)$
 \end_inset
 
@@ -1884,8 +1664,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Formula $Q$
 \end_inset
 
@@ -1898,8 +1676,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Formula $|H(\infty)|(db)$
 \end_inset
 
@@ -1914,8 +1690,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 13000
 \end_layout
 
@@ -1925,8 +1699,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 2
 \end_layout
 
@@ -1936,8 +1708,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 4
 \end_layout
 
@@ -1952,13 +1722,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Requisitos del filtro
 \end_layout
 
@@ -1977,16 +1743,12 @@ Requisitos del filtro
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Primero se analizara la exigencia de la ganancia en el infinito, para ello
  se reescribirá la ecuación (5) de la forma:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 H(s)=K\frac{\frac{1}{\omega_{z}^{2}}+\frac{1}{\omega_{z}Q_{z}s}+\frac{1}{s^{2}}}{\frac{1}{\omega_{p}^{2}}+\frac{1}{\omega_{p}Q_{p}s}+\frac{1}{s^{2}}}
@@ -1998,16 +1760,12 @@ H(s)=K\frac{\frac{1}{\omega_{z}^{2}}+\frac{1}{\omega_{z}Q_{z}s}+\frac{1}{s^{2}}}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Si se toma el limite para una frecuencia infinita, los términos con s dividiendo
  se anulan y queda:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 |H(\infty)|=\frac{2k^{2}}{k^{2}+1}(\frac{\omega_{p}}{\omega_{z}})^{2}
@@ -2020,8 +1778,6 @@ Si se toma el limite para una frecuencia infinita, los términos con s dividiend
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $|H(\infty)|=\frac{2}{k^{2}+1}$
 \end_inset
 
@@ -2033,16 +1789,12 @@ Si se toma el limite para una frecuencia infinita, los términos con s dividiend
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Por lo que reemplazando por la condición de 4dB(aproximadamente 1.58 en veces),
  se llega a que:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 k=0.5117760144
@@ -2055,8 +1807,6 @@ k=0.5117760144
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 k\approx0.512
@@ -2068,8 +1818,6 @@ k\approx0.512
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para cumplir la primera condición de la tabla se remplaza en la expresión
  obtenida en el marco teórico para 
 \begin_inset Formula $\omega_{p}$
@@ -2080,8 +1828,6 @@ Para cumplir la primera condición de la tabla se remplaza en la expresión
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $\omega_{p}=\frac{1}{RC}$
 \end_inset
 
@@ -2090,8 +1836,6 @@ Para cumplir la primera condición de la tabla se remplaza en la expresión
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 RC=\frac{1}{13000}\frac{seg}{rad}
@@ -2103,8 +1847,6 @@ RC=\frac{1}{13000}\frac{seg}{rad}
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se probo con varios valores comerciales de capacitores y se llego a la conclusió
 n que una forma de llegar a valores convenientes de capacitores tanto como
  de resistencias es fijando C=47nf.
@@ -2113,8 +1855,6 @@ n que una forma de llegar a valores convenientes de capacitores tanto como
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \[
 R\approx1637\Omega
@@ -2126,8 +1866,6 @@ R\approx1637\Omega
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Utilizando los valores de C, R, k y 
 \begin_inset Formula $Q$
 \end_inset
@@ -2138,8 +1876,6 @@ Utilizando los valores de C, R, k y
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $\begin{array}{cc}
 R_{1}=R_{3}=R_{8}=1.5k\Omega, & R_{4}=680\Omega,\\
 R_{7}=15k\Omega, & C_{2}=C_{6}=47nf
@@ -2157,14 +1893,10 @@ R_{5}=1.2k\Omega & R_{6}=3.9k\Omega\\
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Elección del modelo de amplificador operacional
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Para la implementación del circuito se decidió utilizar el modelo de amplificado
 r operacional LM833, a lo largo de esta sección se justificara la elección
  del modelo.
@@ -2178,8 +1910,6 @@ r operacional LM833, a lo largo de esta sección se justificara la elección
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 El BWP del operacional influye en la decisión ya que el mismo indica la
  relación entre la ganancia a lazo abierto del operacional y la ubicación
  del polo dominante del mismo.
@@ -2189,8 +1919,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $3.16\times10^{4}<A_{vol}$
 \end_inset
 
@@ -2198,8 +1926,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $A_{vol_{tipico}}=3.16\times10^{5}$
 \end_inset
 
@@ -2207,8 +1933,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $\omega_{o_{tipico}}=298\frac{rad}{seg}$
 \end_inset
 
@@ -2216,8 +1940,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $SlewRate_{tipico}=7\frac{V}{\mu seg}$
 \end_inset
 
@@ -2225,8 +1947,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $I_{bias_{MAX}}=1\mu A$
 \end_inset
 
@@ -2234,8 +1954,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $v_{offset_{MAX}}=5mV$
 \end_inset
 
@@ -2243,8 +1961,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Itemize
-
-\lang spanish
 \begin_inset Formula $Z_{in}=175k\Omega$
 \end_inset
 
@@ -2252,8 +1968,6 @@ s accesibles.Asimismo de la datasheet se obtuvieron los siguientes parámetros:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Las mayores desventajas del amplificador son sus altos valores de corrientes
  de bias y su baja impedancia de entrada con respecto a otros operacionales.Sin
  embargo, se considero que dichas desventajas no son de gran interés ya
@@ -2272,8 +1986,6 @@ Las mayores desventajas del amplificador son sus altos valores de corrientes
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $I_{bias_{MAX}}R_{7}=(1\mu A)\times(15k\Omega)=15mV$
 \end_inset
 
@@ -2281,8 +1993,6 @@ Las mayores desventajas del amplificador son sus altos valores de corrientes
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Esa seria la peor caída posible asumiendo que la corriente de bias toma
  su máximo valor posible y que la misma pasa completamente por 
 \begin_inset Formula $R_{7}$
@@ -2292,27 +2002,19 @@ Esa seria la peor caída posible asumiendo que la corriente de bias toma
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 En cuanto al slew rate, se trato de que sea lo mas alto posible para poder
  tener un mayor rango de tensiones posible a altas frecuencias.
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Limitaciones del filtro
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Slew rate
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 El slew rate del LM833 es en el peor de los casos de 
 \begin_inset Formula $5\frac{V}{\mu s}$
 \end_inset
@@ -2326,8 +2028,6 @@ El slew rate del LM833 es en el peor de los casos de
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula 
 \begin{equation}
 SR=A_{max}G_{i}2\pi f
@@ -2339,8 +2039,6 @@ SR=A_{max}G_{i}2\pi f
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Donde 
 \begin_inset Formula $G_{i}$
 \end_inset
@@ -2356,8 +2054,6 @@ Donde
 
 \begin_layout Standard
 \align center
-
-\lang spanish
 \begin_inset Formula $A_{max}\approx\frac{502100}{f}$
 \end_inset
 
@@ -2365,15 +2061,11 @@ Donde
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 A continuación se presenta una breve tabla con algunos valores de tensiones
  máximas permitidas para frecuencias mayores a los 100KHz:
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float table
 placement H
 wide false
@@ -2382,8 +2074,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="2">
 <features tabularvalignment="middle">
@@ -2394,8 +2084,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 f(kHz)
 \end_layout
 
@@ -2405,8 +2093,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Formula $A_{max}(V)$
 \end_inset
 
@@ -2421,8 +2107,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 100
 \end_layout
 
@@ -2432,8 +2116,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 5.02
 \end_layout
 
@@ -2445,8 +2127,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 250
 \end_layout
 
@@ -2456,8 +2136,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 2.01
 \end_layout
 
@@ -2469,8 +2147,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 500
 \end_layout
 
@@ -2480,8 +2156,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 1
 \end_layout
 
@@ -2493,8 +2167,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 1000
 \end_layout
 
@@ -2504,8 +2176,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 0.502
 \end_layout
 
@@ -2517,8 +2187,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 5000
 \end_layout
 
@@ -2528,8 +2196,6 @@ f(kHz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang spanish
 0.1
 \end_layout
 
@@ -2544,13 +2210,9 @@ f(kHz)
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Valores máximos de amplitud de entrada
 \end_layout
 
@@ -2569,14 +2231,10 @@ Valores máximos de amplitud de entrada
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Saturación
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 También se debe tener cuidado de no saturar al operacional con tensiones
  de entrada muy grandes.El mayor riesgo de saturación es en el sobrepico
  que sigue a la frecuencia de notch, ya que es el rango de frecuencias de
@@ -2596,14 +2254,10 @@ V,por lo que se tiene que la mayor amplitud posible a la entrada sin saturar
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Polo dominante
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 A partir de la simulación en LTSpice, se obtiene que el filtro funciona
  adecuadamente hasta alrededor de los 5MHz en donde la ganancia sube alrededor
  de 1dB y luego en 11MHz la ganancia empieza a bajar debido al polo dominante
@@ -2611,8 +2265,6 @@ A partir de la simulación en LTSpice, se obtiene que el filtro funciona
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2621,8 +2273,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/PoloDominante.PNG
 	scale 40
@@ -2633,13 +2283,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 El efecto del polo dominante del LM833
 \end_layout
 
@@ -2654,14 +2300,10 @@ El efecto del polo dominante del LM833
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Resultados de las mediciones
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 A continuación se presentan las gráficas de las mediciones de los distintos
  parámetros medidos del circuito superpuestos con los obtenidos de las simulacio
 nes de los mismos.La gráfica de la transferencia teórica del filtro se realizo
@@ -2673,14 +2315,10 @@ nes de los mismos.La gráfica de la transferencia teórica del filtro se realizo
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Respuesta en frecuencia
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2689,8 +2327,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/MagRespFrec.png
 	scale 50
@@ -2701,13 +2337,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Magnitud de la respuesta en frecuencia del circuito
 \end_layout
 
@@ -2726,8 +2358,6 @@ Magnitud de la respuesta en frecuencia del circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2736,8 +2366,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/FaseRespFrec.png
 	scale 50
@@ -2748,13 +2376,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Fase de la respuesta en frecuencia del circuito
 \end_layout
 
@@ -2769,14 +2393,10 @@ Fase de la respuesta en frecuencia del circuito
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Impedancia de entrada
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2795,13 +2415,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Magnitud de la impedancia de entrada
 \end_layout
 
@@ -2820,8 +2436,6 @@ Magnitud de la impedancia de entrada
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2840,13 +2454,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Fase de la impedancia de salida
 \end_layout
 
@@ -2865,14 +2475,10 @@ Fase de la impedancia de salida
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang spanish
 Impedancia de salida
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2881,8 +2487,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/MagZout.png
 	scale 50
@@ -2893,13 +2497,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Magnitud de la impedancia de salida del circuito
 \end_layout
 
@@ -2918,8 +2518,6 @@ Magnitud de la impedancia de salida del circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Float figure
 placement H
 wide false
@@ -2928,8 +2526,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang spanish
 \begin_inset Graphics
 	filename ImagenesEj1/FaseZout.png
 	scale 50
@@ -2940,13 +2536,9 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang spanish
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-
-\lang spanish
 Fase de la impedancia de salida del circuito
 \end_layout
 
@@ -2965,14 +2557,10 @@ Fase de la impedancia de salida del circuito
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Análisis de las mediciones
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 Se puede ver en las mediciones realizadas que para la frecuencia de 1Mhz
  las mediciones comienzan a diferir con los resultados simulados.
  Esta diferencia resulta mas evidente en el caso de las impedancias medidas,
@@ -3018,8 +2606,6 @@ a, ya que a medida que aumenta la frecuencia y la magnitud de la impedancia
 \end_layout
 
 \begin_layout Subsection
-
-\lang spanish
 Conclusiones
 \end_layout
 
@@ -3033,8 +2619,6 @@ Es importante en el diseño de filtros que utilizan uno o varios GICs tener
 \end_layout
 
 \begin_layout Standard
-
-\lang spanish
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -3042,15 +2626,11 @@ Es importante en el diseño de filtros que utilizan uno o varios GICs tener
 \end_layout
 
 \begin_layout Section
-
-\lang english
 Diseño de Filtros
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-A continuación se propondrá el diseño de diferentes circuitos que actuén
+A continuación se propondrá el diseño de diferentes circuitos que actúen
  como filtro de frecuencias para las señales de excitación de los mismos.
  Cada uno de estos circuitos conforman un cuadripolo, cuya entrada es la
  señal de excitación y la salida es la señal de entrada filtrada según la
@@ -3067,14 +2647,10 @@ filtros
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Plantillas y Circuitos Propuestos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Los filtros a realizar son cuatro, los cuales deben cumplir con una plantilla
  (una para cada filtro) que se especifica a continuación:
 \end_layout
@@ -3082,17 +2658,14 @@ Los filtros a realizar son cuatro, los cuales deben cumplir con una plantilla
 \begin_layout Standard
 
 \color red
-\lang english
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
 <features tabularvalignment="middle">
@@ -3105,8 +2678,6 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Tipo de Filtro
 \end_layout
 
@@ -3116,8 +2687,6 @@ Tipo de Filtro
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Fpaso (Hz)
 \end_layout
 
@@ -3127,8 +2696,6 @@ Fpaso (Hz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Fatenuación (Hz)
 \end_layout
 
@@ -3138,8 +2705,6 @@ Fatenuación (Hz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Fcorte (Hz)
 \end_layout
 
@@ -3151,8 +2716,6 @@ Fcorte (Hz)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Pasa Alto
 \end_layout
 
@@ -3162,8 +2725,6 @@ Pasa Alto
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 5000
 \end_layout
 
@@ -3173,8 +2734,6 @@ Pasa Alto
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 17500
 \end_layout
 
@@ -3184,8 +2743,6 @@ Pasa Alto
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 -
 \end_layout
 
@@ -3197,8 +2754,6 @@ Pasa Alto
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Pasa Bajo
 \end_layout
 
@@ -3208,8 +2763,6 @@ Pasa Bajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 3000
 \end_layout
 
@@ -3219,8 +2772,6 @@ Pasa Bajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 10500
 \end_layout
 
@@ -3230,8 +2781,6 @@ Pasa Bajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 -
 \end_layout
 
@@ -3243,8 +2792,6 @@ Pasa Bajo
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Pasa Banda
 \end_layout
 
@@ -3254,8 +2801,6 @@ Pasa Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 -
 \end_layout
 
@@ -3265,8 +2810,6 @@ Pasa Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 -
 \end_layout
 
@@ -3276,8 +2819,6 @@ Pasa Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 6000
 \end_layout
 
@@ -3289,8 +2830,6 @@ Pasa Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 Rechaza Banda
 \end_layout
 
@@ -3300,8 +2839,6 @@ Rechaza Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 .
 \end_layout
 
@@ -3311,8 +2848,6 @@ Rechaza Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 .
 \end_layout
 
@@ -3322,8 +2857,6 @@ Rechaza Banda
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 5000
 \end_layout
 
@@ -3339,8 +2872,7 @@ Rechaza Banda
 
 \begin_layout Plain Layout
 
-\color red
-\lang english
+\color black
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3354,24 +2886,16 @@ Plantillas de Filtros
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Otras especificaciones para el filtro pasa alto y para el pasa bajo son:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para el filtro pasa alto, se requiere que para frecuencias a menores a la
  frecuencia de paso, la ganancia sea entre 
 \begin_inset Quotes eld
@@ -3403,8 +2927,6 @@ Para el filtro pasa alto, se requiere que para frecuencias a menores a la
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En cuanto al filtro pasa alto, la ganancia en frecuencias menores a la de
  atenuación debe ser menor a -10dB mientras que para frecuencias mayores
  a la de paso la ganancia debe ser mayor a -3dB y no superar 0dB.
@@ -3416,8 +2938,6 @@ En cuanto al filtro pasa alto, la ganancia en frecuencias menores a la de
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para diseñar circuitos que cumplan con estos requerimientos, se procederá
  a analizar las diferentes señales de tensión que pueden ser medidas en
  un circuito 
@@ -3432,15 +2952,11 @@ RLC serie
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 A continuación se presenta una imagen que presenta un circuito RLC serie
  y algunas señales de salida (caída de tensión) que pueden ser de interés.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -3449,8 +2965,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename puntosRelevantes.PNG
 	scale 50
@@ -3461,8 +2975,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3486,22 +2998,16 @@ RLC serie - Puntos de Medición Relevantes
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Funciones de Transferencia
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Según el punto del circuito en el cual se tome la señal de salida del sistema
  se obtendrán distintas funciones transferencia, las cuales se presentan
  a continuación:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 La función transferencia del filtro 
 \begin_inset Quotes eld
 \end_inset
@@ -3515,8 +3021,6 @@ pasa altos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $V_{L}=V_{i}\frac{sL}{sL+\frac{1}{sC}+R}\Rightarrow H_{HP}(s)=\frac{V_{L}}{V_{i}}=\frac{s^{2}LC}{s^{2}LC+sRC+1}$
 \end_inset
 
@@ -3528,23 +3032,19 @@ pasa altos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 De esta manera se logra obtener un cero doble en el numerador el cual puede
  adecuarse para atenuar las frecuencias bajas y luego ser estabilizado por
  el denominador de la transferencia.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Otra manera de ver que este circuito conforma un pasa altos con la tensión
  de la bobina como salida, es analizar lo que ocurre en casos extremos.
  Es decir, para frecuencias bajas, la bobina se comporta como un corto circuito
  mientras que el capacitor se mantiene como una llave abierta.
  Esto conlleva a que la señal de salida a frecuencias bajas sea nula (a
- este fenómeno se lo suele llamar cero de transimisión doble en altas frecuencia
-s ya que la señal se anula a frecuencias elevadas por dos motivos, tanto
+ este fenómeno se lo suele llamar cero de transmisión doble en altas frecuencias
+ ya que la señal se anula a frecuencias elevadas por dos motivos, tanto
  por comportamiento de la bobina como por efecto del capacitor).
  Por otro lado, a frecuencias altas el capacitor se comporta como un cable
  y la bobina como una llave abierta, por ende si la frecuencia es lo suficientem
@@ -3552,48 +3052,36 @@ ente alta se obtiene una señal de salida igual a la de entrada.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para el caso del filtro pasa bajos, se puede tomar la salida como la caída
  de tensión en el capacitor:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $V_{C}=V_{i}\frac{\frac{1}{sC}}{\frac{1}{sC}+sL+R}\Rightarrow H_{LP}(s)=\frac{V_{C}}{V_{i}}=\frac{1}{s^{2}LC+sRC+1}$
 \end_inset
 
- (cero de transmisiópn a frecuencia baja)
+ (cero de transmisión a frecuencia baja)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En cuanto al filtro pasa banda, se toma la salida como la caída de tensión
  en la resistencia:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $V_{R}=V_{i}\frac{R}{R+sL+\frac{1}{sC}}\Rightarrow H_{BP}(s)=\frac{V_{R}}{V_{i}}=\frac{sRC}{s^{2}LC+sRC+1}$
 \end_inset
 
- (cero de transimisión a frecuencias altas y también a frecuencias bajas)
+ (cero de transmisión a frecuencias altas y también a frecuencias bajas)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por último, para la función transferencia del rechaza banda, tomando la
- salida como la caida de tensión del conjunto capacitor en serie con la
+ salida como la caída de tensión del conjunto capacitor en serie con la
  bobina se puede plantear lo siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $V_{LC}=V_{i}\frac{sL+\frac{1}{sC}}{sL+\frac{1}{sC}+R}\Rightarrow H_{BR}(s)=\frac{V_{LC}}{V_{i}}=\frac{s^{2}LC+1}{s^{2}LC+sRC+1}$
 \end_inset
 
@@ -3601,8 +3089,6 @@ Por último, para la función transferencia del rechaza banda, tomando la
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Sin embargo, este análisis supone que la bobina no tiene resistencia interna.
  Para tener en cuenta esta resistencia (
 \begin_inset Formula $R_{coil}$
@@ -3620,15 +3106,11 @@ Sin embargo, este análisis supone que la bobina no tiene resistencia interna.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Por ende las funciones transferencias que se obtienen con este ùltimo enfoque
+Por ende las funciones transferencias que se obtienen con este último enfoque
  son las siguientes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 H_{HP}(s)=\frac{s\frac{L}{R_{coil}}.sCR_{coil}}{s^{2}LC+s(R+R_{coil})C+1} & (1)\\
 H_{LP}(s)=\frac{1}{s^{2}LC+s(R+R_{coil})C+1} & (2)\\
@@ -3641,14 +3123,10 @@ H_{BR}(s)=\frac{s^{2}LC+sCR_{coil}+1}{s^{2}LC+s(R+R_{coil})C+1} & (4)
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Bobina vs Gyrator
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para el diseño de los filtros planteados se requiere de una bobina en el
  circuito.
  Lo que se planteará a continuación será proponer el uso de un componente
@@ -3657,8 +3135,6 @@ Para el diseño de los filtros planteados se requiere de una bobina en el
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 El nuevo componente para reemplazar la bobina es llamado 
 \begin_inset Quotes eld
 \end_inset
@@ -3667,7 +3143,7 @@ gyrator
 \begin_inset Quotes erd
 \end_inset
 
- (o girador) y enrealidad no es un componente, si no que es un circuito
+ (o girador) y en realidad no es un componente, si no que es un circuito
  que utiliza un capacitor para obtener una impedancia de entrada al circuito
  con características inductivas para ciertas condiciones de trabajo.
  El hecho de utilizar un capacitor para simular un comportamiento inductivo
@@ -3681,12 +3157,10 @@ girador
 
  al nuevo componente.
  A continuación se presenta el esquema del gyrator con amplificador operacional
- a utilizar a lo largo del artìculo:
+ a utilizar a lo largo del artículo:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -3695,8 +3169,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename gyrator.PNG
 	scale 60
@@ -3707,8 +3179,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -3732,14 +3202,10 @@ Gyrator
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Impedancia de Entrada del Gyrator - Análisis Teórico
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 El análisis teórico de la impedancia de entrada del gyrator puede realizarse
  mediante dos enfoques.
  Uno de ellos se realiza con op-amp ideal, mientras que el otro tiene en
@@ -3747,14 +3213,10 @@ El análisis teórico de la impedancia de entrada del gyrator puede realizarse
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Con op-amp ideal se puede plantear:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 V_{o}=(V^{+}-V^{-}).A_{v}=V^{-} & (a)\\
 I=\frac{V_{in}-V^{-}}{R_{L}}+\frac{V^{+}}{R_{G}} & (b)\\
@@ -3766,8 +3228,6 @@ I=\frac{V_{in}-V^{-}}{R_{L}}+\frac{V^{+}}{R_{G}} & (b)\\
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Luego, despejando 
 \begin_inset Formula $V^{-}$
 \end_inset
@@ -3780,8 +3240,6 @@ Luego, despejando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $Z_{input}=\frac{V_{in}}{I}=\frac{sR_{G}C_{G}R_{L}+R_{L}}{sR_{G}C_{G}(1-K)+sR_{L}C_{G}+1}$
 \end_inset
 
@@ -3795,14 +3253,12 @@ Luego, despejando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Considerando 
 \begin_inset Formula $A_{v}$
 \end_inset
 
  constante, para un op-amp ideal se tiene entonces que 
-\begin_inset Formula $K\thickapprox1$
+\begin_inset Formula $K\approx1$
 \end_inset
 
 .
@@ -3810,27 +3266,21 @@ Considerando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $Z_{input}\thickapprox\frac{sR_{G}C_{G}+R_{L}}{sR_{L}C_{G}+1}$
+\begin_inset Formula $Z_{input}\approx\frac{sR_{G}C_{G}+R_{L}}{sR_{L}C_{G}+1}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Con lo cual, si se cumple la condición de que 
-\begin_inset Formula $sR_{L}C_{G}\lll1\Rightarrow\left[Z_{input}\thickapprox sR_{G}C_{G}+R_{L}\right]$
+\begin_inset Formula $sR_{L}C_{G}\ll1\Rightarrow\left[Z_{input}\approx sR_{G}C_{G}+R_{L}\right]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En esta expresión se puede apreciar que el gyrator, bajo las condiciones
  impuestas, presenta una impedancia de entrada característica de una bobina
  con su comportamiento inductivo 
@@ -3845,8 +3295,6 @@ y su resistencia interna
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Si se profundiza más en este análisis y se considera un polo dominante del
  operacional en la frecuencia 
 \begin_inset Formula $"fp"$
@@ -3868,9 +3316,7 @@ constante adimensional, del orden de
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $K=\frac{A_{v}}{A_{v}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1}.\frac{1}{\frac{A_{o}}{\frac{s}{2\pi fp}+1}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1+A_{o}}\thickapprox\frac{A_{o}}{\frac{s}{2\pi fp}+A_{o}}=\frac{1}{\frac{s}{A_{o}2\pi fp}+1}=\frac{1}{\frac{s}{GBP}+1}$
+\begin_inset Formula $K=\frac{A_{v}}{A_{v}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1}.\frac{1}{\frac{A_{o}}{\frac{s}{2\pi fp}+1}+1}=\frac{A_{o}}{\frac{s}{2\pi fp}+1+A_{o}}\approx\frac{A_{o}}{\frac{s}{2\pi fp}+A_{o}}=\frac{1}{\frac{s}{A_{o}2\pi fp}+1}=\frac{1}{\frac{s}{GBP}+1}$
 \end_inset
 
 ; (
@@ -3881,10 +3327,8 @@ constante adimensional, del orden de
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Debese notar que a frecuencias bajas 
-\begin_inset Formula $(\frac{f}{A_{o}fp}\lll1)$
+\begin_inset Formula $(\frac{f}{A_{o}fp}\ll1)$
 \end_inset
 
  la expresión de 
@@ -3892,27 +3336,25 @@ Debese notar que a frecuencias bajas
 \end_inset
 
  se reduce a la ideal, sin embargo a medida que se eleva la frecuencia de
- trabajo el comportamiento de la impedancia del gyrator ya no se adecúa
+ trabajo el comportamiento de la impedancia del gyrator ya no se adecuá
  al de una bobina.
  Aún más, en el caso extremo en el cual 
-\begin_inset Formula $f\shortrightarrow\infty$
+\begin_inset Formula $f\rightarrow\infty$
 \end_inset
 
 sucede que 
-\begin_inset Formula $K\shortrightarrow0$
+\begin_inset Formula $K\rightarrow0$
 \end_inset
 
 , luego 
-\begin_inset Formula $lím_{f\shortrightarrow\infty}Z_{input}=\frac{R_{G}R_{L}}{R_{L}+R_{G}}$
+\begin_inset Formula $lím_{f\rightarrow\infty}Z_{input}=\frac{R_{G}R_{L}}{R_{L}+R_{G}}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Este resultado análitico tiene sentido ya que coincide con el paralelo entre
+Este resultado analítico tiene sentido ya que coincide con el paralelo entre
  
 \begin_inset Formula $R_{G}$
 \end_inset
@@ -3931,23 +3373,21 @@ muy
 \end_inset
 
  grande, la impedancia de salida del mismo op-amp es nula y además que el
- capactitor a altas frecuencias se comporta como un cable.
+ capacitor a altas frecuencias se comporta como un cable.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Además, generalmente para poder obtener inductancias apreciables en frecuencias
  no demasiado altas es necesario que 
 \begin_inset Formula $R_{G}$
 \end_inset
 
- tome un valor elevado para poder contrarestar el valor de 
+ tome un valor elevado para poder contrarrestar el valor de 
 \begin_inset Formula $C_{G}$
 \end_inset
 
  que suele ser del orden de los nano faradios (para que el valor del capacitor
- no sea comparable al de capacitancias paràsitas), mientras que 
+ no sea comparable al de capacitancias parásitas), mientras que 
 \begin_inset Formula $R_{L}$
 \end_inset
 
@@ -3971,42 +3411,34 @@ Además, generalmente para poder obtener inductancias apreciables en frecuencias
 \begin_inset Formula $R_{L}$
 \end_inset
 
- lo que indica que la parte inductiva se convirtiò en un cable, caso contrario
+ lo que indica que la parte inductiva se convirtió en un cable, caso contrario
  a una bobina real que a frecuencias elevadas se comporta como una llave
  abierta.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Por ùltimo, es importante aclarar que este anàlisis se realizò estableciendo
+Por ultimo, es importante aclarar que este análisis se realizó estableciendo
  una referencia a tierra del gyrator mediante la resistencia 
 \begin_inset Formula $R_{G}$
 \end_inset
 
-, caso contrario hubiera cambiado algunos aspectos del anàlisis.
+, caso contrario hubiera cambiado algunos aspectos del análisis.
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Impedancia de Entrada del Gyrator - Simulación vs Modelo Teórico
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 A continuación se expondrán los resultados de las simulaciones en LTspice
  de la respuesta en frecuencia para la impedancia de una bobina ideal en
  serie con una resistencia y también para un gyrator (se simulará para el
  mismo gyrator que se utilizará en los filtros).
  Este resultados se presentan a continuación en forma de gráfico, superponiendo
- a estos el gráfico resultante del modelo análítico:
+ a estos el gráfico resultante del modelo analítico:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -4015,8 +3447,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename zinMAG.png
 	scale 40
@@ -4027,8 +3457,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4052,8 +3480,6 @@ Impedancia de Entrada - LTspice vs Modelo Teórico - Magnitud
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -4061,8 +3487,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename zinPHA.png
 	scale 40
@@ -4073,8 +3497,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4098,15 +3520,13 @@ Impedancia de Entrada - LTspice vs Modelo Teórico - Fase
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En el gráfico de magnitud de la impedancia se puede notar como esta aumenta
  con la frecuencia de la forma que lo hace una bobina pero para el modelo
  con 
 \begin_inset Formula $A_{v}$
 \end_inset
 
- dependiente de la frecuncia existe una frecuencia crítica a la cual se
+ dependiente de la frecuencia existe una frecuencia crítica a la cual se
  alcanza un máximo y luego empieza a decaer, tendiendo a la magnitud que
  se tenía a frecuencias bajas (este resultado también se respalda con la
  simulación).
@@ -4133,8 +3553,6 @@ En el gráfico de magnitud de la impedancia se puede notar como esta aumenta
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En cuanto a la fase, para ambos modelos se puede notar el comportamiento
  inductivo hasta cierta frecuencia.
  Luego, con 
@@ -4149,52 +3567,40 @@ En cuanto a la fase, para ambos modelos se puede notar el comportamiento
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Desventaja de la Bobina
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Hasta aquí se ha analizado el gyrator para poder reemplazar la bobina, pero
  no se ha analizado en profundidad la necesidad de este reemplazo.
  Para evidenciar esto se puede especificar varias desventajas de la bobina
- como la distorsiòn armònica que presentan los materiales ferromàgneticos
+ como la distorsión armónica que presentan los materiales ferromagnéticos
  debido a sus comportamientos alineales o la tendencia de las bobinas a
- funcionar como antenas que inducen señales electromagnèticas, pero principalmen
+ funcionar como antenas que inducen señales electromagnéticas, pero principalmen
 te el tamaño de las bobinas, sobre todo para su uso en bajas frecuencias,
- no es compatible con la tecnologìa miniaturizada (por ejemplo para circuitos
+ no es compatible con la tecnología miniaturizada (por ejemplo para circuitos
  integrados).
- Segùn la inductancia que se requiera, el peso de la bobina, su tamaño y
+ Según la inductancia que se requiera, el peso de la bobina, su tamaño y
  su resistencia asociada pueden llegar a tomar valores elevados lo cual
  no es deseable.
- De aquì la necesidad del gyrator.
+ De aquí la necesidad del gyrator.
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Diseño y Materialización de los Filtros
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-A continuaciòn se desarrollaran los criterios abordados para la disposiciòn
- de los componentes para cada filtro, y luego se detallarà la elecciòn de
- los valores de cada componente para la obtenciòn de los resultados deseados.
+A continuación se desarrollaran los criterios abordados para la disposición
+ de los componentes para cada filtro, y luego se detallará la elección de
+ los valores de cada componente para la obtención de los resultados deseados.
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
-Disposiciones Convenientes a la Mediciòn
+Disposiciones Convenientes a la Medición
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Como se ha mencionado, para todos los filtros se ha decidido implementar
  el circuito 
 \begin_inset Quotes eld
@@ -4204,40 +3610,36 @@ RLC serie
 \begin_inset Quotes erd
 \end_inset
 
-, pero ademàs es importante en el diseño tener en cuenta que se pueda medir
- la salida con algùn instrumento.
- Con respecto a los cuatro casos a diseñar, se tendra en cuenta la salida
+, pero además es importante en el diseño tener en cuenta que se pueda medir
+ la salida con algún instrumento.
+ Con respecto a los cuatro casos a diseñar, se tendrá en cuenta la salida
  para ser medida con un osciloscopio, por lo tanto existe el requerimiento
  de que el componente sobre el cual se mida la salida este referido a tierra.
- Esto ùltimo no traerìa inconvenientes si se trabajara con los tres elementos
- bàsicos convencionales (resistencia, capacitor, bobina) ya que cualquiera
+ Esto último no traería inconvenientes si se trabajara con los tres elementos
+ básicos convencionales (resistencia, capacitor, bobina) ya que cualquiera
  de ellos pueden ser referidos a tierra sin cambiar el comportamiento del
  circuito.
  Sin embargo, al trabajar con un gyrator es importante que este se encuentre
- referido a tierra para que se mantenga la validez del anàlisis realizado
+ referido a tierra para que se mantenga la validez del análisis realizado
  para su impedancia de entrada., por ende, pueden existir dificultades para
  medir los filtros que requieran que sea el capacitor (para el pasa bajo)
- o la resistencia (para el pasa banda) los elementos que estèn referidos
- a tierra por el hecho de que el osciloscopio debe medir la caìda sobre
+ o la resistencia (para el pasa banda) los elementos que están referidos
+ a tierra por el hecho de que el osciloscopio debe medir la caída sobre
  estos componentes.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Con el objetivo de solucionar este problema (solo para el filtro pasa bajo
  y pasa banda), se plantea la posibilidad de disponer al gyrator en el circuito
  de manera que su original puesta a tierra se coloque junto a la fuente
- de excitaciòn (fuente de tensiòn).
- Con esto se logra la posibilidad de plantear un nuevo anàlisis pero que
- se basa en el anàlisis realizado anteriormente para la impedancia de entrada
+ de excitación (fuente de tensión).
+ Con esto se logra la posibilidad de plantear un nuevo análisis pero que
+ se basa en el análisis realizado anteriormente para la impedancia de entrada
  del gyrator.
- El nuevo anàlisis es el siguiente:
+ El nuevo análisis es el siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -4246,8 +3648,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename gyrReferenciaVin.PNG
 	scale 60
@@ -4258,14 +3658,12 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \lang english
-Gyrator con Referencia en la Fuente de Excitaciòn
+Gyrator con Referencia en la Fuente de Excitation
 \end_layout
 
 \end_inset
@@ -4283,9 +3681,7 @@ Gyrator con Referencia en la Fuente de Excitaciòn
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-A partir de la figura mostrada, si se quiere plantear la funciòn transferencia
+A partir de la figura mostrada, si se quiere plantear la función transferencia
  
 \begin_inset Formula $\frac{Vo}{Vi}$
 \end_inset
@@ -4304,7 +3700,7 @@ fuente-gyrator
 \end_inset
 
  (impedancia equivalente de Thevenin) se procede a pasivar la fuente de
- excitaciòn (de tensiòn) cortocircuitando la misma.
+ excitación (de tensión) cortocircuitando la misma.
  Al hacer esto, el gyrator queda referenciado a tierra y resulta que 
 \begin_inset Formula $Z_{th}=Z_{in/gyrator}$
 \end_inset
@@ -4313,18 +3709,14 @@ fuente-gyrator
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por otro lado, para calcular 
 \begin_inset Formula $"V_{th}"$
 \end_inset
 
- se plantea la tensiòn equivalente entre los bornes de salida del gyrator:
+ se plantea la tensión equivalente entre los bornes de salida del gyrator:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -4333,8 +3725,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename theveninGyr.PNG
 	scale 60
@@ -4345,14 +3735,12 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \lang english
-Calculo de Tensiòn de Thevenin
+Calculo de Tension de Thevenin
 \end_layout
 
 \end_inset
@@ -4370,14 +3758,10 @@ Calculo de Tensiòn de Thevenin
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Luego:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $(V^{+}-V_{th})sC_{G}=\frac{(V_{th}-V^{-})}{R_{L}}$
 \end_inset
 
@@ -4385,8 +3769,6 @@ Luego:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 considerando 
 \begin_inset Formula $V^{+}=V^{-}\Rightarrow(V^{-}-V_{th})sC_{G}=\frac{(V_{th}-V^{-})}{R_{L}}$
 \end_inset
@@ -4395,8 +3777,6 @@ considerando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\Rightarrow V_{th}(sC_{G}+\frac{1}{R_{L}})=V^{-}(sC_{G}+\frac{1}{R_{L}})\Rightarrow V_{th}=V^{-}=V^{+}$
 \end_inset
 
@@ -4404,8 +3784,6 @@ considerando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\Rightarrow I=0\Rightarrow\left[V_{th}=V_{in}\right]$
 \end_inset
 
@@ -4413,24 +3791,18 @@ considerando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Finalmente, se pueden calcular las funciones transeferencias y se llegarà
- al mismo resultado que se habìa arribado anteriormente (con el gyrator
+Finalmente, se pueden calcular las funciones transferencias y se llegará
+ al mismo resultado que se había arribado anteriormente (con el gyrator
  puesto a tierra).
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Operacional Para el Gyrator
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En cuanto al integrado utilizado para el armado del gyrator de cada filtro,
- se eligiò el modelo 
+ se eligió el modelo 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4438,7 +3810,7 @@ TL084
 \begin_inset Quotes erd
 \end_inset
 
-, el cual ademàs de ser ùtil por proveer cuatro operacionales tambièn posee
+, el cual además de ser útil por proveer cuatro operacionales también posee
  una impedancia de entrada de 
 \begin_inset Formula $10^{12}\Omega$
 \end_inset
@@ -4451,37 +3823,29 @@ y un
 \begin_inset Formula $3MHz$
 \end_inset
 
-, lo cual permite evitar mejor las alinealidades en comparaciòn a otros
+, lo cual permite evitar mejor las alinealidades en comparación a otros
  modelos.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Es importante aclarar que las especifiaciones mencionadas son extraídas
+Es importante aclarar que las especificaciones mencionadas son extraídas
  de la hoja de datos del componente, pero en la práctica estos parámetros
- suelen variar en un entorno realtivamente cercano pero no exactamente el
+ suelen variar en un entorno relativamente cercano pero no exactamente el
  mismo, lo cual puede dar como consecuencia pequeñas diferencias entre las
- mediciones de un circuito que utilize el integrado real y una simulación
+ mediciones de un circuito que utiliza el integrado real y una simulación
  que implemente los valores que brinda la hoja de datos.
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Diseño de Pasa Alto
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para construir el filtro pasa alto se eligieron los siguientes componentes
  con valores comerciales:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C_{G}=1nF$
 \end_inset
 
@@ -4489,8 +3853,6 @@ Para construir el filtro pasa alto se eligieron los siguientes componentes
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{G}=56K\Omega$
 \end_inset
 
@@ -4498,8 +3860,6 @@ Para construir el filtro pasa alto se eligieron los siguientes componentes
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}=470\Omega$
 \end_inset
 
@@ -4507,17 +3867,13 @@ Para construir el filtro pasa alto se eligieron los siguientes componentes
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\begin_inset Formula $\Rightarrow L\approx26mH$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C=10nF$
 \end_inset
 
@@ -4525,8 +3881,6 @@ Para construir el filtro pasa alto se eligieron los siguientes componentes
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R=2.37K\Omega$
 \end_inset
 
@@ -4534,16 +3888,12 @@ Para construir el filtro pasa alto se eligieron los siguientes componentes
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para elegir los componentes que conforman el gyrator, se tuvieron en cuenta
  tres factores:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $2\pi fR_{L}C_{G}\lll1$
+\begin_inset Formula $2\pi fR_{L}C_{G}\ll1$
 \end_inset
 
  para frecuencias menores a 
@@ -4554,8 +3904,6 @@ Para elegir los componentes que conforman el gyrator, se tuvieron en cuenta
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}$
 \end_inset
 
@@ -4564,8 +3912,6 @@ del orden de los Ohms para no disminuir significativamente el factor de
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $L$
 \end_inset
 
@@ -4581,54 +3927,40 @@ del orden de los Ohms para no disminuir significativamente el factor de
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Ademàs, con esta elecciòn de componentes se obtuvo:
+Además, con esta elección de componentes se obtuvo:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $R_{L}C\lll1$
+\begin_inset Formula $R_{L}C\ll1$
 \end_inset
 
- (garantiza atenuaciòn para frecuencias bajas)
+ (garantiza atenuación para frecuencias bajas)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\xi=\frac{R_{L}+R}{2}.\sqrt{\frac{C}{L}}\thickapprox0.88>\frac{\sqrt{2}}{2}$
+\begin_inset Formula $\xi=\frac{R_{L}+R}{2}.\sqrt{\frac{C}{L}}\approx0.88>\frac{\sqrt{2}}{2}$
 \end_inset
 
  (garantiza no tener sobre picos, para que la salida no supere la entrada)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}\thickapprox10KHz$
+\begin_inset Formula $\frac{1}{2\pi\sqrt{LC}}\approx10KHz$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Diseño de Pasa Bajo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Los valores de los componentes elegidos para el filtro pasa bajos son los
  siguientes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C_{G}=1nF$
 \end_inset
 
@@ -4636,8 +3968,6 @@ Los valores de los componentes elegidos para el filtro pasa bajos son los
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{G}=56K\Omega$
 \end_inset
 
@@ -4645,8 +3975,6 @@ Los valores de los componentes elegidos para el filtro pasa bajos son los
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}=470\Omega$
 \end_inset
 
@@ -4654,17 +3982,13 @@ Los valores de los componentes elegidos para el filtro pasa bajos son los
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\begin_inset Formula $\Rightarrow L\approx26mH$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C=39nF$
 \end_inset
 
@@ -4672,8 +3996,6 @@ Los valores de los componentes elegidos para el filtro pasa bajos son los
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R=680\Omega$
 \end_inset
 
@@ -4681,14 +4003,10 @@ Los valores de los componentes elegidos para el filtro pasa bajos son los
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Algunas consideraciones relevantes fueron:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\xi>\frac{\sqrt{2}}{2}$
 \end_inset
 
@@ -4696,29 +4014,21 @@ Algunas consideraciones relevantes fueron:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\begin_inset Formula $(\frac{1}{2\pi LC}\approx5KHz)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Diseño de Pasa Banda
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C_{G}=1nF$
 \end_inset
 
@@ -4726,8 +4036,6 @@ Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{G}=560K\Omega$
 \end_inset
 
@@ -4735,8 +4043,6 @@ Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}=47\Omega$
 \end_inset
 
@@ -4744,17 +4050,13 @@ Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\begin_inset Formula $\Rightarrow L\approx26mH$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C=39nF$
 \end_inset
 
@@ -4762,8 +4064,6 @@ Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R=1.2K\Omega$
 \end_inset
 
@@ -4771,29 +4071,21 @@ Para el filtro pasa banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\begin_inset Formula $(\frac{1}{2\pi LC}\approx5KHz)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Diseño de Rechaza Banda
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C_{G}=1nF$
 \end_inset
 
@@ -4801,8 +4093,6 @@ Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{G}=560K\Omega$
 \end_inset
 
@@ -4810,8 +4100,6 @@ Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}=470\Omega$
 \end_inset
 
@@ -4819,17 +4107,13 @@ Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\Rightarrow L\thickapprox26mH$
+\begin_inset Formula $\Rightarrow L\approx26mH$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C=39nF$
 \end_inset
 
@@ -4837,8 +4121,6 @@ Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R=2.37K\Omega$
 \end_inset
 
@@ -4846,55 +4128,43 @@ Para el rechaza banda se utilizaron los siguientes componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $(\frac{1}{2\pi LC}\thickapprox5KHz)$
+\begin_inset Formula $(\frac{1}{2\pi LC}\approx5KHz)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Resultados Obtenidos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Una vez terminado el diseño y materialización del circuito, se procede a
  medir para corroborar su funcionamiento.
  A continuación se presentan los resultados obtenidos de las mediciones,
- supuerpuestos estos resultados con lo que se obtuvo al realizar las simulacione
-s en LTspice y mediante el análisis teórico.
+ superpuestos estos resultados con lo que se obtuvo al realizar las simulaciones
+ en LTspice y mediante el análisis teórico.
  Vale aclarar que para los gráficos del análisis teórico se utilizaron las
  expresiones (1), (2), (3), (4) de la sección de funciones transferencia.
  
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Pasa Altos - Resultados
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename HPmag.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -4902,8 +4172,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4927,21 +4195,17 @@ Filtro Pasa Altos - Diagrama de Bode - Magnitud
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename HPfase.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -4949,8 +4213,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4970,27 +4232,21 @@ Filtro Pasa Altos - Diagrama de Bode - Fase
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Pasa Bajos - Resultados
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename LPmag.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -4998,8 +4254,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5019,25 +4273,17 @@ Filtro Pasa Bajos - Diagrama de Bode - Magnitud
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename LPfase.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -5045,8 +4291,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5070,14 +4314,10 @@ Filtro Pasa Bajos - Diagrama de Bode - Fase
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Pasa Banda - Resultados
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5086,11 +4326,9 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename BPmag.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -5098,8 +4336,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5119,8 +4355,6 @@ Filtro Pasa Banda - Diagrama de Bode - Magnitud
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5129,11 +4363,9 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename BPfase.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -5141,8 +4373,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5162,14 +4392,10 @@ Filtro Pasa Banda - Diagrama de Bode - Fase
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Rechaza Banda - Resultados
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5178,11 +4404,9 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename BRmag.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -5190,8 +4414,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5211,8 +4433,6 @@ Filtro Rechaza Banda - Diagrama de Bode - Magnitud
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5221,11 +4441,9 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename BRfase.png
-	scale 40
+	scale 60
 
 \end_inset
 
@@ -5234,8 +4452,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5255,16 +4471,12 @@ Filtro Rechaza Banda - Diagrama de Bode - Fase
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Análisis de Resultados
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Los resultados obtenidos presentan en general discrepancias entre el modelo
- análitico y las mediciones, mientras que las mediciones coinciden con la
+ analítico y las mediciones, mientras que las mediciones coinciden con la
  forma de respuesta que indican las simulaciones de LTspice.
  A continuación se analizan distintos factores relevantes con respecto a
  estos resultados.
@@ -5272,32 +4484,26 @@ Los resultados obtenidos presentan en general discrepancias entre el modelo
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Magnitud Según Frecuencia de Trabajo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Según los resultados obtenidos, se puede afirmar que para frecuencias bajas
  y medias (menores a 100KHz) los filtros cumplen con las plantillas especificada
 s.
  En cuanto a las frecuencias altas, el comportamiento de la impedancia de
  entrada del gyrator, sumado a el efecto del polo dominante del operacional,
- provocaron discrepancias entre el modelo análitico y los resultados experimenta
+ provocaron discrepancias entre el modelo analítico y los resultados experimenta
 les de los filtros.
  Se puede notar tanto para el filtro pasa altos como para el rechaza banda
  que a frecuencias altas la magnitud de la salida no tiende a igualar la
  entrada (0 dB) sino que decrece.
  Este resultado medido coincide con las simulaciones según lo muestran los
- gráficos, pero también se puede predecir análiticamente teniendo en cuenta
+ gráficos, pero también se puede predecir analíticamente teniendo en cuenta
  lo siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por ejemplo, para el pasa altos 
 \begin_inset Formula $H(s)=\frac{Z_{Gyrator}}{Z_{Gyrator}+R+\frac{1}{sC}}=\frac{sCZ_{Gyrator}}{sCZ_{gyrator}+sRC+1}$
 \end_inset
@@ -5306,8 +4512,6 @@ Por ejemplo, para el pasa altos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Luego, para frecuencias elevadas (
 \begin_inset Formula $s\rightarrow\infty$
 \end_inset
@@ -5324,15 +4528,11 @@ Luego, para frecuencias elevadas (
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En decibeles se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+R})\thickapprox-16dB$
+\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+R})\approx-16dB$
 \end_inset
 
 , siendo 
@@ -5343,16 +4543,12 @@ En decibeles se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Sin embargo, este efecto no impide el cumplimiento de la plantilla para
  el caso del filtro pasa bajos y el filtro pasa banda, los cuales deben
  presentar atenuaciones elevadas a frecuencias altas.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Como aspecto a mejorar, para el filtro pasa alto por ejemplo, se podría
  plantear un diseño para el cual la magnitud de establecimiento a altas
  frecuencias se encuentre entre -3dB y 0dB provocada por una relación entre
@@ -5368,29 +4564,23 @@ Como aspecto a mejorar, para el filtro pasa alto por ejemplo, se podría
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Más aún, notese que si 
+Más aún, nótese que si 
 \begin_inset Formula $R=\frac{R_{//}}{4}$
 \end_inset
 
  se logra que 
-\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+\frac{R_{//}}{4}})=20log(\frac{1}{1.25})\thickapprox-1.94dB$
+\begin_inset Formula $M=20log(\frac{R_{//}}{R_{//}+\frac{R_{//}}{4}})=20log(\frac{1}{1.25})\approx-1.94dB$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para mostrar la posible realización de esta mejora se presenta la simulación
  en LTspice de un diseño del circuito con los siguientes valores de componentes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C_{G}=100pF$
 \end_inset
 
@@ -5398,8 +4588,6 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{G}=30K\Omega$
 \end_inset
 
@@ -5407,8 +4595,6 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R_{L}=3K\Omega$
 \end_inset
 
@@ -5416,17 +4602,13 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-\begin_inset Formula $\Rightarrow L\thickapprox9mH$
+\begin_inset Formula $\Rightarrow L\approx9mH$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $C=3.3nF$
 \end_inset
 
@@ -5434,8 +4616,6 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $R=750\Omega$
 \end_inset
 
@@ -5444,8 +4624,6 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5453,8 +4631,7 @@ sideways false
 status collapsed
 
 \begin_layout Plain Layout
-
-\lang english
+\align center
 \begin_inset Graphics
 	filename simHPmejora.PNG
 	scale 40
@@ -5465,8 +4642,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5490,14 +4665,10 @@ Simulación LTspice - Filtro Pasa Altos - Tentativa Mejora
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Efecto de Resistencia Interna de Bobina
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Otro aspecto a analizar, es la resistencia 
 \begin_inset Formula $R_{L}$
 \end_inset
@@ -5514,9 +4685,9 @@ notch
 \end_inset
 
 ).
- Esto se puede predecir facilmente teniendo en cuenta que el cero de transimisió
-n para este tipo de filtros se debe a la resonancia de un capacitor y una
- bobina produciendo que no se aprecie una caida de tensión sobre estos dos
+ Esto se puede predecir fácilmente teniendo en cuenta que el cero de transmisión
+ para este tipo de filtros se debe a la resonancia de un capacitor y una
+ bobina produciendo que no se aprecie una caída de tensión sobre estos dos
  componentes.
  Sin embargo, existir una resistencia 
 \begin_inset Formula $R_{L}$
@@ -5527,8 +4698,6 @@ n para este tipo de filtros se debe a la resonancia de un capacitor y una
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Del mismo modo, la resistencia 
 \begin_inset Formula $R_{L}$
 \end_inset
@@ -5547,10 +4716,8 @@ Del mismo modo, la resistencia
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En fin, como aspecto a mejorar en estos filtros se podría pensar un diseño
- para el cual se trate minimzar aún más el valor de 
+ para el cual se trate minimizar aún más el valor de 
 \begin_inset Formula $R_{L}$
 \end_inset
 
@@ -5558,16 +4725,12 @@ En fin, como aspecto a mejorar en estos filtros se podría pensar un diseño
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Desfase
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En referencia a la fase que resultó de los filtros, se puede observar que
- el modelo análitico indica un salto de 180 grados en el diagrama de Bode,
+ el modelo analítico indica un salto de 180 grados en el diagrama de Bode,
  lo cual es esperable para un circuito de segundo orden.
  Sin embargo, las mediciones y las simulaciones en LTspice indican que la
  fase tiende a cambiar 180 grados solo hasta cierta frecuencia.
@@ -5576,13 +4739,11 @@ En referencia a la fase que resultó de los filtros, se puede observar que
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Dicho fenómeno se puede entender si se tiene en cuenta que la impedancia
  del gyrator se comporta como una bobina para ciertas frecuencias, pero
  a frecuencias altas presenta una impedancia resistiva, lo cual provoca
  que el comportamiento del circuito a altas frecuencias sea de primer orden
- (simil a un 
+ (símil a un 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5594,24 +4755,18 @@ RC
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Conclusiónes
+Conclusiones
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 En conclusión, para el diseño de un filtro es importante plantear la función
  transferencia conveniente según las características que se especifiquen
  en la plantilla.
  Para esto es relevante tener en cuenta la ubicación de los ceros de transmisión
- generalmente necesarios y los componentes adecuados para logralos.
+ generalmente necesarios y los componentes adecuados para lograrlos.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Aún así, el uso de algunos de los componentes, a partir de los cuales se
  obtuvo la transferencia deseada, pueden generar problemas de diseño como
  en el caso de la bobina.
@@ -5628,8 +4783,6 @@ Aún así, el uso de algunos de los componentes, a partir de los cuales se
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Newpage pagebreak
 \end_inset
 
@@ -5640,7 +4793,2395 @@ Aún así, el uso de algunos de los componentes, a partir de los cuales se
 Amplificador de Instrumentación
 \end_layout
 
+\begin_layout Section
+Ecualizador de Fase y Control de Tonos
+\end_layout
+
+\begin_layout Subsection
+Marco Teórico
+\end_layout
+
+\begin_layout Subsubsection
+Potenciómetro
+\end_layout
+
 \begin_layout Standard
+Es necesario entender el modelo teórico de un potenciómetro para poder analizarl
+o matemáticamente.
+ Un potenciómetro es una resistencia variable la cual tiene la ventaja de
+ que puede ser usada como una perilla para el usuario del circuito, a diferencia
+ de un preset donde su ajuste es difícil de lograr.
+ Para entender un potenciómetro se puede emplear la siguiente imagen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pot.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Potenciometro
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde k es un parámetro variable que depende de la posición de la perilla
+ y R es el valor máximo de la resistencia variable.
+ De esta manera se puede ver que si conectamos los dos extremos del potenciómetr
+o obtenemos una resistencia fija de 
+\begin_inset Formula $R*k+R*(1-k)=R$
+\end_inset
+
+.
+ Y al conectar un extremo con el medio del potenciómetro tenemos una resistencia
+ que varia de cero hasta k.
+ Se puede observar fácilmente que cuando un extremo y el medio tienen una
+ resistencia de valor 
+\begin_inset Formula $R_{x}$
+\end_inset
+
+ el otro extremo tendrá el complemento faltante para que la suma sea 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ecualizadores de fase
+\end_layout
+
+\begin_layout Standard
+Un ecualizador de fase es un circuito que, dada una entrada, no modifica
+ la magnitud de esta pero si causa un defasaje en ella.
+ Si el ecualizador no es de fase, existen los ecualizadores lineales y los
+ ecualizadores de fase mínima.
+ Los ecualizadores lineales no generan cambio algún en la fase mientras
+ que cambian la magnitud.
+ Estos son mas comunes en el ámbito digital que analógico.
+ Un ecualizador de fase mínima es el que genera un cambio en la amplitud
+ deseado y trata de cambiar lo mas mínimo posible la fase, estos son muy
+ comunes en los ecualizadores analógicos como el deseado en este trabajo.
+ Volviendo al ecualizador de fase, este no es posible de lograr igual al
+ teórico si se emplean OpAmps ya que estos tienen un polo dominante, de
+ manera que a frecuencias muy altas esta empieza a atenuar.
+ Pero como la frecuencia de audio abarca de los 
+\begin_inset Formula $20Hz$
+\end_inset
+
+ a los 
+\begin_inset Formula $20kHz$
+\end_inset
+
+, los polos del integrado no son un problema y el circuito se comportara
+ como deseado para el rango de frecuencias que queremos.
+ Los ecualizadores de fase pueden ser de varios ordenes, el orden determina
+ que cantidad desfasa la señal; siguiendo la formula 
+\begin_inset Formula $n*90^{o}$
+\end_inset
+
+ donde n es el grado u orden del ecualizador.
+\end_layout
+
+\begin_layout Subsubsection
+Control de Tonos
+\end_layout
+
+\begin_layout Standard
+Para el control de tonos se usa una combinación serie o paralelo de ecualizadore
+s de una banda.
+ De esta manera se puede manipular la ganancia o atenuación de una señal
+ de audio.
+ Cuantas mas bandas tenga el ecualizador mas fino sera el control sobre
+ la región de audio.
+ Los ecualizadores comerciales mas usados son de control de tonos de tres
+ bandas (agudos, medios y graves) y ecualizadores de 8 bandas, el cual tiene
+ una frecuencia central cada una octava de la frecuencia de audio.
+\end_layout
+
+\begin_layout Subsubsection
+Pull Down Resistor
+\end_layout
+
+\begin_layout Standard
+Los capacitores en un circuito pueden quedar cargados tras apagarse y desconecta
+rse del resto de un circuito mas complejo.
+ Estos capacitores cargados pueden generar una diferencia de potencial en
+ la entrada y salida del circuito si están aislados, es decir, si no hay
+ un circuito cerrado por el cual puedan descargarse.
+ Por lo que si se vuelve a conectar la circuito y este se prende, el voltaje
+ de corriente directa que se encontraba en los capacitores se descarga en
+ el mismo camino que la señal.
+ Cuando se esta trabajando con señales de audio, esto se refleja en un fuerte
+ ruido 'pop' cuando se enciende el circuito.
+ Esto puede pasar en parlantes, amplificadores y en este caso pedales de
+ distorsión.
+ Para evitar este problema se debe eliminar esta corriente directa del circuito.
+ La manera de resolver esto es agregando una resistencia a tierra, de manera
+ que la pequeña carga almacenada en el capacitor puede descargarse a tierra
+ por esta resistencia sin alterar la señal.
+ El valor de la resistencia debe ser lo suficientemente grande como para
+ que se pueda descargar el capacitor.
+ Normalmente se puede empezar entre los 
+\begin_inset Formula $2M\Omega$
+\end_inset
+
+ y 
+\begin_inset Formula $5M\Omega$
+\end_inset
+
+, e ir bajando el valor hasta que se vuelva a escuchar el 'pop', de manera
+ que se encuentre un limite al que se puede bajar el valor de la resistencia.
+\end_layout
+
+\begin_layout Subsection
+Resolución del Circuito
+\end_layout
+
+\begin_layout Standard
+El circuito propuesto por la cátedra es el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/circuitoProp.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Circuito Propuesto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Planteando las ecuaciones de los nodos en el circuito, tomando el OpAmp
+ como ideal, se obtienen las siguientes cuatro ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+1) & \frac{V_{i}}{R_{3}}+V_{2}C_{2}*s=-\frac{V_{o}}{R_{3}}\\
+2) & \frac{V_{1}-V_{2}}{R_{2}k}=\frac{V_{2}-V_{3}}{R_{2}(1-k)}+V_{2}C_{2}*s\\
+3) & (V_{1}-V_{3})C_{1}*s+\frac{V_{2}-V_{3}}{R_{2}(1-k)}=\frac{V_{3}-V_{o}}{R_{1}}\\
+4) & \frac{V_{1}-V_{i}}{R_{1}}+\frac{V_{1}-V_{2}}{R_{2}k}+(V_{1}-V_{3})C_{1}*s=0
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y reordenando las ecuaciones se obtiene lo siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+1) & V_{o}=-V_{i}-V_{2}R_{3}C_{2}*s\\
+2) & V_{2}=V_{1}\frac{a}{R_{2}k}+V_{3}\frac{a}{R_{2}(1-k)}\\
+3) & V_{3}=V_{1}bC_{1}*s+V_{2}\frac{b}{R_{2}(1-k)}+V_{o}\frac{b}{R_{1}}\\
+4) & V_{1}=V_{i}\frac{e}{R_{1}}+V_{2}\frac{e}{R_{2}k}+V_{3}eC_{1}*s
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a=(\frac{1}{R_{2}k}+\frac{1}{R_{2}(1-k)}+C_{2}*s)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $b=(\frac{1}{R_{1}}+\frac{1}{R_{2}(1-k)}+C_{1}*s)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $e=(\frac{1}{R_{1}}+\frac{1}{R_{2}k}+C_{1}*s)^{-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De estas ecuaciones se puede dibujar el siguiente gráfico:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/grafo.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Grafo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde Aplicando el Teorema de Mason:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $G=\frac{V_{o}}{V_{i}}=\frac{\sum_{i=1}^{N}\triangle_{i}G_{i}}{\triangle}=\frac{\triangle_{1}G_{1}+\triangle_{2}G_{2}+\triangle_{3}G_{3}}{\triangle}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y sabiendo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+G_{1}=-1\\
+G_{2}=-\frac{eaR_{3}C_{2}*s}{R_{1}R_{2}k}\\
+G_{3}=-\frac{eabC_{1}C_{2}R_{3}}{R_{1}R_{2}(1-k)}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+\triangle_{1}=1-(L_{1}+L_{2}+L_{3}+L_{4}+L_{5})\\
+\triangle_{2}=1\\
+\triangle_{3}=1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+\triangle=1-(L_{1}+L_{2}+L_{3}+L_{4}+L_{5}+L_{6}+L_{7})\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+L_{1}=\frac{ea}{(R_{2}k)^{2}}\\
+L_{2}=(sC_{1})^{2}be\\
+L_{3}=\frac{ab}{(R_{2}(1-k))^{2}}\\
+L_{4}=\frac{baeC_{1}s}{R_{2}^{2}(1-k)k}\\
+L_{5}=L_{4}\\
+L_{6}=-\frac{beaC_{1}C_{2}R_{3}*s}{R_{1}R_{2}k}\\
+L_{7}=-\frac{baR_{3}C_{2}*s}{R_{1}R_{2}(1-k)}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Reemplazando en la ecuación original se obtiene la siguiente ecuación general
+ de la transferencia 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $G(s)=$
+\end_inset
+
+-
+\begin_inset Formula $\frac{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s-9C_{2}R_{2}^{2}k*s+10C_{2}R_{2}^{2}s+2R_{1}+R_{2}}{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+11C_{2}R_{2}^{2}k*s+2R_{1}+R_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Siendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+A=20(C_{2}R_{2}k*s)^{2}R_{1}\\
+B=20(C_{2}R_{2}*s)^{2}R_{1}k\\
+C=R_{1}(10C_{2}R_{2}*s)^{2}\\
+D=10R_{2}(R_{1}C_{2}s)^{2}\\
+E=C_{2}(R_{2}k)^{2}s
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Simplificando la ecuación general con las condiciones de diseño:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $C_{1}=10C_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{3}=10R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{3}\gg R_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se llega a la siguiente ecuación:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $G(s)=-\frac{s^{2}(10R_{2}C_{2})^{2}R_{1}-sC_{2}R_{2}^{2}*(k+10)*(k-1)+2R_{1}+R_{2}}{s^{2}(10R_{2}C_{2})^{2}R_{1}-sC_{2}R_{2}^{2}*k*(k-11)+2R_{1}+R_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde se puede ver fácilmente que la frecuencia central es la misma para
+ el polinomio en el denominador como en el numerador, ya que esta depende
+ solamente del termino independiente y el termino con 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+.
+ Donde 
+\begin_inset Formula $f_{o}=\sqrt{f_{1}*f_{2}}$
+\end_inset
+
+ y 
+\begin_inset Formula $w_{1}*w_{2}=\frac{a_{o}}{a_{2}}$
+\end_inset
+
+ donde 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ es el termino independiente y 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ es el termino donde se encuentra 
+\begin_inset Formula $s^{2}$
+\end_inset
+
+.
+ Reemplazando 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ y 
+\begin_inset Formula $a_{2}$
+\end_inset
+
+ se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w_{1}*w_{2}=\frac{a_{o}}{a_{2}}=\frac{2R_{1}+R_{2}}{(10R_{2}C_{2})^{2}R_{1}}=\frac{2+\frac{R_{2}}{R_{1}}}{(10R_{2}C_{2})^{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{o}=\frac{w_{0}}{2\pi}=\frac{\sqrt{w_{1}*w_{2}}}{2\pi}=\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{20\pi R_{2}C_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para calcular el rango en la magnitud de la función transferencia en veces
+ se puede seleccionar k=1 y k=0, que es cuando mayor atenuación o amplificación
+ se puede apreciar, y luego reemplazar en la función transferencia la 
+\begin_inset Formula $f_{o}$
+\end_inset
+
+ que corresponde a la frecuencia de mayor amplificación/atenuación.
+ Por lo que reemplazando en la ecuación k=0 y k=1 se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+G(s)=-\frac{D+C+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+10C_{2}R_{2}^{2}s+2R_{1}+R_{2}}{D+C+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+2R_{1}+R_{2}} & k=0\\
+\begin{cases}
+C=R_{1}(10C_{2}R_{2}*s)^{2}\\
+D=10R_{2}(R_{1}C_{2}s)^{2}
+\end{cases}\\
+G(s)=-\frac{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s-9C_{2}R_{2}^{2}*s+10C_{2}R_{2}^{2}s+2R_{1}+R_{2}}{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+11C_{2}R_{2}^{2}*s+2R_{1}+R_{2}} & k=1\\
+\begin{cases}
+A=20(C_{2}R_{2}*s)^{2}R_{1}\\
+B=20(C_{2}R_{2}*s)^{2}R_{1}\\
+C=R_{1}(10C_{2}R_{2}*s)^{2}\\
+D=10R_{2}(R_{1}C_{2}s)^{2}\\
+E=C_{2}(R_{2})^{2}s
+\end{cases}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y si luego reemplazamos 
+\begin_inset Formula $f_{0}$
+\end_inset
+
+ obtenemos:
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Formula $\begin{cases}
+|G(jw_{o})|=|-\frac{D+C+C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+10C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+2R_{1}+R_{2}}{D+C+C_{2}R_{1}^{2}*\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+2R_{1}+R_{2}}|=|\frac{C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+10C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}{C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}| & k=0\\
+\begin{cases}
+C=R_{1}(10C_{2}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}=-(2R_{1}+R_{2})\\
+D=10R_{2}(R_{1}C_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}=-\frac{R_{1}}{R_{2}}*(2\frac{R_{1}}{R_{2}}+1)\approx0
+\end{cases}\\
+|G(jw_{o})|=|-\frac{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s-9C_{2}R_{2}^{2}*s+10C_{2}R_{2}^{2}s+2R_{1}+R_{2}}{D-A+B+C-E+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+11C_{2}R_{2}^{2}*s+2R_{1}+R_{2}}| & k=1\\
+|G(jw_{o})|=|\frac{-C_{2}(R_{2})^{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}-9C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+10C_{2}R_{2}^{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}{-C_{2}(R_{2})^{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+11C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}|\\
+\begin{cases}
+A=20(C_{2}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}R_{1}=-20\frac{2+\frac{R_{2}}{R_{1}}}{100}R_{1}=-\frac{2+\frac{R_{2}}{R_{1}}}{5}R_{1}=-\frac{2R_{1}+R_{2}}{5}\\
+B=20(C_{2}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}R_{1}=-\frac{2R_{1}+R_{2}}{5}\\
+C=R_{1}(10C_{2}R_{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}=-(2R_{1}+R_{2})\\
+D=10R_{2}(R_{1}C_{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}})^{2}=-\frac{R_{1}}{R_{2}}*(2\frac{R_{1}}{R_{2}}+1)\approx0\\
+E=C_{2}(R_{2})^{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}
+\end{cases}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Simplificando obtenemos:
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset Formula $\begin{cases}
+|G(jw_{o})|=\frac{C_{2}R_{1}^{2}+31C_{2}R_{1}R_{2}+10C_{2}R_{2}^{2}}{C_{2}R_{1}^{2}+31C_{2}R_{1}R_{2}}=\frac{R_{1}^{2}+31R_{1}R_{2}+10R_{2}^{2}}{R_{1}^{2}+31R_{1}R_{2}}=\frac{1+31\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}{1+31\frac{R_{2}}{R_{1}}}\approx\frac{30\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}{30\frac{R_{2}}{R_{1}}}\approx\frac{3+\frac{R_{2}}{R_{1}}}{3(\frac{R_{2}}{R_{1}})} & k=0\\
+|G(f_{o})|=|\frac{-(R_{2})^{2}+R_{1}^{2}+31R_{1}R_{2}-9R_{2}^{2}+10R_{2}^{2}}{-(R_{2})^{2}+R_{1}^{2}+31R_{1}R_{2}+11R_{2}^{2}}|=\frac{R_{1}^{2}+31R_{1}R_{2}}{R_{1}^{2}+31R_{1}R_{2}+10R_{2}^{2}}=\frac{1+31\frac{R_{2}}{R_{1}}}{1+31\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}\approx\frac{30\frac{R_{2}}{R_{1}}}{30\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}\approx\frac{3(\frac{R_{2}}{R_{1}})}{3+\frac{R_{2}}{R_{1}}} & k=1
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que se llega a la siguiente inecuacion:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{3R_{1}}{3R_{1}+R_{2}}<A_{o}<\frac{3R_{1}+R_{2}}{3R_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Explicación en Diagrama de Polos y Ceros
+\end_layout
+
+\begin_layout Standard
+El análisis en el diagrama de polos y ceros se puede apreciar fácilmente
+ si asignamos valores arbitrarios a los componentes siguiendo las reglas
+ de diseño y luego graficando en Matlab para diferentes valores de k.
+\end_layout
+
+\begin_layout Standard
+Al graficar 
+\begin_inset Formula $k\rightarrow0$
+\end_inset
+
+ se obtienen los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pzplotk0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama polos y ceros (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeplotk0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede ver, con 
+\begin_inset Formula $k=0$
+\end_inset
+
+ resulta un pasa banda en la frecuencia central 
+\begin_inset Formula $f_{o}$
+\end_inset
+
+, ya que como se puede ver en el diagrama de polos y ceros, los polos se
+ encuentran sobre el eje imaginario y los ceros en el eje real.
+ Por lo que, al estar los polos en una frecuencia entre los polos, resulta
+ en un pasa banda entre las frecuencias de los ceros de la función.
+\end_layout
+
+\begin_layout Standard
+Al graficar 
+\begin_inset Formula $k\rightarrow0.2$
+\end_inset
+
+ se obtienen los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pzplotk0,2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama polos y ceros (k=0.2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeplotk0,2.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode (k=0.2)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mientras se aumenta k, la frecuencia de los polos se agranda y la de los
+ ceros se achica, por lo que sigue siendo en este caso un pasa banda, pero
+ de un ancho mayor.
+\end_layout
+
+\begin_layout Standard
+Al graficar 
+\begin_inset Formula $k\rightarrow0.5$
+\end_inset
+
+ se obtienen los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pzplotk0,5.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama polos y ceros (k=0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeplotk0,5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode (k=0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cuando se llega a 
+\begin_inset Formula $k=0.5$
+\end_inset
+
+, los polos y ceros se encuentran en en las mismas frecuencias por lo que
+ se 'cancelan' entre si y el modulo de la función transferencia es 1, y
+ la fase es 
+\begin_inset Formula $180^{o}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Al graficar 
+\begin_inset Formula $k\rightarrow0.8$
+\end_inset
+
+ se obtienen los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pzplotk0,8.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama polos y ceros (k=0.8)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeplotk0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode (k=0.8)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al pasar 0.5, son los ceros los que se encuentran entre las frecuencias de
+ los polos, por lo que el circuito se transforma en un rechaza banda.
+\end_layout
+
+\begin_layout Standard
+Al graficar 
+\begin_inset Formula $k\rightarrow1$
+\end_inset
+
+ se obtienen los siguientes gráficos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/pzplotk1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama polos y ceros (k=1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeplotk1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode (k=1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al seguir aumentando k hasta llegar a 1, los ceros quedan en el eje imaginario
+ y su frecuencia de corte es la menor, por lo que el ancho del rechaza banda
+ se hace menor.
+ 
+\end_layout
+
+\begin_layout Standard
+Este circuito corresponde a uno de fase mínima, ya que los ceros se encuentran
+ siempre en el semiplano izquierdo en el diagrama de polos y ceros.
+ Para transformarlo en un circuito de fase no mínima, se necesita hacer
+ uso de un ecualizador de fase de segundo orden.
+ El mas sencillo es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/eqOrden2.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Ecualizador de Fase de segundo orden
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde su función transferencia es:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{V_{o}}{V_{i}}=\frac{R_{4}}{R_{3}+R_{4}}\cdotp\frac{s^{2}-s(\frac{2}{R_{2}C})+\frac{1}{R_{1}R_{2}C^{2}}}{s^{2}+s(\frac{2}{R_{2}C})+\frac{1}{R_{1}R_{2}C^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si se siguen las siguientes reglas de diseno:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{2}=\frac{2Q}{\omega_{o}C}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{1}=\frac{1}{2\omega_{o}CQ}=R_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{4}=\frac{R_{2}}{4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eligiendo 
+\begin_inset Formula $C=10nF$
+\end_inset
+
+, 
+\begin_inset Formula $\omega_{o}=1.4kHz$
+\end_inset
+
+ y 
+\begin_inset Formula $Q=10$
+\end_inset
+
+, obtenemos el siguiente circuito:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/Screenshot 2018-09-25 22.23.00.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Valores de circuito
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde aproximadamente no hay atenuación ni ganancia y su fase es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/Screenshot 2018-09-25 22.25.04.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Fase ecualizador segundo orden no minimo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De esta manera si conectamos en serie los dos circuitos y usamos el potenciómetr
+o fijo en 
+\begin_inset Formula $k=0.5$
+\end_inset
+
+ (lo reemplazamos por dos resistencias del mismo valor), obtenemos un ecualizado
+r de fase no mínima.
+ El circuito resultante es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/eqfase.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Circuito ecualizador de fase no minima
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y si respuesta en frecuencia es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodeeq2.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Diagrama de bode
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diseño de Ecualizador de Tres Bandas
+\end_layout
+
+\begin_layout Standard
+Para diseñar un control de tonos de 3 bandas, se necesita utilizar 3 circuitos
+ como el sugerido por la cátedra, ya que cada uno amplifica o atenuá un
+ rango de frecuencias diferente.
+ Se necesita uno para los graves (Bass), uno para las frecuencias de audio
+ medias (Mid) y un ultimo circuito para modificar los agudos (Treble).
+ Lo primero que se debe hacer es elegir las frecuencias centrales representativa
+s para cada etapa.
+ Para hace esto se requirió una investigación en el ámbito de la percepción
+ auditiva.
+ Se encontró que el rango característico de las frecuencias de audio es
+ entre 
+\begin_inset Formula $20Hz$
+\end_inset
+
+ y 
+\begin_inset Formula $20kHz$
+\end_inset
+
+.
+ De las cuales los bajos corresponde a las frecuencias entre los 
+\begin_inset Formula $25Hz$
+\end_inset
+
+ y los 
+\begin_inset Formula $350Hz$
+\end_inset
+
+ aproximadamente.
+ Para las frecuencias medias es entre los 
+\begin_inset Formula $400Hz$
+\end_inset
+
+ y los 
+\begin_inset Formula $5kHz$
+\end_inset
+
+.
+ Y a los agudos les corresponde el rango de los 
+\begin_inset Formula $4khZ$
+\end_inset
+
+ Y los 
+\begin_inset Formula $20kHz$
+\end_inset
+
+.
+ Para sacar las frecuencias centrales se encontró que lo conveniente en
+ el audio es calcularla como la media geométrica, de manera que 
+\begin_inset Formula $f_{o}=\sqrt{f_{1}*f_{2}}$
+\end_inset
+
+.
+ Ya que al estar la respuesta en frecuencias en décadas, la media lineal
+ no cubriría eficientemente el rango que necesita ya que este no es logarítmico.
+ Por lo que utilizando la media geométrica de los tres diferentes rangos
+ se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+f_{bass}=\sqrt{25*300}Hz\approx87Hz\\
+f_{mid}=\sqrt{400*5000}Hz\approx1414Hz\\
+f_{treble}=\sqrt{4000*20000}Hz\approx8944Hz
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El siguiente paso es elegir la mejor configuración de las tres etapas.
+ Estas pueden ir en serie o en paralelo con un sumador.
+ La configuración en paralelo seria de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/Esquema-EQ-procesado-paralelo.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Conexion paralelo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La conexión en paralelo en el ambiente del audio se usa cuando se quiere
+ utilizar varios efectos para diferentes entradas, como por ejemplo una
+ distorsión que se quiere aplicar a varios instrumentos.
+ Ya que si fuese conectad en serie solo se puede aplicar el circuito diseñado
+ a una sola entrada.
+ Pero al trabajar con filtros es conveniente conectarlos en serie.
+ Y tras una investigación en circuitos básicos de ecualizadores se encuentra
+ que la mayoría de los ecualizadores analógicos son conectados en serie,
+ ya que de esta manera no se requiere un circuito sumador que aumenta el
+ costo del circuito total y puede causar efectos no deseados, como sumar
+ el ruido individual de cada conexión en paralelo, cosa que no ocurre con
+ un ecualizador en serie.
+ Tras hacer el ecualizador, este ya completo se podría conectar igualmente
+ en paralelo con otros ecualizadores o distorsionadores.
+\end_layout
+
+\begin_layout Standard
+Por lo que en este caso se pondrán las tres etapas en serie.
+ Ademas de las tres etapas, a la entrada se puede agregar un Pull Down Resistor,
+ por la razón explicada en el marco teórico.
+ A la salida se puede agregar un potenciómetro logarítmico que controle
+ el volumen a la salida.
+ Este funciona ya que el circuito queda de la siguiente manera:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/divisor.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Divisor Resistivo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $V_{o}=V_{i}*\frac{R*(1-k)}{R*(1-k)+R*k}=V_{i}*(1-k)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{V_{o}}{V_{i}}=1-k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que el circuito completo es:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/circuitoCompleto.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Circuito Completo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde cada EQ es equivalente al circuito propuesto por la cátedra pero con
+ valores elegidos apropiadamente.
+\end_layout
+
+\begin_layout Standard
+Para elegir los valores de cada circuito se debe partir de la frecuencia
+ central elegida y los dB que se quiere que el circuito amplifique/atenué.
+ Para nuestro ecualizador se eligió una amplificación y atenuación de 
+\begin_inset Formula $21dB$
+\end_inset
+
+ aproximadamente.
+ Por lo que la salida podrá ser aproximadamente 12 veces mayor o menor a
+ la entrada.
+ De manera que partiendo de la inecuacion de la amplitud presentada anteriorment
+e se tiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $12=\frac{3R_{1}+R_{2}}{3R_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{R_{2}}{33}=R_{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y despejando 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ de la adecuación la frecuencia central se obtiene:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $C_{2}=\frac{\sqrt{2+\frac{33R_{1}}{R_{1}}}}{20\pi f_{o}R_{2}}=\frac{\sqrt{35}}{20\pi}*\frac{1}{f_{o}R_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De manera que para elegir los valores se tienen las siguientes equivalencias:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+C_{2}=\frac{\sqrt{35}}{20\pi}*\frac{1}{f_{o}R_{2}}\\
+C_{1}=10C_{2}\\
+\frac{R_{2}}{33}=R_{1}\\
+R_{3}=10R_{2}
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo que eligiendo 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ y usando las 
+\begin_inset Formula $f_{o}$
+\end_inset
+
+ para cada rango calculadas anteriormente se pueden deducir todos los valores.
+ Para que no queden capacitores muy chicos y estos sean comparables con
+ los de las puntas del osciloscopio (potencialmente arruinando las mediciones),
+ se eligió un valor de 
+\begin_inset Formula $R_{2}=10k\Omega$
+\end_inset
+
+.
+ En consecuencia:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{1}\approx303\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R_{3}\approx100k\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Independiente del valor de la frecuencia central.
+\end_layout
+
+\begin_layout Standard
+Para los bajos, se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+C_{2}=1.082*10^{-7}F\approx100nF\\
+C_{1}=10C_{2}=10.82*10^{-7}F\approx1\mu F
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para los medios, se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+C_{2}=6.66*10^{-9}F\approx6.8nF\\
+C_{1}=10C_{2}=66.9*10^{-9}F\approx68nF
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y para los agudos se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\begin{cases}
+C_{2}=1.05*10^{-9}F\approx1nF\\
+C_{1}=10C_{2}=10.5*10^{-9}F\approx10nF
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Análisis de Singularidades del Circuito
+\end_layout
+
+\begin_layout Standard
+Las singularidades del nuevo circuito compuesto por tres bandas se pueden
+ analizar de la siguiente manera; Si pensamos como un nodo la unión entre
+ dos etapas de los ecualizadores, tendremos ademas de 
+\begin_inset Formula $V_{o}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+: 
+\begin_inset Formula $V_{bass}$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{mid}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Por lo que:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G=\frac{V_{o}}{V_{i}}=\frac{V_{bass}}{V_{i}}\cdotp\frac{V_{mid}}{V_{bass}}\cdotp\frac{V_{o}}{V_{bass}}=G_{1}*G_{2}*G_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora, si cada etapa del ecualizador tiene una impedancia de salida baja
+ y una impedancia de entrada alta, se podría aproximar cada una de las ganancias
+ intermedias como independientes entre ellas.
+ De esta manera cada una de estas ganancias va a corresponder a la calculada
+ para una sola etapa.
+ 
+\end_layout
+
+\begin_layout Subsection
+Realización de la Placa
+\end_layout
+
+\begin_layout Standard
+Para implementar el circuito en una placa se decidió utilizar OpAmps individuale
+s para cada etapa, para garantizar de esta manera que no haya ningún tipo
+ de interferencia entre las tres etapas.
+\end_layout
+
+\begin_layout Standard
+A continuación se implemento el diseño propuesto en placa:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/placa.jpeg
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Placa
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Respuesta en frecuencia simulada y medida
+\end_layout
+
+\begin_layout Standard
+Anterior a la implementación en placa, se simulo en LTspice el circuito
+ completo en 3 casos separados, con todos los potenciómetros con 
+\begin_inset Formula $k=0$
+\end_inset
+
+, todos los potenciómetros con 
+\begin_inset Formula $k=0.5$
+\end_inset
+
+ y con todos los potenciómetros en 
+\begin_inset Formula $k=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Los resultados son los siguientes:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/simk0.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Simulacion (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/simk0.5.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Simulacion (k=0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/simk1.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Simulacion (k=1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es interesante observar como la máxima atenuación o amplificación puede
+ variar levemente a la calculada inicialmente cuando se amplifica o atenuá
+ mas de una región de audio ya que estas regiones se superponen levemente.
+ De manera que la amplificación de los bajos puede llegar también a amplificar
+ en algunos decibeles (
+\begin_inset Formula $2dB-5dB$
+\end_inset
+
+ en este caso) a las frecuencias medias.
+ Se puede observar que si, por ejemplo, se amplifican solo los medios, estas
+ amplificación vuelve nuevamente a corresponder a la calculada anteriormente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/medio.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Amplificacion de los medios (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Y luego se midieron los diagramas de Bode de la placa en osciloscopio, el
+ resultado fue el siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodek0.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido modulo (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodek0pha.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido fase (k=0)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodek1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido modulo (k=1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodek1pha.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido fase (k=1)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodk0.5.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido modulo (k=0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename F:/informe ej4 tp3/bodk0.5pha.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\lang english
+Bode medido fase (k=0.5)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como se puede observar las mediciones se ajustan bien a la simulación y
+ a la teoría.
+ Pueden llegar a diferir levemente por el error de los instrumentos empleados,
+ la tolerancia de los componentes y a que los valores de resistencia empleados
+ no son exactos sino que los valores comerciales mas cercanos.
+ Se puede ver que la mayor diferencia entre la simulación y lo medido es
+ en k=0.5, ya que los potenciómetros no se pueden ajustar a la mitad con
+ tanta precisión, lo que genera una pequeña ganancia o atenuación al medirse,
+ debido a que el k no es exactamente 0.5, a diferencia de k=0 y k=1, donde
+ esto si se puede lograr.
+\end_layout
+
+\begin_layout Subsection
+Datasheet
+\end_layout
+
+\begin_layout Itemize
+Max Gain: 
+\begin_inset Formula $21dB$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Max Attenuation: 
+\begin_inset Formula $-21dB$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Input Impedance: 
+\begin_inset Formula $5k\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Output Impedance: 
+\begin_inset Formula $2n\Omega$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Max Input Voltage: 
+\begin_inset Formula $1.2v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Max Vcc: 
+\begin_inset Formula $18v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Min Vcc: 
+\begin_inset Formula $-18v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Conclusión
+\end_layout
+
+\begin_layout Standard
+En conclusión, la implementación en serie de ecualizadores forman un control
+ de tonos de 3 bandas, donde su comportamiento en frecuencia se ajusta al
+ modelo teórico gracias a sus impedancias de entrada y de salida.
+ Este mismo atenuá o amplifica tres regiones de audio diferente de manera
+ que se puede controlar los bajos, agudos y medios de cualquier entrada
+ de audio que no sature los OpAmps.
+ 
 \begin_inset Newpage pagebreak
 \end_inset
 
