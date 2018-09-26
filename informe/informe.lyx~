@@ -4628,7 +4628,7 @@ Para mostrar la posible realización de esta mejora se presenta la simulación
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -4794,37 +4794,27 @@ Amplificador de Instrumentación
 \end_layout
 
 \begin_layout Section
-
-\lang english
 Ecualizador de Fase y Control de Tonos
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Marco Teorico
+Marco Teórico
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
-Potenciometro
+Potenciómetro
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Es necesario entender el modelo teorico de un potenciometro para poder analizarl
-o matematicamente.
- Un potenciometro es una resistencia variable la cual tiene la ventaha de
+Es necesario entender el modelo teórico de un potenciómetro para poder analizarl
+o matemáticamente.
+ Un potenciómetro es una resistencia variable la cual tiene la ventaja de
  que puede ser usada como una perilla para el usuario del circuito, a diferencia
- de un preset donde su ajuste es dificil de lograr.
- Para entender un potenciometro se puede emplear la siguiente imagen:
+ de un preset donde su ajuste es difícil de lograr.
+ Para entender un potenciómetro se puede emplear la siguiente imagen:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -4833,8 +4823,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pot.png
 	scale 50
@@ -4845,8 +4833,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -4870,24 +4856,22 @@ Potenciometro
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Donde k es un parametro variable que depende de la posicion de la perilla
- y R es el valor maximo de la resistencia variable.
- De esta manera se puede ver que si conectamos los dos extremos del potenciometr
+Donde k es un parámetro variable que depende de la posición de la perilla
+ y R es el valor máximo de la resistencia variable.
+ De esta manera se puede ver que si conectamos los dos extremos del potenciómetr
 o obtenemos una resistencia fija de 
 \begin_inset Formula $R*k+R*(1-k)=R$
 \end_inset
 
 .
- Y al conectar un extremo con el medio del potenciometro tenemos una resistencoi
-a que varia de cero hasta k.
- Se puede observar facilmente que cuando un extremo y el medio tienen una
+ Y al conectar un extremo con el medio del potenciómetro tenemos una resistencia
+ que varia de cero hasta k.
+ Se puede observar fácilmente que cuando un extremo y el medio tienen una
  resistencia de valor 
 \begin_inset Formula $R_{x}$
 \end_inset
 
- el otro extremo tendra el complemento faltante para que la suma sea 
+ el otro extremo tendrá el complemento faltante para que la suma sea 
 \begin_inset Formula $R$
 \end_inset
 
@@ -4895,26 +4879,22 @@ a que varia de cero hasta k.
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Ecualizadores de fase
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Un ecualizador de fase es un circuito que, dada una entrada, no modifica
  la magnitud de esta pero si causa un defasaje en ella.
- Si el acualizador no es de faes, existen los ecualizadores lineales y los
- equalizadores de fase minima.
- Los ecualizadores lineales no generan cambio algun en la fase mientras
+ Si el ecualizador no es de fase, existen los ecualizadores lineales y los
+ ecualizadores de fase mínima.
+ Los ecualizadores lineales no generan cambio algún en la fase mientras
  que cambian la magnitud.
- Estos son mas comunes en el ambito digital que analogico.
- Un ecualizador de fase minima es el que genera un cambio en la amplitud
- deseado y trata de cambiar lo mas minimo posible la fase, estsos son muy
- comunes en los ecualizadores analogicos como el deseado en este trabajo.
+ Estos son mas comunes en el ámbito digital que analógico.
+ Un ecualizador de fase mínima es el que genera un cambio en la amplitud
+ deseado y trata de cambiar lo mas mínimo posible la fase, estos son muy
+ comunes en los ecualizadores analógicos como el deseado en este trabajo.
  Volviendo al ecualizador de fase, este no es posible de lograr igual al
- teorico si se emplean OpAmps ya que estos tienen un polo dominante, de
+ teórico si se emplean OpAmps ya que estos tienen un polo dominante, de
  manera que a frecuencias muy altas esta empieza a atenuar.
  Pero como la frecuencia de audio abarca de los 
 \begin_inset Formula $20Hz$
@@ -4927,7 +4907,7 @@ Un ecualizador de fase es un circuito que, dada una entrada, no modifica
 , los polos del integrado no son un problema y el circuito se comportara
  como deseado para el rango de frecuencias que queremos.
  Los ecualizadores de fase pueden ser de varios ordenes, el orden determina
- que cantidad desfasa la senal; siguiendo la formula 
+ que cantidad desfasa la señal; siguiendo la formula 
 \begin_inset Formula $n*90^{o}$
 \end_inset
 
@@ -4935,28 +4915,22 @@ Un ecualizador de fase es un circuito que, dada una entrada, no modifica
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Control de Tonos
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Para el control de tonos se usa una combinacion serie o paralelo de ecualizadore
+Para el control de tonos se usa una combinación serie o paralelo de ecualizadore
 s de una banda.
- De esta manera se puede manipular la ganancia o atenuacion de una senal
+ De esta manera se puede manipular la ganancia o atenuación de una señal
  de audio.
  Cuantas mas bandas tenga el ecualizador mas fino sera el control sobre
- la region de audio.
- Los ecualizadores comericiales mas usados son de control de tonos de tres
+ la región de audio.
+ Los ecualizadores comerciales mas usados son de control de tonos de tres
  bandas (agudos, medios y graves) y ecualizadores de 8 bandas, el cual tiene
  una frecuencia central cada una octava de la frecuencia de audio.
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang english
 Pull Down Resistor
 \end_layout
 
@@ -4964,21 +4938,20 @@ Pull Down Resistor
 Los capacitores en un circuito pueden quedar cargados tras apagarse y desconecta
 rse del resto de un circuito mas complejo.
  Estos capacitores cargados pueden generar una diferencia de potencial en
- la entrada y salida del circuito si estan aislados, es decir, si no hay
- un circuito cerrado por el cual puedan decargarse.
+ la entrada y salida del circuito si están aislados, es decir, si no hay
+ un circuito cerrado por el cual puedan descargarse.
  Por lo que si se vuelve a conectar la circuito y este se prende, el voltaje
  de corriente directa que se encontraba en los capacitores se descarga en
- el mismo camino que la senal.
- Cuando se esta trabajando con senales de audio, esto se refleja en un fuerte
+ el mismo camino que la señal.
+ Cuando se esta trabajando con señales de audio, esto se refleja en un fuerte
  ruido 'pop' cuando se enciende el circuito.
  Esto puede pasar en parlantes, amplificadores y en este caso pedales de
- distorsion.
- Para evitar este problema se debe 'eliminar' esta corriente directa del
- circuito.
+ distorsión.
+ Para evitar este problema se debe eliminar esta corriente directa del circuito.
  La manera de resolver esto es agregando una resistencia a tierra, de manera
- que la pequena carga almacenada en el capacitor puede descargarse a tierra
- por esta resistencia sin alterar la senal.
- El valor de la resistencia debe ser lo suficentemente grande como para
+ que la pequeña carga almacenada en el capacitor puede descargarse a tierra
+ por esta resistencia sin alterar la señal.
+ El valor de la resistencia debe ser lo suficientemente grande como para
  que se pueda descargar el capacitor.
  Normalmente se puede empezar entre los 
 \begin_inset Formula $2M\Omega$
@@ -4993,20 +4966,14 @@ rse del resto de un circuito mas complejo.
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Resolucion del Circuito
+Resolución del Circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-El circuito propuesto por la catedra es el siguiente:
+El circuito propuesto por la cátedra es el siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5015,8 +4982,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/circuitoProp.png
 	scale 70
@@ -5027,8 +4992,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5052,15 +5015,11 @@ Circuito Propuesto
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Planteando las ecuaciones de los nodos en el circuito, tomando el OpAmp
  como ideal, se obtienen las siguientes cuatro ecuaciones:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 1) & \frac{V_{i}}{R_{3}}+V_{2}C_{2}*s=-\frac{V_{o}}{R_{3}}\\
 2) & \frac{V_{1}-V_{2}}{R_{2}k}=\frac{V_{2}-V_{3}}{R_{2}(1-k)}+V_{2}C_{2}*s\\
@@ -5073,14 +5032,10 @@ Planteando las ecuaciones de los nodos en el circuito, tomando el OpAmp
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y reordenando las ecuaciones se obtiene lo siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 1) & V_{o}=-V_{i}-V_{2}R_{3}C_{2}*s\\
 2) & V_{2}=V_{1}\frac{a}{R_{2}k}+V_{3}\frac{a}{R_{2}(1-k)}\\
@@ -5093,14 +5048,10 @@ Y reordenando las ecuaciones se obtiene lo siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Donde:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $a=(\frac{1}{R_{2}k}+\frac{1}{R_{2}(1-k)}+C_{2}*s)^{-1}$
 \end_inset
 
@@ -5108,8 +5059,6 @@ Donde:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $b=(\frac{1}{R_{1}}+\frac{1}{R_{2}(1-k)}+C_{1}*s)^{-1}$
 \end_inset
 
@@ -5117,8 +5066,6 @@ Donde:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $e=(\frac{1}{R_{1}}+\frac{1}{R_{2}k}+C_{1}*s)^{-1}$
 \end_inset
 
@@ -5126,14 +5073,10 @@ Donde:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-De estas ecuaciones se puede dibujar el siguiente grafico:
+De estas ecuaciones se puede dibujar el siguiente gráfico:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5142,8 +5085,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/grafo.png
 	scale 50
@@ -5154,8 +5095,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5179,15 +5118,11 @@ Grafo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Donde Aplicando el Teorema de Mason:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $G=\frac{V_{o}}{V_{i}}=\frac{\sum_{i=1}^{N}\triangle_{i}G_{i}}{\triangle}=\frac{\triangle_{1}G_{1}+\triangle_{2}G_{2}+\triangle_{3}G_{3}}{\triangle}$
 \end_inset
 
@@ -5195,14 +5130,10 @@ Donde Aplicando el Teorema de Mason:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y sabiendo que:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 G_{1}=-1\\
 G_{2}=-\frac{eaR_{3}C_{2}*s}{R_{1}R_{2}k}\\
@@ -5214,8 +5145,6 @@ G_{3}=-\frac{eabC_{1}C_{2}R_{3}}{R_{1}R_{2}(1-k)}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 \triangle_{1}=1-(L_{1}+L_{2}+L_{3}+L_{4}+L_{5})\\
 \triangle_{2}=1\\
@@ -5227,8 +5156,6 @@ G_{3}=-\frac{eabC_{1}C_{2}R_{3}}{R_{1}R_{2}(1-k)}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 \triangle=1-(L_{1}+L_{2}+L_{3}+L_{4}+L_{5}+L_{6}+L_{7})\end{cases}$
 \end_inset
@@ -5237,8 +5164,6 @@ G_{3}=-\frac{eabC_{1}C_{2}R_{3}}{R_{1}R_{2}(1-k)}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 L_{1}=\frac{ea}{(R_{2}k)^{2}}\\
 L_{2}=(sC_{1})^{2}be\\
@@ -5254,9 +5179,7 @@ L_{7}=-\frac{baR_{3}C_{2}*s}{R_{1}R_{2}(1-k)}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Reemplazando en la ecuacion original se obtiene la siguiente ecuacion general
+Reemplazando en la ecuación original se obtiene la siguiente ecuación general
  de la transferencia 
 \begin_inset Formula $G$
 \end_inset
@@ -5266,8 +5189,6 @@ Reemplazando en la ecuacion original se obtiene la siguiente ecuacion general
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $G(s)=$
 \end_inset
 
@@ -5279,14 +5200,10 @@ Reemplazando en la ecuacion original se obtiene la siguiente ecuacion general
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Siendo:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 A=20(C_{2}R_{2}k*s)^{2}R_{1}\\
 B=20(C_{2}R_{2}*s)^{2}R_{1}k\\
@@ -5300,15 +5217,11 @@ E=C_{2}(R_{2}k)^{2}s
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Simplificando la ecuacion general con las condiciones de diseno:
+Simplificando la ecuación general con las condiciones de diseño:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $C_{1}=10C_{2}$
 \end_inset
 
@@ -5317,8 +5230,6 @@ Simplificando la ecuacion general con las condiciones de diseno:
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $R_{3}=10R_{2}$
 \end_inset
 
@@ -5327,8 +5238,6 @@ Simplificando la ecuacion general con las condiciones de diseno:
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $R_{3}\gg R_{1}$
 \end_inset
 
@@ -5336,15 +5245,11 @@ Simplificando la ecuacion general con las condiciones de diseno:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Se llega a la siguiente ecuacion:
+Se llega a la siguiente ecuación:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $G(s)=-\frac{s^{2}(10R_{2}C_{2})^{2}R_{1}-sC_{2}R_{2}^{2}*(k+10)*(k-1)+2R_{1}+R_{2}}{s^{2}(10R_{2}C_{2})^{2}R_{1}-sC_{2}R_{2}^{2}*k*(k-11)+2R_{1}+R_{2}}$
 \end_inset
 
@@ -5352,9 +5257,7 @@ Se llega a la siguiente ecuacion:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Donde se puede ver facilemente que la frecuencia central es la misma para
+Donde se puede ver fácilmente que la frecuencia central es la misma para
  el polinomio en el denominador como en el numerador, ya que esta depende
  solamente del termino independiente y el termino con 
 \begin_inset Formula $s^{2}$
@@ -5394,8 +5297,6 @@ Donde se puede ver facilemente que la frecuencia central es la misma para
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $w_{1}*w_{2}=\frac{a_{o}}{a_{2}}=\frac{2R_{1}+R_{2}}{(10R_{2}C_{2})^{2}R_{1}}=\frac{2+\frac{R_{2}}{R_{1}}}{(10R_{2}C_{2})^{2}}$
 \end_inset
 
@@ -5403,14 +5304,10 @@ Donde se puede ver facilemente que la frecuencia central es la misma para
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Entonces:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $f_{o}=\frac{w_{0}}{2\pi}=\frac{\sqrt{w_{1}*w_{2}}}{2\pi}=\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{20\pi R_{2}C_{2}}$
 \end_inset
 
@@ -5418,21 +5315,17 @@ Entonces:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Para calcular el rango en la magnitud de la funcion transferencia en veces
- se puede seleccionar k=1 y k=0, que es cuando mayor atenuacion o amplificacion
- se puede apreciar, y luego reemplazar en la funcion transferencia la 
+Para calcular el rango en la magnitud de la función transferencia en veces
+ se puede seleccionar k=1 y k=0, que es cuando mayor atenuación o amplificación
+ se puede apreciar, y luego reemplazar en la función transferencia la 
 \begin_inset Formula $f_{o}$
 \end_inset
 
- que corresponde a la frecuencia de mayor amplificacion/atenuacion.
- Por lo que reemplazando en la ecuacion k=0 y k=1 se obtiene:
+ que corresponde a la frecuencia de mayor amplificación/atenuación.
+ Por lo que reemplazando en la ecuación k=0 y k=1 se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 G(s)=-\frac{D+C+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+10C_{2}R_{2}^{2}s+2R_{1}+R_{2}}{D+C+C_{2}R_{1}^{2}*s+31C_{2}R_{1}R_{2}*s+2R_{1}+R_{2}} & k=0\\
 \begin{cases}
@@ -5454,8 +5347,6 @@ E=C_{2}(R_{2})^{2}s
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y si luego reemplazamos 
 \begin_inset Formula $f_{0}$
 \end_inset
@@ -5466,7 +5357,6 @@ Y si luego reemplazamos
 \begin_layout Standard
 
 \size footnotesize
-\lang english
 \begin_inset Formula $\begin{cases}
 |G(jw_{o})|=|-\frac{D+C+C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+10C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+2R_{1}+R_{2}}{D+C+C_{2}R_{1}^{2}*\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+2R_{1}+R_{2}}|=|\frac{C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+10C_{2}R_{2}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}{C_{2}R_{1}^{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}+31C_{2}R_{1}R_{2}*j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}}| & k=0\\
 \begin{cases}
@@ -5489,15 +5379,12 @@ E=C_{2}(R_{2})^{2}j\frac{\sqrt{2+\frac{R_{2}}{R_{1}}}}{10R_{2}C_{2}}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Simplificando obtenemos:
 \end_layout
 
 \begin_layout Standard
 
 \size small
-\lang english
 \begin_inset Formula $\begin{cases}
 |G(jw_{o})|=\frac{C_{2}R_{1}^{2}+31C_{2}R_{1}R_{2}+10C_{2}R_{2}^{2}}{C_{2}R_{1}^{2}+31C_{2}R_{1}R_{2}}=\frac{R_{1}^{2}+31R_{1}R_{2}+10R_{2}^{2}}{R_{1}^{2}+31R_{1}R_{2}}=\frac{1+31\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}{1+31\frac{R_{2}}{R_{1}}}\approx\frac{30\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}{30\frac{R_{2}}{R_{1}}}\approx\frac{3+\frac{R_{2}}{R_{1}}}{3(\frac{R_{2}}{R_{1}})} & k=0\\
 |G(f_{o})|=|\frac{-(R_{2})^{2}+R_{1}^{2}+31R_{1}R_{2}-9R_{2}^{2}+10R_{2}^{2}}{-(R_{2})^{2}+R_{1}^{2}+31R_{1}R_{2}+11R_{2}^{2}}|=\frac{R_{1}^{2}+31R_{1}R_{2}}{R_{1}^{2}+31R_{1}R_{2}+10R_{2}^{2}}=\frac{1+31\frac{R_{2}}{R_{1}}}{1+31\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}\approx\frac{30\frac{R_{2}}{R_{1}}}{30\frac{R_{2}}{R_{1}}+10(\frac{R_{2}}{R_{1}})^{2}}\approx\frac{3(\frac{R_{2}}{R_{1}})}{3+\frac{R_{2}}{R_{1}}} & k=1
@@ -5508,15 +5395,11 @@ Simplificando obtenemos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por lo que se llega a la siguiente inecuacion:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $\frac{3R_{1}}{3R_{1}+R_{2}}<A_{o}<\frac{3R_{1}+R_{2}}{3R_{1}}$
 \end_inset
 
@@ -5524,32 +5407,24 @@ Por lo que se llega a la siguiente inecuacion:
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Explicacion en Diagrama de Polos y Ceros
+Explicación en Diagrama de Polos y Ceros
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-El analisis en el diagrama de polos y ceros se puede apreciar facilmente
+El análisis en el diagrama de polos y ceros se puede apreciar fácilmente
  si asignamos valores arbitrarios a los componentes siguiendo las reglas
- de diseno y luego graficando en matlab para diferentes valores de k.
+ de diseño y luego graficando en Matlab para diferentes valores de k.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al graficar 
 \begin_inset Formula $k\rightarrow0$
 \end_inset
 
- se obtienen los siguientes graficos:
+ se obtienen los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5558,8 +5433,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pzplotk0.png
 	scale 60
@@ -5570,8 +5443,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5595,8 +5466,6 @@ Diagrama polos y ceros (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5605,8 +5474,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeplotk0.png
 	scale 60
@@ -5617,8 +5484,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5642,8 +5507,6 @@ Bode (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Como se puede ver, con 
 \begin_inset Formula $k=0$
 \end_inset
@@ -5655,22 +5518,18 @@ Como se puede ver, con
 , ya que como se puede ver en el diagrama de polos y ceros, los polos se
  encuentran sobre el eje imaginario y los ceros en el eje real.
  Por lo que, al estar los polos en una frecuencia entre los polos, resulta
- en un pasa banda entre las frecuencias de los ceros de la funcion.
+ en un pasa banda entre las frecuencias de los ceros de la función.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al graficar 
 \begin_inset Formula $k\rightarrow0.2$
 \end_inset
 
- se obtienen los siguientes graficos:
+ se obtienen los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5679,8 +5538,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pzplotk0,2.png
 	scale 60
@@ -5691,8 +5548,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5712,8 +5567,6 @@ Diagrama polos y ceros (k=0.2)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5722,8 +5575,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeplotk0,2.png
 	scale 60
@@ -5734,8 +5585,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5755,26 +5604,20 @@ Bode (k=0.2)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Mientras se aumenta k, la frecuencia de los polos se agranda y la de los
  ceros se achica, por lo que sigue siendo en este caso un pasa banda, pero
  de un ancho mayor.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al graficar 
 \begin_inset Formula $k\rightarrow0.5$
 \end_inset
 
- se obtienen los siguientes graficos:
+ se obtienen los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5783,8 +5626,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pzplotk0,5.png
 	scale 60
@@ -5795,8 +5636,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5816,8 +5655,6 @@ Diagrama polos y ceros (k=0.5)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5826,8 +5663,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeplotk0,5.png
 	scale 50
@@ -5838,8 +5673,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5859,15 +5692,13 @@ Bode (k=0.5)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Cuando se llega a 
 \begin_inset Formula $k=0.5$
 \end_inset
 
 , los polos y ceros se encuentran en en las mismas frecuencias por lo que
- se 'cancelan' entre si y el modulo de la funcion tranferencia es 1, y la
- fase es 
+ se 'cancelan' entre si y el modulo de la función transferencia es 1, y
+ la fase es 
 \begin_inset Formula $180^{o}$
 \end_inset
 
@@ -5875,18 +5706,14 @@ Cuando se llega a
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al graficar 
 \begin_inset Formula $k\rightarrow0.8$
 \end_inset
 
- se obtienen los siguientes graficos:
+ se obtienen los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5895,8 +5722,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pzplotk0,8.png
 	scale 60
@@ -5907,8 +5732,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5928,8 +5751,6 @@ Diagrama polos y ceros (k=0.8)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5938,8 +5759,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeplotk0.png
 	scale 60
@@ -5950,8 +5769,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -5971,25 +5788,19 @@ Bode (k=0.8)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al pasar 0.5, son los ceros los que se encuentran entre las frecuencias de
  los polos, por lo que el circuito se transforma en un rechaza banda.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al graficar 
 \begin_inset Formula $k\rightarrow1$
 \end_inset
 
- se obtienen los siguientes graficos:
+ se obtienen los siguientes gráficos:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -5998,8 +5809,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/pzplotk1.png
 	scale 60
@@ -6010,8 +5819,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6031,8 +5838,6 @@ Diagrama polos y ceros (k=1)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6041,8 +5846,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeplotk1.png
 	scale 60
@@ -6053,8 +5856,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6074,8 +5875,6 @@ Bode (k=1)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Al seguir aumentando k hasta llegar a 1, los ceros quedan en el eje imaginario
  y su frecuencia de corte es la menor, por lo que el ancho del rechaza banda
  se hace menor.
@@ -6083,28 +5882,22 @@ Al seguir aumentando k hasta llegar a 1, los ceros quedan en el eje imaginario
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Este circuito corresponde a uno de fase minima, ya que los ceros se encuentran
+Este circuito corresponde a uno de fase mínima, ya que los ceros se encuentran
  siempre en el semiplano izquierdo en el diagrama de polos y ceros.
- Para transformarlo en un circuito de fase no minima, se necesita hacer
+ Para transformarlo en un circuito de fase no mínima, se necesita hacer
  uso de un ecualizador de fase de segundo orden.
  El mas sencillo es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/eqOrden2.png
 	scale 80
@@ -6115,14 +5908,12 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \lang english
-Ecualizador de Fase de segundi orden
+Ecualizador de Fase de segundo orden
 \end_layout
 
 \end_inset
@@ -6140,15 +5931,11 @@ Ecualizador de Fase de segundi orden
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Donde su funcion transferencia es:
+Donde su función transferencia es:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $\frac{V_{o}}{V_{i}}=\frac{R_{4}}{R_{3}+R_{4}}\cdotp\frac{s^{2}-s(\frac{2}{R_{2}C})+\frac{1}{R_{1}R_{2}C^{2}}}{s^{2}+s(\frac{2}{R_{2}C})+\frac{1}{R_{1}R_{2}C^{2}}}$
 \end_inset
 
@@ -6156,14 +5943,10 @@ Donde su funcion transferencia es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Si se siguen las siguientes reglas de diseno:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 \begin_inset Formula $R_{2}=\frac{2Q}{\omega_{o}C}$
 \end_inset
 
@@ -6171,8 +5954,6 @@ Si se siguen las siguientes reglas de diseno:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 \begin_inset Formula $R_{1}=\frac{1}{2\omega_{o}CQ}=R_{3}$
 \end_inset
 
@@ -6180,8 +5961,6 @@ Si se siguen las siguientes reglas de diseno:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 \begin_inset Formula $R_{4}=\frac{R_{2}}{4}$
 \end_inset
 
@@ -6189,8 +5968,6 @@ Si se siguen las siguientes reglas de diseno:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Eligiendo 
 \begin_inset Formula $C=10nF$
 \end_inset
@@ -6207,8 +5984,6 @@ Eligiendo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -6216,8 +5991,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/Screenshot 2018-09-25 22.23.00.png
 	scale 70
@@ -6228,8 +6001,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6253,14 +6024,10 @@ Valores de circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Donde aproximadamente no hay atenuacion ni ganancia y su fase es:
+Donde aproximadamente no hay atenuación ni ganancia y su fase es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 wide false
 sideways false
@@ -6268,8 +6035,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/Screenshot 2018-09-25 22.25.04.png
 	scale 40
@@ -6280,14 +6045,12 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \lang english
-Fase ecualizador segund orden no minimo
+Fase ecualizador segundo orden no minimo
 \end_layout
 
 \end_inset
@@ -6305,21 +6068,17 @@ Fase ecualizador segund orden no minimo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-De esta manera si conectamos en serie los dos circuitos y usamos el potenciometr
+De esta manera si conectamos en serie los dos circuitos y usamos el potenciómetr
 o fijo en 
 \begin_inset Formula $k=0.5$
 \end_inset
 
  (lo reemplazamos por dos resistencias del mismo valor), obtenemos un ecualizado
-r de fase no minima.
+r de fase no mínima.
  El circuito resultante es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6328,8 +6087,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/eqfase.png
 	scale 80
@@ -6340,8 +6097,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6365,14 +6120,10 @@ Circuito ecualizador de fase no minima
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y si respuesta en frecuencia es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6381,8 +6132,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodeeq2.png
 	scale 40
@@ -6393,8 +6142,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6418,24 +6165,20 @@ Diagrama de bode
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Diseno de Ecualizador de Tres Bandas
+Diseño de Ecualizador de Tres Bandas
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Para disenar un control de tonos de 3 bandas, se necesita utilizar 3 circuitos
- como el sugerido por la catedra, ya que cada uno amplifia o atenua un rango
- de frecuencias diferente.
+Para diseñar un control de tonos de 3 bandas, se necesita utilizar 3 circuitos
+ como el sugerido por la cátedra, ya que cada uno amplifica o atenuá un
+ rango de frecuencias diferente.
  Se necesita uno para los graves (Bass), uno para las frecuencias de audio
  medias (Mid) y un ultimo circuito para modificar los agudos (Treble).
  Lo primero que se debe hacer es elegir las frecuencias centrales representativa
 s para cada etapa.
- Para hace esto se requirio una investigacion en el ambito de la percepcion
+ Para hace esto se requirió una investigación en el ámbito de la percepción
  auditiva.
- Se encontro que el rango caracteristico de las frecuencias de audio es
+ Se encontró que el rango característico de las frecuencias de audio es
  entre 
 \begin_inset Formula $20Hz$
 \end_inset
@@ -6445,7 +6188,7 @@ s para cada etapa.
 \end_inset
 
 .
- De las cuales los bajos correponde a las frecuencias entre los 
+ De las cuales los bajos corresponde a las frecuencias entre los 
 \begin_inset Formula $25Hz$
 \end_inset
 
@@ -6472,21 +6215,19 @@ s para cada etapa.
 \end_inset
 
 .
- Para sacar las frecuencias centrales se encontro que lo conveniente en
- el audio es calcularla como la media geometrica, de manera que 
+ Para sacar las frecuencias centrales se encontró que lo conveniente en
+ el audio es calcularla como la media geométrica, de manera que 
 \begin_inset Formula $f_{o}=\sqrt{f_{1}*f_{2}}$
 \end_inset
 
 .
- Ya que al estar la respuesta en frecuencias en decadas, la media lineal
- no cubriria eficientemente el rango que neceista ya que este no es logaritmico.
- Por lo que utilizando la media geometrica de los tres diferentes rangos
+ Ya que al estar la respuesta en frecuencias en décadas, la media lineal
+ no cubriría eficientemente el rango que necesita ya que este no es logarítmico.
+ Por lo que utilizando la media geométrica de los tres diferentes rangos
  se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 f_{bass}=\sqrt{25*300}Hz\approx87Hz\\
 f_{mid}=\sqrt{400*5000}Hz\approx1414Hz\\
@@ -6498,16 +6239,12 @@ f_{treble}=\sqrt{4000*20000}Hz\approx8944Hz
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-El siguiente paso es elegir la mejor configuracion de las tres etapas.
+El siguiente paso es elegir la mejor configuración de las tres etapas.
  Estas pueden ir en serie o en paralelo con un sumador.
- La configuracion en paralelo seria de la siguiente manera:
+ La configuración en paralelo seria de la siguiente manera:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6516,8 +6253,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/Esquema-EQ-procesado-paralelo.png
 	scale 70
@@ -6528,8 +6263,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6553,38 +6286,32 @@ Conexion paralelo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-La conexion en paralelo en el ambiente del audio se usa cuando se quiere
+La conexión en paralelo en el ambiente del audio se usa cuando se quiere
  utilizar varios efectos para diferentes entradas, como por ejemplo una
- distorsion que se quiere aplicar a varios instrumentos.
- Ya que si fuese conectad en serie solo se puede aplicar el circuito disenado
+ distorsión que se quiere aplicar a varios instrumentos.
+ Ya que si fuese conectad en serie solo se puede aplicar el circuito diseñado
  a una sola entrada.
  Pero al trabajar con filtros es conveniente conectarlos en serie.
- Y tras una inestigacion en circuitos basicos de equalizadores se encuentra
- que la mayoria de los equalizadores analogicos son conectados en serie,
+ Y tras una investigación en circuitos básicos de ecualizadores se encuentra
+ que la mayoría de los ecualizadores analógicos son conectados en serie,
  ya que de esta manera no se requiere un circuito sumador que aumenta el
  costo del circuito total y puede causar efectos no deseados, como sumar
- el ruido individual de cada conexion en paralelo, cosa que no ocurre con
- un equalizador en serie.
- Tras hacer el ecualizador, este ya completo se podria conectar igualmente
+ el ruido individual de cada conexión en paralelo, cosa que no ocurre con
+ un ecualizador en serie.
+ Tras hacer el ecualizador, este ya completo se podría conectar igualmente
  en paralelo con otros ecualizadores o distorsionadores.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Por lo que en este caso se pondran las tres etapas en serie.
+Por lo que en este caso se pondrán las tres etapas en serie.
  Ademas de las tres etapas, a la entrada se puede agregar un Pull Down Resistor,
- por la razon explicada en el marco teorico.
- A la salida se puede agregar un potenciometro logaritmico que controle
+ por la razón explicada en el marco teórico.
+ A la salida se puede agregar un potenciómetro logarítmico que controle
  el volumen a la salida.
- Este funciiona ya que el circuito queda de la siguiente manera:
+ Este funciona ya que el circuito queda de la siguiente manera:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6593,8 +6320,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/divisor.png
 	scale 50
@@ -6605,8 +6330,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6630,15 +6353,11 @@ Divisor Resistivo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por lo que:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $V_{o}=V_{i}*\frac{R*(1-k)}{R*(1-k)+R*k}=V_{i}*(1-k)$
 \end_inset
 
@@ -6647,8 +6366,6 @@ Por lo que:
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $\frac{V_{o}}{V_{i}}=1-k$
 \end_inset
 
@@ -6656,14 +6373,10 @@ Por lo que:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 De manera que el circuito completo es:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6672,8 +6385,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/circuitoCompleto.png
 	scale 50
@@ -6684,8 +6395,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -6709,23 +6418,19 @@ Circuito Completo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Donde cada EQ es equivalente al circuito propuesto por la catedra pero con
- valores elegidos apropidamente.
+Donde cada EQ es equivalente al circuito propuesto por la cátedra pero con
+ valores elegidos apropiadamente.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para elegir los valores de cada circuito se debe partir de la frecuencia
- central elegida y los dB que se quiere que el cicruito amplifique/atenue.
- Para nuestro equalizador se eligio una amplificacion y atenuacion de 
+ central elegida y los dB que se quiere que el circuito amplifique/atenué.
+ Para nuestro ecualizador se eligió una amplificación y atenuación de 
 \begin_inset Formula $21dB$
 \end_inset
 
  aproximadamente.
- Por lo que la salida podra ser aproximadamente 12 veces mayor o menor a
+ Por lo que la salida podrá ser aproximadamente 12 veces mayor o menor a
  la entrada.
  De manera que partiendo de la inecuacion de la amplitud presentada anteriorment
 e se tiene:
@@ -6733,8 +6438,6 @@ e se tiene:
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $12=\frac{3R_{1}+R_{2}}{3R_{1}}$
 \end_inset
 
@@ -6743,8 +6446,6 @@ e se tiene:
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $\frac{R_{2}}{33}=R_{1}$
 \end_inset
 
@@ -6752,19 +6453,15 @@ e se tiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y despejando 
 \begin_inset Formula $C_{2}$
 \end_inset
 
- de la ecuacionde la frecuencia central se obtiene:
+ de la adecuación la frecuencia central se obtiene:
 \end_layout
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $C_{2}=\frac{\sqrt{2+\frac{33R_{1}}{R_{1}}}}{20\pi f_{o}R_{2}}=\frac{\sqrt{35}}{20\pi}*\frac{1}{f_{o}R_{2}}$
 \end_inset
 
@@ -6772,14 +6469,10 @@ Y despejando
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-De manera que para elegir los valores se tienen ls siguientes equivalencias:
+De manera que para elegir los valores se tienen las siguientes equivalencias:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 C_{2}=\frac{\sqrt{35}}{20\pi}*\frac{1}{f_{o}R_{2}}\\
 C_{1}=10C_{2}\\
@@ -6792,8 +6485,6 @@ R_{3}=10R_{2}
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por lo que eligiendo 
 \begin_inset Formula $R_{2}$
 \end_inset
@@ -6805,7 +6496,7 @@ Por lo que eligiendo
  para cada rango calculadas anteriormente se pueden deducir todos los valores.
  Para que no queden capacitores muy chicos y estos sean comparables con
  los de las puntas del osciloscopio (potencialmente arruinando las mediciones),
- se eligio un valor de 
+ se eligió un valor de 
 \begin_inset Formula $R_{2}=10k\Omega$
 \end_inset
 
@@ -6815,8 +6506,6 @@ Por lo que eligiendo
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $R_{1}\approx303\Omega$
 \end_inset
 
@@ -6825,8 +6514,6 @@ Por lo que eligiendo
 
 \begin_layout Standard
 \align center
-
-\lang english
 \begin_inset Formula $R_{3}\approx100k\Omega$
 \end_inset
 
@@ -6834,20 +6521,14 @@ Por lo que eligiendo
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Independiente del valor de la frecuencia central.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para los bajos, se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 C_{2}=1.082*10^{-7}F\approx100nF\\
 C_{1}=10C_{2}=10.82*10^{-7}F\approx1\mu F
@@ -6858,14 +6539,10 @@ C_{1}=10C_{2}=10.82*10^{-7}F\approx1\mu F
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Para los medios, se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 C_{2}=6.66*10^{-9}F\approx6.8nF\\
 C_{1}=10C_{2}=66.9*10^{-9}F\approx68nF
@@ -6876,14 +6553,10 @@ C_{1}=10C_{2}=66.9*10^{-9}F\approx68nF
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y para los agudos se obtiene:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $\begin{cases}
 C_{2}=1.05*10^{-9}F\approx1nF\\
 C_{1}=10C_{2}=10.5*10^{-9}F\approx10nF
@@ -6894,16 +6567,12 @@ C_{1}=10C_{2}=10.5*10^{-9}F\approx10nF
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Analisis de Singularidades del Circuito
+Análisis de Singularidades del Circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Las singularidades del nuevo circuito compuesto por tres bandas se pueden
- analizar de la siguiente manera; Si pensamos como un nodo la union entre
+ analizar de la siguiente manera; Si pensamos como un nodo la unión entre
  dos etapas de los ecualizadores, tendremos ademas de 
 \begin_inset Formula $V_{o}$
 \end_inset
@@ -6924,14 +6593,10 @@ Las singularidades del nuevo circuito compuesto por tres bandas se pueden
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Por lo que:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Formula $G=\frac{V_{o}}{V_{i}}=\frac{V_{bass}}{V_{i}}\cdotp\frac{V_{mid}}{V_{bass}}\cdotp\frac{V_{o}}{V_{bass}}=G_{1}*G_{2}*G_{3}$
 \end_inset
 
@@ -6939,39 +6604,29 @@ Por lo que:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Ahora, si cada etapa del ecualizador tiene una impedancia de salida baja
- y una impedancia de entrada alta, se podria aproximar cada una de las ganancias
+ y una impedancia de entrada alta, se podría aproximar cada una de las ganancias
  intermedias como independientes entre ellas.
- De esta manera cada una de estas ganancias va a corresponder a la caculada
+ De esta manera cada una de estas ganancias va a corresponder a la calculada
  para una sola etapa.
  
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Realizacion de la Placa
+Realización de la Placa
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Para implementar el circuito en una placa se decidio utilizar OpAmps individuale
-s para cada etapa, para garantiar de esta manera que no haya ningun tipo
+Para implementar el circuito en una placa se decidió utilizar OpAmps individuale
+s para cada etapa, para garantizar de esta manera que no haya ningún tipo
  de interferencia entre las tres etapas.
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-A continuacion se implemento el diseno propuesto en placa:
+A continuación se implemento el diseño propuesto en placa:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -6980,8 +6635,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/placa.jpeg
 	scale 30
@@ -6992,8 +6645,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7017,24 +6668,20 @@ Placa
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
 Respuesta en frecuencia simulada y medida
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Anterior a la implementacion en placa, se simulo en LTspice el circuito
- completo en 3 casos separados, con todos los potenciometros con 
+Anterior a la implementación en placa, se simulo en LTspice el circuito
+ completo en 3 casos separados, con todos los potenciómetros con 
 \begin_inset Formula $k=0$
 \end_inset
 
-, todos los potenciomteros con 
+, todos los potenciómetros con 
 \begin_inset Formula $k=0.5$
 \end_inset
 
- y con todos los potenciometros en 
+ y con todos los potenciómetros en 
 \begin_inset Formula $k=1$
 \end_inset
 
@@ -7042,14 +6689,10 @@ Anterior a la implementacion en placa, se simulo en LTspice el circuito
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Los resultados son los siguientes:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7058,8 +6701,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/simk0.png
 	scale 40
@@ -7070,8 +6711,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7095,8 +6734,6 @@ Simulacion (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7105,8 +6742,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/simk0.5.png
 	scale 40
@@ -7117,8 +6752,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7142,8 +6775,6 @@ Simulacion (k=0.5)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7152,8 +6783,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/simk1.png
 	scale 40
@@ -7164,8 +6793,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7189,24 +6816,20 @@ Simulacion (k=1)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Es interesante observar como la maxima atenuacion o amplificacion puede
- variar levemente a la calculada inicialmente cuando se amplifica o atenua
- mas de una region de audio ya que estas regiones se superponen levemente.
- De manera que la amplificacion de los bajos puede llegar tambien a amplificar
+Es interesante observar como la máxima atenuación o amplificación puede
+ variar levemente a la calculada inicialmente cuando se amplifica o atenuá
+ mas de una región de audio ya que estas regiones se superponen levemente.
+ De manera que la amplificación de los bajos puede llegar también a amplificar
  en algunos decibeles (
 \begin_inset Formula $2dB-5dB$
 \end_inset
 
  en este caso) a las frecuencias medias.
  Se puede observar que si, por ejemplo, se amplifican solo los medios, estas
- amplifiacion vuelve nuevamente a corresponder a la calculada anteriormente:
+ amplificación vuelve nuevamente a corresponder a la calculada anteriormente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7215,8 +6838,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/medio.png
 	scale 40
@@ -7227,8 +6848,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7252,15 +6871,11 @@ Amplificacion de los medios (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 Y luego se midieron los diagramas de Bode de la placa en osciloscopio, el
  resultado fue el siguiente:
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7269,8 +6884,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodek0.png
 	scale 60
@@ -7281,8 +6894,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7302,8 +6913,6 @@ Bode medido modulo (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7312,8 +6921,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodek0pha.png
 	scale 60
@@ -7324,8 +6931,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7345,8 +6950,6 @@ Bode medido fase (k=0)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7355,8 +6958,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodek1.png
 	scale 60
@@ -7367,8 +6968,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7388,8 +6987,6 @@ Bode medido modulo (k=1)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7398,8 +6995,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodek1pha.png
 	scale 60
@@ -7410,8 +7005,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7431,8 +7024,6 @@ Bode medido fase (k=1)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7441,8 +7032,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodk0.5.png
 	scale 60
@@ -7453,8 +7042,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7474,8 +7061,6 @@ Bode medido modulo (k=0.5)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
 \begin_inset Float figure
 placement H
 wide false
@@ -7484,8 +7069,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-
-\lang english
 \begin_inset Graphics
 	filename F:/informe ej4 tp3/bodk0.5pha.png
 	scale 60
@@ -7496,8 +7079,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang english
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -7517,29 +7098,23 @@ Bode medido fase (k=0.5)
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-Como se puede observar las mediciones se ajustan bien a la simuacion y a
- la teoria.
+Como se puede observar las mediciones se ajustan bien a la simulación y
+ a la teoría.
  Pueden llegar a diferir levemente por el error de los instrumentos empleados,
  la tolerancia de los componentes y a que los valores de resistencia empleados
- no son excatos sino que los valores comerciales mas cercanos.
- Se puede ver que la mayor diferencia entre la simulacion y lo medido es
- en k=0.5, ya que los potenciometros no se pueden ajustar a la mitad con
- tanta precision, lo que genera una pequena ganancia o atenuacion al medirse,
+ no son exactos sino que los valores comerciales mas cercanos.
+ Se puede ver que la mayor diferencia entre la simulación y lo medido es
+ en k=0.5, ya que los potenciómetros no se pueden ajustar a la mitad con
+ tanta precisión, lo que genera una pequeña ganancia o atenuación al medirse,
  debido a que el k no es exactamente 0.5, a diferencia de k=0 y k=1, donde
  esto si se puede lograr.
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Data Sheet
+Datasheet
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Max Gain: 
 \begin_inset Formula $21dB$
 \end_inset
@@ -7548,8 +7123,6 @@ Max Gain:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Max Attenuation: 
 \begin_inset Formula $-21dB$
 \end_inset
@@ -7558,8 +7131,6 @@ Max Attenuation:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Input Impedance: 
 \begin_inset Formula $5k\Omega$
 \end_inset
@@ -7568,8 +7139,6 @@ Input Impedance:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Output Impedance: 
 \begin_inset Formula $2n\Omega$
 \end_inset
@@ -7578,8 +7147,6 @@ Output Impedance:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Max Input Voltage: 
 \begin_inset Formula $1.2v$
 \end_inset
@@ -7588,8 +7155,6 @@ Max Input Voltage:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Max Vcc: 
 \begin_inset Formula $18v$
 \end_inset
@@ -7598,8 +7163,6 @@ Max Vcc:
 \end_layout
 
 \begin_layout Itemize
-
-\lang english
 Min Vcc: 
 \begin_inset Formula $-18v$
 \end_inset
@@ -7608,23 +7171,17 @@ Min Vcc:
 \end_layout
 
 \begin_layout Subsection
-
-\lang english
-Conclusion
+Conclusión
 \end_layout
 
 \begin_layout Standard
-
-\lang english
-En conclusion, la implementacion en serie de ecualizadores forman un control
+En conclusión, la implementación en serie de ecualizadores forman un control
  de tonos de 3 bandas, donde su comportamiento en frecuencia se ajusta al
- modelo teorico gracias a sus impedancias de entrada y de salida.
- Este mismo atenua o amplifica tres regiones de audio diferente de manera
+ modelo teórico gracias a sus impedancias de entrada y de salida.
+ Este mismo atenuá o amplifica tres regiones de audio diferente de manera
  que se puede controlar los bajos, agudos y medios de cualquier entrada
  de audio que no sature los OpAmps.
  
-\lang spanish
-
 \begin_inset Newpage pagebreak
 \end_inset
 
