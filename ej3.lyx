@@ -1,0 +1,1889 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Academic Title Page
+% LaTeX Template
+% Version 2.0 (17/7/17)
+%
+% This template was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (LaTeX - Title Creation) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage}, rename
+% this file and move it to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./<new filename>.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+% Required for inputting international characters
+% Output font encoding for international characters
+
+% Palatino font
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package babel
+\inputencoding utf8
+\fontencoding T1
+\font_roman "cmr" "default"
+\font_sans "default" "default"
+\font_typewriter "mathpazo" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 10
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 19mm
+\topmargin 25mm
+\rightmargin 19mm
+\bottommargin 43mm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section
+Amplificador de Instrumentación
+\end_layout
+
+\begin_layout Subsection
+Introducción 
+\end_layout
+
+\begin_layout Standard
+Los amplificadores de instrumentación son amplificadores diferenciales que
+ satisfacen las siguientes características: 
+\shape slanted
+a)
+\shape default
+ impedancias de entrada en modo diferencial y común altas (idealmente infinitas)
+; 
+\shape italic
+b)
+\shape default
+ impedancia de salida muy baja; 
+\shape italic
+c)
+\shape default
+ ganancia exacta y estable; y 
+\shape italic
+d)
+\shape default
+ rechazo al modo común (CMRR) elevado (idealmente infinito).
+\end_layout
+
+\begin_layout Standard
+Con ésto, permiten medir una diferencia de tensión entre sus entradas y
+ generan a su salida una tensión proporcional a esa diferencia relativa
+ entre las terminales de entrada (modo diferencial).
+ Su principal ventaja frente a circuitos que simplemente amplifican una
+ señal referenciada a masa (modo común) es su gran inmunidad frente al ruido,
+ lo cual los hace aptos para medir señales de muy baja amplitud, que de
+ ser medidas de otra forma no podrían ser distinguidas del ruido.
+ 
+\end_layout
+
+\begin_layout Standard
+Se buscará por lo tanto estudiar su comportamiento para determinar las principal
+es características y limitaciones que este tipo de circuitos presentan,
+ tomando como punto de partida aquel presentado en la figura siguiente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/circuito.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Amplificador-de-instrumentación"
+
+\end_inset
+
+Amplificador de instrumentación utilizado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Además, son útiles para eliminarlo el ruido de las señales, ya que al ser
+ este común ambas entradas, es rechazado por tener un alto CMRR.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Análisis del circuito
+\end_layout
+
+\begin_layout Standard
+Se definirá el modo común como la semisuma de ambas entradas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{CM}=\frac{V1+V2}{2}
+\end{equation}
+
+\end_inset
+
+ y el modo diferencial como la resta entre ellas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{DM}=V1-V2
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despejando V1 y V2, se obtienen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V1=V_{CM}-\frac{V_{DM}}{2};\,\,V2=V_{CM}+\frac{V_{DM}}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es de utilidad definir además, el rechazo del modo común (CMRR), con 
+\begin_inset Formula $A_{DM}$
+\end_inset
+
+ la ganancia en modo diferencial y 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $A_{CM}$
+\end_inset
+
+ la del modo común;
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish-mexico
+ como:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+CMRR_{dB}=20log_{10}\left(\frac{A_{DM}}{A_{CM}}\right)\label{cmrr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analizando el circuito de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Amplificador-de-instrumentación"
+
+\end_inset
+
+ con más detenimiento se puede ahondar en sus componentes y funcionamiento.
+\end_layout
+
+\begin_layout Subsubsection
+Amplificadores operacionales
+\end_layout
+
+\begin_layout Standard
+El sistema está compuesto por cuatro op-amps; por un lado se observa un
+ buffer a cada entrada (U1 y U2), lo que logra altas impedancias a la entrada.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, el op-amp colocado a la salida actúa como un amplificador
+ diferencial.
+ El mismo se observa con mayor detalle en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:diff-amp"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/diffamp.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:diff-amp"
+
+\end_inset
+
+Amplificador diferencial.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Planteando las ecuaciones correspondientes en los nodos se puede obtener
+ la ganancia ideal (
+\begin_inset Formula $V^{-}=V^{+}=V$
+\end_inset
+
+)de este amplificador partiendo de las ecuaciones de nodos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V1-V}{R1}=\frac{V1-V_{out}}{R2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{V2-V}{R8}=\frac{V}{R9}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se llega a la ganancia ideal:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=\frac{R2}{R1}(\frac{1+R2/R1}{1+R8/R9}V2-V1)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+si elegimos convenientemente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R1}{R2}=\frac{R8}{R9}\label{eq:puentebalanceado}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+se forma un puente balanceado, obteniendo una ganancia lineal e ideal, siendo
+ la salida directamente proporcional a la diferencia verdadera de las entradas:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=\frac{R2}{R1}(V2-V1)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Al utilizarse en un amplificador de instrumentación, idealmente se eliminaría
+ por completo el modo común 
+\begin_inset Formula $V_{CM}$
+\end_inset
+
+, respondiendo éste únicamente al modo diferencial 
+\begin_inset Formula $V_{DM}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ahora, en la práctica el puente nunca estará desbalanceado pues las resistencias
+ tienen tolerancias, lo que consigue indeseadamente que el amplificador
+ diferencial responda no sólo al 
+\begin_inset Formula $V_{DM}$
+\end_inset
+
+, sino también al 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $V_{CM}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Esto quiere decir que el CMRR práctico será el resultado de dos efectos:
+ el desbalance del puente, y la no idealidad del op-amp.
+\end_layout
+
+\begin_layout Standard
+En síntesis, es importante que las tolerancias de los componentes sean bajas
+ y que se cumpla la relación dada por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:puentebalanceado"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A su vez, para maximizar el CMRR, las entradas en modo común deben ser simétrica
+s, es decir, la tensión en el nodo entre R5, R4 y R6 debe ser nula, ya que
+ idealmente, V1 y V2 son iguales, esto en la práctica resulta imposible
+ porque las resistencias no son exactas, como ya se mencionó, y los op-amps
+ son reales y diferentes entre sí; entonces se estaría amplificando la diferenci
+a entre ambas señales.
+ Para contrarrestar esta asimetría y lograr una tensión nula en este nodo,
+ se coloca un último op-amp, (en la figura el que está relacionado con 
+\begin_inset Formula $V_{Feed}$
+\end_inset
+
+, es decir, U4).
+ 
+\end_layout
+
+\begin_layout Standard
+Hablar de R5 (control de cmrr, calibrar) y Vfeed para estabilidad.
+\end_layout
+
+\begin_layout Subsubsection
+Análisis de ganancia en modo diferencial y común
+\end_layout
+
+\begin_layout Standard
+Para obtener la ganancia ideal del circuito 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Amplificador-de-instrumentación"
+
+\end_inset
+
+, utilizando nodos para resolver el circuito, se llegaron a las siguientes
+ ecuaciones:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/circuitospice.png
+	lyxscale 65
+	scale 65
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:nodos"
+
+\end_inset
+
+Circuito simplificado con notación en los nodos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{1}-V_{01}}{R3}=\frac{V_{1}-V_{X}}{R4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{X}-V_{2}}{R6}=\frac{V_{2}}{R7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{01}}{R1}=\frac{-V_{out}}{R2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{1}-V_{01}}{R3}=\frac{V_{01}}{R1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resolviendo el sistema, se obtiene la transferencia ideal,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{out}=-\frac{R2}{R1}\left[V1(1+\frac{R3}{R4})-V2\,\frac{R3}{R4}(1+\frac{R6}{R7})\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En modo común, ambas entradas son iguales 
+\begin_inset Formula $(V1=V2=V_{CM})$
+\end_inset
+
+; y se busca que la salida sea nula, por lo que se obtiene la siguiente
+ relación de resistencias, para una atenuación ideal infinita en modo común:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{R3}{R4}=\frac{R7}{R6}=K\label{eq:resistencias_relacion}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+es decir;
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+V_{out}=-\frac{R2}{R1}\left[V1(1+K)-V2\,K(1+1/K)\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Además, se puede deducir la ganancia ideal del modo diferencial, referenciando
+ una de las entradas a tierra, y obteniendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{DM}=\frac{R2}{R1}(1+K)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+con 
+\begin_inset Formula $K$
+\end_inset
+
+ dada por la relación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:resistencias_relacion"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Elección de componentes
+\end_layout
+
+\begin_layout Standard
+La ganancia pedida fue 
+\begin_inset Formula $G=120+20sen((N-1)\frac{\pi}{4}+\frac{\pi}{6})=110;$
+\end_inset
+
+ con N=5.
+ Al elegir las resistencias, se buscó mantener el puente dado por la relación
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:puentebalanceado"
+
+\end_inset
+
+ lo más balanceado posible, es decir con resistencias con tolerancias pequeñas,
+ lo que también ayuda a mantener una ganancia estable; y utilizando también
+ aquella relación dada por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:resistencias_relacion"
+
+\end_inset
+
+, para cancelar el modo común.
+\end_layout
+
+\begin_layout Standard
+R5 funciona para calibrar el amplificador de instrumentación, como se analizará
+ más adelante, por lo que se eligió como un preset de 
+\begin_inset Formula $100k\Omega$
+\end_inset
+
+ de 25 vueltas, para mejor calibración.
+\end_layout
+
+\begin_layout Standard
+A su vez, los órdenes de las resistencias se eligieron de tal manera que
+ no fueran muy elevados, ya que generarían ruido térmico, y tampoco muy
+ pequeños para que no se vuelvan comparables con las impedancias de salida
+ de los op-amps.
+\end_layout
+
+\begin_layout Standard
+Se buscó obtener una mayor ganancia en la parte del amplificador diferencial,
+ y una un poco menor con los buffers.
+\end_layout
+
+\begin_layout Standard
+Con todo, los valores finales elegidos para las resistencias fueron los
+ siguientes:
+\end_layout
+
+\begin_layout Itemize
+Para el puente y la mayor ganancia: 
+\begin_inset Formula $R9=22k\Omega,\,5\%$
+\end_inset
+
+; 
+\begin_inset Formula $R8=1k\Omega,\,5\%$
+\end_inset
+
+; 
+\begin_inset Formula $R2=22k\Omega,\,1\%$
+\end_inset
+
+; y 
+\begin_inset Formula $R1=1k\Omega,\,1\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Para la ganancia relacionada con los buffers: 
+\begin_inset Formula $R3=R7=12k\Omega,\,1\%$
+\end_inset
+
+ y 
+\begin_inset Formula $R4=R6=3k\Omega,\,1\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Respuesta en frecuencia del modo diferencial y común
+\end_layout
+
+\begin_layout Standard
+Se midió la ganancia tanto en modo diferencial como en común, y se graficó
+ junto a la simulación, obteniendo los siguientes resultados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/magdifsimvsmedido.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnitud de la ganancia en modo diferencial.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/fasedifsimvsmedido.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase de la ganancia en modo diferencial.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ganancia modo diferencial, con 
+\begin_inset Formula $R5=52k\Omega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/magcomunsimvsmed.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Magnitud de la ganancia en modo común.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/fasecomunsimvsmed.png
+	lyxscale 60
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fase de la ganancia en modo común.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ganancia modo común, con 
+\begin_inset Formula $R5=52k\Omega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+De lo anterior se destacan varios puntos; en primer lugar, la ganancia en
+ modo diferencial es en decibeles 
+\begin_inset Formula $G\approx40.8dB$
+\end_inset
+
+ , lo que es igual a 110 de ganancia en veces, que era la ganancia pedida.
+ Además se mantiene constante y estable hasta una frecuencia de 
+\begin_inset Formula $100kHz,$
+\end_inset
+
+ y luego comienza a decaer a razón de 
+\begin_inset Formula $20dB/década$
+\end_inset
+
+, debido al polo dominante del op-amp.
+\end_layout
+
+\begin_layout Standard
+Por otro lado, en el modo común, las diferencias pueden deberse a que son
+ amplitudes muy bajas las que se miden, lo que ocasiona errores de medición.
+ Además, que por ejemplo, resulta imposible medir una atenuación de 
+\begin_inset Formula $-80dB$
+\end_inset
+
+ con un osciloscopio, pues está por debajo del error del mismo.
+ En la simulación y en la medición, en el modo común parece atenuar y funcionar
+ de manera aceptable hasta los 
+\begin_inset Formula $100kHz$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es de utilidad mostrar el rechazo al modo común, dado por la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cmrr"
+
+\end_inset
+
+, que surge de restar ambas ganancias (al estar en decibeles).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/cmrr.png
+	lyxscale 50
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cmrr"
+
+\end_inset
+
+Rechazo al modo común en función de la frecuencia.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Como se puede ver, funciona deseadamente hasta una frecuencia alrededor
+ de los 100kHz, con un rango de funcionamiento incluso mejor hasta las 10kHz.
+\end_layout
+
+\begin_layout Subsection
+Efecto de las variaciones resistivas sobre el circuito
+\end_layout
+
+\begin_layout Standard
+En principio, se realizó una simulación variando los valores de las resistencias
+ teniendo en cuenta sus tolerancias, para ver de qué manera afectaban el
+ rendimiento del circuito en modo diferencial y común.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/montecarlodiferencial.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:montecarlodif"
+
+\end_inset
+
+Simulación Montecarlo de la ganancia en modo diferencial, con 
+\begin_inset Formula $R5=52k\Omega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Como se puede observar, la ganancia del modo diferencial no parece depender
+ de las tolerancias de los componentes; lo que tiene sentido ya que //chamuyar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/montecarlocomun.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:montecarlocom"
+
+\end_inset
+
+Simulación Montecarlo de la ganancia en modo común, con 
+\begin_inset Formula $R5=52k\Omega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+En el caso de la ganancia del modo común, se ve mucho más afectado por un
+ cambio en los valores reales de las resistencias, esto se debe a que depende
+ en gran medida del puente balanceado, cuyo balance no se cumple con las
+ tolerancias resistivas.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/magr5.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variación en la magnitud de la ganancia en modo común con distintos valores
+ de R5.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/faser5.png
+	lyxscale 60
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Variación en la fase de la ganancia en modo común con distintos valores
+ de R5.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:modocomun"
+
+\end_inset
+
+Ganancia modo común para distintos valores de R5.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como el modo diferencial no varía con R5, si se quiere maximizar el CMRR,
+ se pensaría que según la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:modocomun"
+
+\end_inset
+
+, R5 debería rondar o superar los 
+\begin_inset Formula $100k\varOmega$
+\end_inset
+
+.
+ Sin embargo, al acercarse en la práctica a ese valor se observaron comportamien
+tos indeseados, que se muestran a continuación:
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/satr5a96kyfa1k.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Saturación con 
+\begin_inset Formula $R5=95k\varOmega$
+\end_inset
+
+, a 1kHz de frecuencia de entrada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/osc.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Oscilación observada con 
+\begin_inset Formula $R5=9k\varOmega$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:r5feo"
+
+\end_inset
+
+Salida del circuito con valores extremos de R5, siendo la señal amarilla
+ la entrada y la verde la salida.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Se observa pues, ante valores extremos del preset (R5), se satura al acercarse
+ al límite superior, y por otro lado, al llegar al inferior, surge una senoidal
+ montada sobre la salida.
+ Se midió con detenimiento variando R5, y se notó que saturaba cuando superaba
+ los 
+\begin_inset Formula $70k\varOmega$
+\end_inset
+
+ y comenzaba a oscilar al valer por debajo de 
+\begin_inset Formula $15k\varOmega$
+\end_inset
+
+.
+ Por ésto se concluyó que funciona como un calibrador, como se mencionó
+ en la primera sección, evitando que tanto sature como oscile el circuito.
+\end_layout
+
+\begin_layout Subsection
+Puente de Wheatstone
+\end_layout
+
+\begin_layout Subsubsection
+Introducción teórica
+\end_layout
+
+\begin_layout Standard
+Un amplificador de instrumentación puede utilizarse para calibrar un puente
+ de Wheatstone.
+ Se implementó el siguiente puente y se incorporó al circuito de la siguiente
+ manera:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/wheat.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Puente de Wheatstone.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se agregó una resistencia de 
+\begin_inset Formula $100\varOmega$
+\end_inset
+
+ en serie a R3, de base, para que no se anule.
+ Además, los valores elegidos fueron 
+\begin_inset Formula $R1=1k\varOmega,$
+\end_inset
+
+ 
+\begin_inset Formula $R4=4k7\varOmega$
+\end_inset
+
+, 
+\begin_inset Formula $R3$
+\end_inset
+
+ un preset de 
+\begin_inset Formula $5k\varOmega$
+\end_inset
+
+ , y R2 la resistencia a averiguar.
+ En teoría, al cumplirse la condición:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{R1}{R4}=\frac{R2}{R3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+el puente estaría balanceado y no circularía corriente entre los puntos
+ A y B.
+ En nuestro amplificador, la tensión de entrada sería nula.
+ Para poder medirla con más precisión es para lo que se usa el circuito,
+ amplificando considerablemente esta pequeña diferencia de tensión, buscando
+ mejorar la precisión.
+\end_layout
+
+\begin_layout Subsubsection
+Aplicación
+\end_layout
+
+\begin_layout Standard
+Se conectó la salida del puente a la entrada del amplificador, y se midió
+ junto a la señal de salida del mismo.
+ Se procedió a variar R3 hasta que la entrada al amplificador fuera la mínima,
+ estando balanceado el puente.
+ Se observó entonces la salida del circuito, y se vio amplificada en la
+ ganancia esperada como se observa en la siguiente figura:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ej3/wheatnorm3.png
+	lyxscale 50
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+La señal amarilla corresponde a la entrada al amplificador de instrumentación
+ y la verde a la salida.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se puede ver que la señal de salida del puente se amplifica alrededor de
+ 110 veces, como era esperado.
+ De ahí, se podría seguir variando el preset hasta que sea mínima, logrando
+ una calibración del puente mucho más precisa que no se hubiera podido conseguir
+ sin el amplificador.
+\end_layout
+
+\begin_layout Subsubsection
+Señal de entrada no referenciada
+\end_layout
+
+\begin_layout Standard
+Al entrar con una señal en modo diferencial sin referencia a tierra, el
+ circuito se comporta de manera indeseada, pues se genera una tierra flotante.
+ Esto hace que se genere una referencia a, por ejemplo, el ruido de línea,
+ de amplitud desconocida.
+ Tal podría ocasionar que sature el circuito.
+ Por esto es necesario que la señal de entrada esté referenciada a la masa
+ del circuito.
+\end_layout
+
+\begin_layout Subsection
+Offset
+\end_layout
+
+\begin_layout Standard
+Si se observa el circuito utilizado, de la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Amplificador-de-instrumentación"
+
+\end_inset
+
+, se nota que hay una única referencia a tierra.
+ Por lo que si se quiere montar la salida sobre un nivel de continua, se
+ podría modificar la tensión en ese nodo logrando el offset deseado.
+ Para ésto se colocó un jumper en ese nodo para dar la posibilidad de entrar
+ con una señal de continua.
+ El correcto funcionamiento se corroboró empíricamente.
+\end_layout
+
+\begin_layout Standard
+Se notó, sin embargo, que estando el circuito conectado a tierra, es decir,
+ sin tensión de offset, la salida estaba montada sobre un nivel de continua
+ de decenas de 
+\begin_inset Formula $mV$
+\end_inset
+
+.
+ Nada alarmante, siendo algo que puede deberse a la alta ganancia del modo
+ diferencial del circuito, que amplifica notoriamente las tensiones de offset,
+ modificando la salida del circuito.
+ Se podría también contrarrestar este efecto alterando la tensión en el
+ nodo que va a tierra, como se diseñó.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
