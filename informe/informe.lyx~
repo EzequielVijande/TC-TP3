@@ -530,13 +530,13 @@ En la siguiente sección se muestra la resolución de un circuito que utiliza
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ImagenesEj1/CircProp.PNG
-	scale 50
+	scale 35
 
 \end_inset
 
@@ -768,7 +768,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename ImagenesEj1/GrafoEqPNG.PNG
-	scale 50
+	scale 70
 
 \end_inset
 
@@ -931,11 +931,11 @@ Se despejo convenientemente la función transferencia con la ayuda de Matlab
 \begin_layout Standard
 \align center
 
-\size scriptsize
+\size large
 \lang spanish
 \begin_inset Formula 
 \begin{equation}
-H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})s^{2}+(C_{2}R_{3}R_{4}R_{5}R_{6}R_{7}-C_{2}R_{3}R_{4}R_{5}R_{u}-C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{6}R_{7}+R_{1}R_{6}R_{a}(C_{2}R_{3}+\frac{C_{6}R_{7}+C_{2}R_{3}}{A_{vol}}))s+R_{6}(R_{4}R_{5}R_{7}+\frac{R_{1}R_{a}}{A_{vol}})}{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{5}R_{8}+\frac{R_{a}}{A_{vol}}(1+\frac{1}{A_{vol}}))s^{2}+(\frac{C_{6}R_{1}R_{6}R_{7}R_{a}+C_{2}R_{3}R_{a}R_{u}}{A_{vol}}-C_{2}R_{3}R_{5}R_{6}R_{7}R_{8}+C_{2}R_{3}R_{5}R_{8}R_{u}+\frac{R_{a}}{A_{vol}^{2}}(C_{2}R_{3}R_{u}+C_{6}R_{1}R_{6}R_{7}))s+R_{4}R_{6}R_{7}(R_{5}+R_{8})+\frac{R_{a}R_{u}}{A_{vol}}(1+\frac{1}{A_{vol}})}
+H(s)=\frac{num1\times s^{2}+num2\times s+num3}{den1\times s^{2}+den2\times s+den3}
 \end{equation}
 
 \end_inset
@@ -949,11 +949,54 @@ H(s)=\frac{C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})
 Donde:
 \end_layout
 
-\begin_layout Standard
-\align center
+\begin_layout Itemize
 
 \lang spanish
 \begin_inset Formula $R_{u}=R_{1}R_{6}+R_{1}R_{7}+R_{6}R_{7}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang spanish
+\begin_inset Formula $num1=C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{a}(1+\frac{1}{A_{vol}})-R_{4}R_{5})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $num2=(C_{2}R_{3}R_{4}R_{5}R_{6}R_{7}-C_{2}R_{3}R_{4}R_{5}R_{u}-C_{2}C_{6}R_{1}R_{3}R_{4}R_{5}R_{6}R_{7}+R_{1}R_{6}R_{a}(C_{2}R_{3}+\frac{C_{6}R_{7}+C_{2}R_{3}}{A_{vol}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $num3=R_{6}(R_{4}R_{5}R_{7}+\frac{R_{1}R_{a}}{A_{vol}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den1=C_{2}C_{6}R_{1}R_{3}R_{6}R_{7}(R_{5}R_{8}+\frac{R_{a}}{A_{vol}}(1+\frac{1}{A_{vol}}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den2=(\frac{C_{6}R_{1}R_{6}R_{7}R_{a}+C_{2}R_{3}R_{a}R_{u}}{A_{vol}}-C_{2}R_{3}R_{5}R_{6}R_{7}R_{8}+C_{2}R_{3}R_{5}R_{8}R_{u}+\frac{R_{a}}{A_{vol}^{2}}(C_{2}R_{3}R_{u}+C_{6}R_{1}R_{6}R_{7}))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $den3=R_{4}R_{6}R_{7}(R_{5}+R_{8})+\frac{R_{a}R_{u}}{A_{vol}}(1+\frac{1}{A_{vol}})$
 \end_inset
 
 
